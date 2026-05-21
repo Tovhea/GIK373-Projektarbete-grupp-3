@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lönegapet mellan män och kvinnor</title>
+    <meta name="title" content="Vi är grupp 3">
+    <meta name="decription" content="Det här är en hemsida med statistiska visualiseringar gjord av grupp 3">
+
+<!-- 
+Favicon(den lilla bilden som visas i webbläsarfliken)
+--> 
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-32x32.png">
+
+<!--
+google fonts
+--> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--roboto --> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!--open sans --> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<!--
+custom css link
+--> 
+<link rel="stylesheet" href="./assets/css/require.css">
+<link rel="stylesheet" href="./assets/css/main.css"> 
+
+<!--
+Preload images(Ladda den här bilden direkt, även om den inte används förrän senare. Användbart för: Hero-bilder – stora bilder högst upp på sidan
+Loggor – visas direkt vid laddning
+Bakgrundsbilder i CSS)
+--> 
+
+<!--<link rel="preload" as="image" href="./assets/images/strand.jpeg"> -->
+</head>
+<body>
+
+
+<!-- PRELOADER snurrande cirkel som kommer upp om innehållet på sidan behöver tid på sig att ladda-->
+<div class="preloader" data-preloader>
+    <div class="preloader-circle"></div>
+</div>
+
+
+
+<!-- HEADER -->
+<header class="header" data-header>
+    <div class="container">
+
+        <a href="./index.html" class="logo">
+            <img src="xxxx" width="151" height="28" alt="EQUALIA">
+        </a>
+
+        <nav class="navbar" data-navbar>
+            <ul class="navbar-list">
+
+                <li class="navbar-item">
+                    <a href="./index.html" class="label-lg navbar-link has-after active" data-nav-link>Hem</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="./data.html" class="label-lg navbar-link has-after" data-nav-link>Data</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="./sources.html" class="label-lg navbar-link has-after" data-nav-link>Källor</a>
+                </li>
+            </ul>
+
+
+
+        </nav>
+
+        <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler>
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon> 
+        </button>
+    </div>
+</header>
+
+<!-- hamburgermeny --> 
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- Hero -->
+
+<main>
+
+<div class="hero">
+    <img class ="hero-image" src="./assets/images/header.png" alt="hero image">
+    <div class="hero-text">
+        <h1 class="headline-sm">Lönegapet mellan män och kvinnor</h1>
+        <p class="body-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        <button class="button-primary">Se vår statistik</button>
+    </div>
+</div>
+
+<!--sektion med målen -->
+<section class="goals">
+    <div class="container">
+        <div class="goals-grid">
+            <div class="goal-card">
+                <div class="icon-circle">
+                    ❤
+                  </div>
+                <h3 class="title-sm">Jämställdhet</h3>
+                <p class="body-sm">Mål 5 handlar om att uppnå jämställdhet och alla kvinnors och flickors egenmakt.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="icon-circle">
+                    ❤
+                  </div>
+                <h3 class="title-sm">Ekonomi</h3>
+                <p class="body-sm">Mål 8 handlar om att alla människor ska ha ett arbete med goda arbetsvillkor och främja en inkluderande ekonomisk tillväxt.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="icon-circle">
+                    ❤
+                  </div>
+                <h3 class="title-sm">Jämlikhet</h3>
+                <p class="body-sm">Mål 10 handlar om att minska ojämlikheter inom samhällen och mellan länder.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="articles">
+    <div class="container">
+        <div class="articles-grid">
+            <a href="./article.html" class="article-link">
+                <div class="article-card">
+                    <img class ="article-image" src="./assets/images/gap.jpg" alt="artikelbild">
+                    <h3 class="title-sm">Jämställdhet</h3>
+                    <p class="body-sm">Mål 5 handlar om att uppnå jämställdhet och alla kvinnors och flickors egenmakt.</p>
+                </div>
+            </a>
+            <div class="article-card">
+                <img class ="article-image" src="./assets/images/family.jpg" alt="artikelbild">
+                <h3 class="title-sm">Ekonomi</h3>
+                <p class="body-sm">Mål 8 handlar om att alla människor ska ha ett arbete med goda arbetsvillkor och främja en inkluderande ekonomisk tillväxt.</p>
+            </div>
+
+            <div class="article-card">
+                <img class ="article-image" src="./assets/images/money.jpg" alt="artikelbild">
+                <h3 class="title-sm">Jämlikhet</h3>
+                <p class="body-sm">Mål 10 handlar om att minska ojämlikheter inom samhällen och mellan länder.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+<!-- CUSTOM JS LINK (egenskriven js fil) --> 
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

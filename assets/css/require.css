@@ -1,0 +1,305 @@
+:root {
+
+/**
+colors
+**/
+--black:                    hsla(0, 0%, 15%, 1);
+--white:                    hsla(220, 15%, 95%, 1);
+--white_a10:                hsla(0, 0%, 100%, 0.1);
+--white_a25:                hsla(0, 0%, 100%, 0.25);
+--white_a50:                hsla(0, 0%, 100%, 0.5);
+--black_a10:                hsla(0, 0%, 0%, 0.1);
+--black_a25:                hsla(0, 0%, 0%, 0.25);
+
+--primary:                  hsla(220, 85%, 57%, 1);
+--primary-light:            hsl(15, 17%, 91%);
+--primary-dark:             hsla(220, 85%, 38%, 1);
+
+--accent:                   hsla(162, 73%, 46%, 1);
+--accent-light:             hsla(162, 73%, 65%, 1);
+
+--surface-tone:             hsla(15, 17%, 91%, 1); /*används för kort och ytor, oftast mörk eller neutral*/
+--surface-light:            hsla(220, 20%, 22%, 1);
+
+--text-primary-white:       hsla(220, 15%, 95%, 1);
+--text-primary-black:       hsla(0, 0%, 15%, 1);
+--text-secondary:           hsla(0, 0%, 45%, 1);
+
+/**
+typography
+**/
+--ff-roboto:'Roboto', sans-serif; 
+--ff-opensans: 'Open Sans', sans-serif;
+--fs-45: 4.5rem;
+--fs-38: 3.8rem;
+--fs-32: 3.2rem;
+--fs-28: 2.8rem;
+--fs-24: 2.4rem;
+--fs-20: 2rem;
+--fs-18: 1.8rem;
+--fs-16: 1.6rem;
+--fs-14: 1.4rem;
+--fs-12: 1.2rem;
+--fs-10: 1rem;
+
+--fw-400:400;
+--fw-500:500;
+--fw-600:600;
+
+/**
+spacing
+ **/
+--spacing-xs: 0.8rem;
+--spacing-s: 1.6rem;
+--spacing-m: 2.4rem;
+--spacing-l: 3.2rem;
+--spacing-xl: 4.8rem;
+--spacing-xxl: 6rem; 
+--spacing-xxl: 8rem;
+
+/**
+shadow
+**/
+
+--shadow: 0 2px 2px hsla(0, 0%, 22%, 0.5);
+    
+/**
+border radius
+**/
+
+--radius-50: 50px;
+--radius-pill: 100px;
+--radius-cirkle: 50%;
+
+/**
+transition
+**/
+
+--transition-1:0.25s ease;
+--transition-2:0.5s ease;
+--cubic-out:(0.05, 0.83, 0.52, 0.97);
+
+
+/**
+Reset, nollställer webbläsarens inbyggda standardstilar
+**/
+
+*,
+*::before,
+*::after {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box; /* gör att padding inte påverkar elementets storlek */
+}
+
+li{ list-style: none;} /*tar bort punkterna framför listor*/
+
+
+a, 
+img,
+span,
+label,
+button,
+ion-icon { display:block;} /*Tar upp hela bredden, kan ha margin/padding/höjd*/
+
+a {
+color: inherit; /*Webbläsaren gör länkar blå som standard. Med inherit ärver länken istället färgen från sitt förälderelement, så du slipper skriva över färgen manuellt överallt.*/
+text-decoration:none;
+}
+
+img {
+height:auto;
+}
+
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+
+}
+
+.button-primary {
+    background: var(--black);
+    box-shadow: var(--shadow);
+    padding: 4px 20px;
+    border-radius: 30px;
+    color: var(--text-primary-white);
+
+}
+
+html {
+    font-family: var(--ff-opensans); /*standardfonten är open sans*/
+    font-size: 10px; /*definierar alla de andra fontstorlekarna, 1rem = 10px*/
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--white);
+    color: var(--text-primary-black);
+    line-height: 1.5;
+    overflow:hidden; /*allt innehåll som sticker utanför elementets gränser klipps bort och döljs*/
+    height: 300vh; /* viewport height – alltså höjden på webbläsarfönstret, elementet är 3 gånger så högt som fönstret*/
+}
+
+body.loaded {overflow:visible;} /* Medan sidan laddar vill man dölja element som ännu inte animerats in. När allt är klart lägger JavaScript till klassen loaded på body*/ 
+
+:focus-visible { outline-offset: 4px;} /*visar en fokusring bara när användaren navigerar med tangentbordet, tillgänglighetsregel – personer som navigerar med tangentbord (t.ex. synskadade) behöver se var de är på sidan*/
+
+/*scrollbar, bredd och färg*/
+::-webkit-scrollbar { width:10px;}
+::-webkit-scrollbar-track { background-color: var(--white_a25);}
+::-webkit-scrollbar-thumb { 
+    background-color: var(--black_a25);
+    border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover { background-color: var(--black_a10);}
+
+/*refused style*/
+.container {
+    padding-inline: 16px; 
+    margin-inline: auto;
+}
+
+/* Preloadern syns från början och täcker hela sidan */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gömmer preloadern när loaded-klassen läggs till */
+.preloader.loaded {
+    display: none;
+}
+
+/*styling för laddningscirkel*/
+.preloader-circle {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--black);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+} 
+
+/*preloaderhjulet snurrar*/
+@keyframes spin {
+to { transform: rotate(360deg); }
+}
+
+
+/*typografi*/
+.headline-lg {font-size: var(--fs-45); } /*huvudrubrik på hela sidan*/
+.headline-md {font-size: var(--fs-38); } 
+.headline-sm {font-size: var(--fs-24); }
+.title-lg {font-size: var(--fs-28); } /*rubriker för sektioner och kort*/
+.title-md {font-size: var(--fs-24); }
+.title-sm {font-size: var(--fs-16); }
+.body-lg {font-size: var(--fs-14); } /*brödtext och längre stycken*/
+.body-md {font-size: var(--fs-12); }
+.body-sm {font-size: var(--fs-10); }
+.label-lg {font-size: var(--fs-14);} /*Etiketter och datum*/
+.label-md {font-size: var(--fs-10);}
+
+
+/*font weight och färg*/
+.headline-lg,
+.headline-md,
+.headline-sm  {
+    color: var(--white);
+    line-height:1.2;
+}
+
+.label-lg,
+.title-lg,
+.title-md {
+    color: var(--black);
+}
+
+/*typsnitt för text vid logotyp*/
+.logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header .btn { display: none; }
+
+
+.header {
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    color: var(--white);
+    background-color: var(--black_a10);
+    z-index:4;
+    padding-block: 8px;
+    transition: var(--transition-1);
+}
+
+.header.active { box-shadow: var(--shadow); }
+
+.header .container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+
+
+.nav-toggle-btn {
+    color: var(--white);
+    font-size: 2.8rem;
+}
+
+.nav-toggle-btn:hover{
+    color: var(--primary);
+    transition: var(--transition-1);
+}
+
+.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    border-block: 2px solid var(--black_a25);
+    transition: 0.25s var(--cubic-out);
+    transition-delay: 0.15s;
+    transform: scaleY(0);
+    transform-origin: top;
+    visibility: hidden;
+}
+
+
+.navbar.active {
+    transform: scaleY(1);
+    visibility:visible;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+}
+
+
+/*lägger till linjer mellan varje navbar länk*/
+.navbar-item:not(_last-child) {border-block-end: 1px solid var(--black_a25); }
+
+/*styling av innehållet i hamburgermenyn*/
+.navbar-link {
+    text-transform: uppercase;
+    letter-spacing:3px;
+    padding: var(--spacing-s);
+    transition: var(--transition-1);
+}
+
+
+.navbar-link:is(:hover, :focus-visible, .active) { color: var(--primary); }
+
+
+}
