@@ -1,3 +1,4 @@
+/*I denna main fil finns css för specifika delar av hemsidan*/
 /* Grundstyle – mobil */
 
 /*HEADER*/
@@ -94,8 +95,6 @@
 }
 
 /*styling av artikelsidan*/
-
-
 .article-long {
     width: 80%;
 
@@ -142,13 +141,19 @@
         width: 100%;
     }
 
+}
+
 /* Desktop */
 @media (min-width: 1024px) {
     .hero {
-        max-height: 1000px;
+        max-height: 800px;
+    }
+
+    /*döjer hamburgermenyknappen vid desktopläge*/
+    .nav-toggle-btn,
+    .nav-toggle-btn ion-icon {
+        display: none;
     }
 
 
-    
-}
 }

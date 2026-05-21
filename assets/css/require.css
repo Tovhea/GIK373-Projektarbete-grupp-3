@@ -1,7 +1,9 @@
+/*I denna require fil finns root som sätter grundstylingen för hela hemsidan och även css som är generell för alla sidor, såsom navbar, header, knappar */
+
 :root {
 
 /**
-colors
+colors, alla färger som används på sidan utgår ifrån dessa variabler som sätts senare på elementen
 **/
 --black:                    hsla(0, 0%, 15%, 1);
 --white:                    hsla(220, 15%, 95%, 1);
@@ -26,7 +28,7 @@ colors
 --text-secondary:           hsla(0, 0%, 45%, 1);
 
 /**
-typography
+typografi, alla fontstorlekar utgår ifrån dessa variabler
 **/
 --ff-roboto:'Roboto', sans-serif; 
 --ff-opensans: 'Open Sans', sans-serif;
@@ -47,26 +49,49 @@ typography
 --fw-600:600;
 
 /**
-spacing
- **/
---spacing-xs: 0.8rem;
---spacing-s: 1.6rem;
---spacing-m: 2.4rem;
---spacing-l: 3.2rem;
---spacing-xl: 4.8rem;
---spacing-xxl: 6rem; 
---spacing-xxl: 8rem;
-
-/**
-shadow
+fontstorlekarna läggs till klasserna för olika typer av text och rubriker
 **/
 
+.headline-lg {font-size: var(--fs-45); } /*huvudrubrik på hela sidan*/
+.headline-md {font-size: var(--fs-38); } 
+.headline-sm {font-size: var(--fs-24); }
+.title-lg {font-size: var(--fs-28); } /*rubriker för sektioner och kort*/
+.title-md {font-size: var(--fs-24); }
+.title-sm {font-size: var(--fs-16); }
+.body-lg {font-size: var(--fs-14); } /*brödtext och längre stycken*/
+.body-md {font-size: var(--fs-12); }
+.body-sm {font-size: var(--fs-10); }
+.label-lg {font-size: var(--fs-14);} /*Etiketter och datum*/
+.label-md {font-size: var(--fs-10);}
+
+
+/*font weight och färg*/
+.headline-lg,
+.headline-md,
+.headline-sm  {
+    color: var(--white);
+    line-height:1.2;
+}
+
+/**
+spacing
+ **/
+--spacing-xs: 0.8rem; /* 8 px */
+--spacing-s: 1.6rem; /* 16 px */
+--spacing-m: 2.4rem; /* 24 px */
+--spacing-l: 3.2rem; /* 32 px */
+--spacing-xl: 4.8rem; /* 48 px */
+--spacing-xxl: 6rem; /* 60 px */
+--spacing-xxl: 8rem; /* 80 px */
+
+/**
+shadow, för t ex cards, knappar
+**/
 --shadow: 0 2px 2px hsla(0, 0%, 22%, 0.5);
     
 /**
 border radius
 **/
-
 --radius-50: 50px;
 --radius-pill: 100px;
 --radius-cirkle: 50%;
@@ -74,7 +99,6 @@ border radius
 /**
 transition
 **/
-
 --transition-1:0.25s ease;
 --transition-2:0.5s ease;
 --cubic-out:(0.05, 0.83, 0.52, 0.97);
@@ -83,7 +107,6 @@ transition
 /**
 Reset, nollställer webbläsarens inbyggda standardstilar
 **/
-
 *,
 *::before,
 *::after {
@@ -129,7 +152,7 @@ button {
 }
 
 html {
-    font-family: var(--ff-opensans); /*standardfonten är open sans*/
+    font-family: var(--ff-opensans); /*standardfonten är nu open sans*/
     font-size: 10px; /*definierar alla de andra fontstorlekarna, 1rem = 10px*/
     scroll-behavior: smooth;
 }
@@ -195,29 +218,7 @@ body.loaded {overflow:visible;} /* Medan sidan laddar vill man dölja element so
 to { transform: rotate(360deg); }
 }
 
-
-/*typografi*/
-.headline-lg {font-size: var(--fs-45); } /*huvudrubrik på hela sidan*/
-.headline-md {font-size: var(--fs-38); } 
-.headline-sm {font-size: var(--fs-24); }
-.title-lg {font-size: var(--fs-28); } /*rubriker för sektioner och kort*/
-.title-md {font-size: var(--fs-24); }
-.title-sm {font-size: var(--fs-16); }
-.body-lg {font-size: var(--fs-14); } /*brödtext och längre stycken*/
-.body-md {font-size: var(--fs-12); }
-.body-sm {font-size: var(--fs-10); }
-.label-lg {font-size: var(--fs-14);} /*Etiketter och datum*/
-.label-md {font-size: var(--fs-10);}
-
-
-/*font weight och färg*/
-.headline-lg,
-.headline-md,
-.headline-sm  {
-    color: var(--white);
-    line-height:1.2;
-}
-
+/*färg för dessa rubriker*/
 .label-lg,
 .title-lg,
 .title-md {
@@ -228,9 +229,6 @@ to { transform: rotate(360deg); }
 .logo {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.header .btn { display: none; }
-
 
 .header {
     position: fixed;
@@ -244,8 +242,10 @@ to { transform: rotate(360deg); }
     transition: var(--transition-1);
 }
 
+/*när man scrollar ner på sidan blir det en skugga i kanten nertill på headern*/
 .header.active { box-shadow: var(--shadow); }
 
+/*fördelning av elementen på headern*/
 .header .container {
     display:flex;
     justify-content: space-between;
@@ -253,17 +253,19 @@ to { transform: rotate(360deg); }
 }
 
 
-
+/*färg och storlek på hamburgerikonen*/
 .nav-toggle-btn {
     color: var(--white);
     font-size: 2.8rem;
 }
 
+/*hover för hamburgerikon knappen*/
 .nav-toggle-btn:hover{
     color: var(--primary);
     transition: var(--transition-1);
 }
 
+/*styling av navigationsmenyn som fälls ut i mobilläge*/
 .navbar {
     position: absolute;
     top: 100%;
@@ -279,6 +281,7 @@ to { transform: rotate(360deg); }
 }
 
 
+/*När användaren klickar på hamburgarikonen lägger javaScript till eller ta bort klassen active från html koden, när den är aktiv gäller detta*/
 .navbar.active {
     transform: scaleY(1);
     visibility:visible;
@@ -298,7 +301,7 @@ to { transform: rotate(360deg); }
     transition: var(--transition-1);
 }
 
-
+/* hover för länkarna i hamburgermenyn*/
 .navbar-link:is(:hover, :focus-visible, .active) { color: var(--primary); }
 
 
