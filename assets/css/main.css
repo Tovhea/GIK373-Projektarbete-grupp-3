@@ -126,6 +126,10 @@
 
 /* Tablet */
 @media (min-width: 768px) {
+
+    html {
+        font-size: 12px;
+    }
     .hero {
         max-height: 600px;
     }
@@ -145,6 +149,11 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
+
+    html {
+        font-size: 14px;
+    }
+
     .hero {
         max-height: 800px;
     }
@@ -154,6 +163,24 @@
     .nav-toggle-btn ion-icon {
         display: none;
     }
+    /*navbarens utseende i desktopläge*/
+    .navbar {
+        display: block;
+        position: static;
+        visibility: visible;
+        transform: none;
+        border: none;
+        width: auto;
+        background-color: transparent;
+    }
 
+    .navbar-list {
+        display: flex;
+        gap: 32px;
+    }
+
+    .navbar-link {
+        color: var(--white);
+    }
 
 }

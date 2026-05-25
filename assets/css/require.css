@@ -13,7 +13,7 @@ colors, alla färger som används på sidan utgår ifrån dessa variabler som s�
 --black_a10:                hsla(0, 0%, 0%, 0.1);
 --black_a25:                hsla(0, 0%, 0%, 0.25);
 
---primary:                  hsla(220, 85%, 57%, 1);
+--primary:                  hsla(322, 100%, 68%, 1);
 --primary-light:            hsl(15, 17%, 91%);
 --primary-dark:             hsla(220, 85%, 38%, 1);
 
@@ -32,6 +32,7 @@ typografi, alla fontstorlekar utgår ifrån dessa variabler
 **/
 --ff-roboto:'Roboto', sans-serif; 
 --ff-opensans: 'Open Sans', sans-serif;
+--ff-abril: 'Abril Fatface';
 --fs-45: 4.5rem;
 --fs-38: 3.8rem;
 --fs-32: 3.2rem;
@@ -43,35 +44,10 @@ typografi, alla fontstorlekar utgår ifrån dessa variabler
 --fs-14: 1.4rem;
 --fs-12: 1.2rem;
 --fs-10: 1rem;
-
 --fw-400:400;
 --fw-500:500;
 --fw-600:600;
 
-/**
-fontstorlekarna läggs till klasserna för olika typer av text och rubriker
-**/
-
-.headline-lg {font-size: var(--fs-45); } /*huvudrubrik på hela sidan*/
-.headline-md {font-size: var(--fs-38); } 
-.headline-sm {font-size: var(--fs-24); }
-.title-lg {font-size: var(--fs-28); } /*rubriker för sektioner och kort*/
-.title-md {font-size: var(--fs-24); }
-.title-sm {font-size: var(--fs-16); }
-.body-lg {font-size: var(--fs-14); } /*brödtext och längre stycken*/
-.body-md {font-size: var(--fs-12); }
-.body-sm {font-size: var(--fs-10); }
-.label-lg {font-size: var(--fs-14);} /*Etiketter och datum*/
-.label-md {font-size: var(--fs-10);}
-
-
-/*font weight och färg*/
-.headline-lg,
-.headline-md,
-.headline-sm  {
-    color: var(--white);
-    line-height:1.2;
-}
 
 /**
 spacing
@@ -102,6 +78,43 @@ transition
 --transition-1:0.25s ease;
 --transition-2:0.5s ease;
 --cubic-out:(0.05, 0.83, 0.52, 0.97);
+
+}
+
+
+/**
+fontstorlekarna läggs till klasserna för olika typer av text och rubriker
+**/
+
+.headline-lg {font-size: var(--fs-24); } /*huvudrubrik på hela sidan*/
+.headline-md {font-size: var(--fs-38); } 
+.headline-sm {font-size: var(--fs-24); }
+.title-lg {font-size: var(--fs-28); } /*rubriker för sektioner och kort*/
+.title-md {font-size: var(--fs-24); }
+.title-sm {font-size: var(--fs-16); }
+.body-lg {font-size: var(--fs-14); } /*brödtext och längre stycken*/
+.body-md {font-size: var(--fs-12); }
+.body-sm {font-size: var(--fs-10); }
+.label-lg {font-size: var(--fs-14);} /*Etiketter och datum*/
+.label-md {font-size: var(--fs-10);}
+
+
+/*font weight och färg*/
+.headline-lg,
+.headline-md,
+.headline-sm  {
+    color: var(--white);
+    line-height:1.2;
+}
+
+.headline-lg,
+.headline-md,
+.headline-sm,
+.title-lg,
+.title-md,
+.title-sm {
+    font-family: var(--ff-abril); 
+}
 
 
 /**
@@ -153,7 +166,7 @@ button {
 
 html {
     font-family: var(--ff-opensans); /*standardfonten är nu open sans*/
-    font-size: 10px; /*definierar alla de andra fontstorlekarna, 1rem = 10px*/
+    font-size: 10px; /*definierar alla de andra fontstorlekarna, 1rem = 10px i mobilläge, de andra (desktop och tablet) sätts i sin mediaquery*/
     scroll-behavior: smooth;
 }
 
@@ -303,6 +316,3 @@ to { transform: rotate(360deg); }
 
 /* hover för länkarna i hamburgermenyn*/
 .navbar-link:is(:hover, :focus-visible, .active) { color: var(--primary); }
-
-
-}
