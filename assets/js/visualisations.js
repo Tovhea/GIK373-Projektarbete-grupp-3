@@ -94,6 +94,8 @@ function printSCBChart(dataSCB) {
       data: { labels, datasets },
 
       options: {
+        responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: {
             position: 'bottom',
