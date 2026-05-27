@@ -83,8 +83,8 @@
                 <h1 class="headline-lg">Lönegapet mellan män och kvinnor</h1>
             </section>
 
-            <h2 class="article-h2-1 headline-md">It has roots in a piece of classical</h2>
-            <h3 class="text-above-img">Sambandet mellan dessa variabler</h3>
+            <h2 class="article-h2-1 headline-sm">It has roots in a piece of classical</h2>
+            <h3 class="text-above-img description">Sambandet mellan dessa variabler</h3>
             <img class="article-image" src="./assets/images/diagram.jpg" alt="statistikbild">
 
 
@@ -100,8 +100,21 @@
                 Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
                 exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
 
-            <h2 class="article-h2-2 headline-lg"> Contrary to popular belief, Lorem Ipsum </h2>
-            <img class="image-left" src="./assets/images/diagram.jpg" alt="statistikbild">
+            <h2 class="article-h2-2 headline-sm"> Contrary to popular belief </h2>
+
+
+
+            <!--<img class="image-left" src="./assets/images/diagram.jpg" alt="statistikbild"> -->
+
+            <section class="image-left">
+                <!-- antal kvinnor vs män i olika inkomstklasser-->
+                <h3 class="description"> Antal kvinnor vs män i olika inkomstklasser </h3>
+                <div class="chart-container">
+                    <canvas id="scb2"></canvas>
+                </div>
+            </section>
+
+
             <p class="article-text-right body-lg"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has
                 roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
                 McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
@@ -112,7 +125,16 @@
                 Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
                 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. </p>
 
-            <img class="image-right" src="./assets/images/diagram.jpg" alt="statistikbild">
+                <h2 class="article-h2-3 headline-sm"> Contrary to popular belief </h2>
+
+            <!--<img class="image-right" src="./assets/images/diagram.jpg" alt="statistikbild"> -->
+
+                <section class="image-right">
+                    <h3 class="description"> Antal kvinnor vs män i olika inkomstklasser </h3>
+                    <div class="chart-container">
+                        <canvas id="scb3"></canvas>
+                    </div>
+                </section>
 
             <p class="article-text-left body-lg"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has
                 roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
@@ -124,9 +146,21 @@
                 Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
                 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. </p>
 
-            <section class="article-"></section>
-
         </section>
+
+
+
+    <!-- kartan-->
+        <div class="statistics-chart">
+            <canvas id="Map"></canvas>
+        </div>
+
+
+
+    <!-- hämtar in chart.js biblioteket och visualiseringarna-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+        <script src="./assets/js/visualisations.js"></script>
+        <script src="./assets/Karta/script.js"></script>
 
 
     </main>

@@ -96,6 +96,7 @@ fontstorlekarna läggs till klasserna för olika typer av text och rubriker
 .body-sm {font-size: var(--fs-10); }
 .label-lg {font-size: var(--fs-14);} /*Etiketter och datum*/
 .label-md {font-size: var(--fs-10);}
+.description {font-size: var(--fs-16);}
 
 
 /*font weight och färg*/
@@ -103,6 +104,13 @@ fontstorlekarna läggs till klasserna för olika typer av text och rubriker
 .headline-md,
 .headline-sm  {
     line-height:1.2;
+}
+
+.description {
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    padding: var(--spacing-s);
 }
 
 /*.headline-lg,
@@ -304,7 +312,6 @@ to { transform: rotate(360deg); }
 
 /*styling av innehållet i hamburgermenyn*/
 .navbar-link {
-    text-transform: uppercase;
     letter-spacing:3px;
     padding: var(--spacing-s);
     transition: var(--transition-1);

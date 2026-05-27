@@ -197,6 +197,7 @@ footer {
 
 /*styling av artikelsidan*/
 .container-article-long {
+    margin-top: var(--spacing-xxl);
     height: 100%;
     display: grid;
     grid-gap: 20px;
@@ -214,6 +215,7 @@ footer {
         "article-h2-2"
         "image-left"
         "article-text-right"
+        "article-h2-3"
         "image-right"
         "article-text-left";
 }
@@ -251,6 +253,10 @@ footer {
     grid-area: article-text-left;
 }
 
+.article-h2-3 {
+    grid-area: article-h2-3;
+}
+
 .image-right {
     grid-area: image-right;
     max-width: 100%;
@@ -263,7 +269,8 @@ footer {
 
 .article-head,
 .article-h2-1,
-.article-h2-2 {
+.article-h2-2,
+.article-h2-3 {
     text-align: center;
     color: var(--text-primary-black);
 }
@@ -283,11 +290,10 @@ footer {
     margin-inline: auto;
 }
 
-.text-above-img {
-    font-style: italic;
-    font-weight: 300;
-    text-align: center;
-    padding: var(--spacing-s);
+.chart-container {
+    max-width: 500px;
+    width: 100%;
+    margin-inline: auto;
 }
 
 
@@ -298,6 +304,10 @@ footer {
     html {
         font-size: 12px;
     }
+
+    .navbar-item:not(_last-child) {
+        border-block-end: none;
+
     .hero {
         max-height: 600px;
     }
@@ -322,6 +332,7 @@ footer {
     }
     .overlay__left .body-sm{
     max-width: 80%; }
+    
 
 }
 
@@ -375,16 +386,18 @@ footer {
     /*header spans 2 columner*/
     grid-template-areas: 
             "article-head article-head"
+            "article-h2-1 article-h2-1"
             "text-above-img text-above-img"
             "article-image article-image"
             "article-text-1 article-text-1"
-            "article-h2-1 article-h2-1"
-            "image-left article-text-right"
             "article-h2-2 article-h2-2"
+            "image-left article-text-right"
+            "article-h2-3 article-h2-3"
             "article-text-left image-right";  
     }
 
     .image-right {
         justify-self: end;
     }
+}
 }
