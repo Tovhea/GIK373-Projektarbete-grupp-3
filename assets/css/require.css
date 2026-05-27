@@ -30,9 +30,8 @@ colors, alla färger som används på sidan utgår ifrån dessa variabler som s�
 /**
 typografi, alla fontstorlekar utgår ifrån dessa variabler
 **/
---ff-roboto:'Roboto', sans-serif; 
+--ff-times: 'Times New Roman', Times, serif;
 --ff-opensans: 'Open Sans', sans-serif;
---ff-abril: 'Abril Fatface';
 --fs-45: 4.5rem;
 --fs-38: 3.8rem;
 --fs-32: 3.2rem;
@@ -107,14 +106,13 @@ fontstorlekarna läggs till klasserna för olika typer av text och rubriker
     line-height:1.2;
 }
 
-.headline-lg,
+/*.headline-lg,
 .headline-md,
 .headline-sm,
 .title-lg,
 .title-md,
 .title-sm {
-    font-family: var(--ff-abril); 
-}
+}*/
 
 
 /**
