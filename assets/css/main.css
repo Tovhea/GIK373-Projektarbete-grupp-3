@@ -194,20 +194,86 @@ footer {
 }
 
 /*styling av artikelsidan*/
-.article-long {
-    width: 80%;
+/*styling av artikelsidan*/
+.container-article-long {
+    height: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin-inline: auto;
 
+    /*header spans 2 columner*/
+    grid-template-areas: "head head"
+        "text-above-img text-above-img"
+        "image-1 image-1"
+        "text-1 text-1"
+        "article-h2-1 article-h2-1"
+        "image-2 text-2"
+        "article-h2-2 article-h2-2"
+        "text-3 image-3";
 }
 
-.date{
+.article-head {
+    grid-area: head;
+}
+
+.text-above-img {
+    grid-area: text-above-img;
+}
+
+.article-image {
+    grid-area: image-1;
+}
+
+.article-h2-1 {
+    grid-area: article-h2-1;
+}
+
+.article-text-1 {
+    grid-area: text-1;
+}
+
+.image-left {
+    grid-area: image-2;
+    width: 250px;
+}
+
+.article-h2-2 {
+    grid-area: article-h2-2;
+}
+
+.article-text-left {
+    grid-area: text-2;
+}
+
+.image-right {
+    grid-area: image-3;
+    width: 250px;
+    justify-self: end;
+}
+
+.article-text-right {
+    grid-area: text-3;
+}
+
+
+.article-head,
+.article-h2-1,
+.article-h2-2 {
+    text-align: center;
+    color: var(--text-primary-black);
+}
+
+.date {
     font-weight: 300;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .title {
     text-align: center;
     padding: var(--spacing-xl);
-    }
+}
 
 .statistic-img {
     width: 90%;
