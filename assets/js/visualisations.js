@@ -86,54 +86,22 @@ function printSCBChart(dataSCB) {
     data: { labels, datasets },
 
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           position: "bottom",
-
-      data: { labels, datasets },
-
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            position: 'bottom',
-            
-            labels: {
-              usePointStyle: true,
-              pointStyle: 'circle',
-              boxWidth: 4,
-              boxHeight: 4,
-              font: {
-                family: "Open Sans",
-                size: 12
-              }
-            }
-          } 
-        },
-
-        scales: {
-          x: {
-            ticks: {
-              padding: 15,
-              font: {
-                family: "Open Sans",
-                size: 10
-              },
-              minRotation: 45,
-              maxRotation: 45
           labels: {
             usePointStyle: true,
-            pointStyle: "circle",
+            pointStyle: 'circle',
             boxWidth: 4,
             boxHeight: 4,
             font: {
               family: "Open Sans",
-              size: 14,
-              weight: "bold",
-            },
-          },
-        },
+              size: 12
+            }
+          }
+        } 
       },
 
       scales: {
