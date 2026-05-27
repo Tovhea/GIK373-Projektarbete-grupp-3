@@ -9,6 +9,7 @@
     max-height: 400px;
     overflow: hidden; /* klipper bilden om den sticker ut */
     position:relative;
+    color: var(--text-primary-white)
 }
 
 .hero-image {
@@ -193,29 +194,32 @@ footer {
     margin-bottom: 1rem;
 }
 
-/*styling av artikelsidan*/
+
 /*styling av artikelsidan*/
 .container-article-long {
     height: 100%;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    width: 70%;
+    grid-template-columns: 1fr;
+    width: 80%;
     margin-inline: auto;
 
     /*header spans 2 columner*/
-    grid-template-areas: "head head"
-        "text-above-img text-above-img"
-        "image-1 image-1"
-        "text-1 text-1"
-        "article-h2-1 article-h2-1"
-        "image-2 text-2"
-        "article-h2-2 article-h2-2"
-        "text-3 image-3";
+    grid-template-areas: 
+        "article-head"
+        "article-h2-1"
+        "text-above-img"
+        "article-image"
+        "article-text-1"
+        "article-h2-2"
+        "image-left"
+        "article-text-right"
+        "image-right"
+        "article-text-left";
 }
 
 .article-head {
-    grid-area: head;
+    grid-area: article-head;
 }
 
 .text-above-img {
@@ -223,20 +227,20 @@ footer {
 }
 
 .article-image {
-    grid-area: image-1;
+    grid-area: article-image;
+}
+
+.article-text-1 {
+    grid-area: article-text-1;
 }
 
 .article-h2-1 {
     grid-area: article-h2-1;
 }
 
-.article-text-1 {
-    grid-area: text-1;
-}
-
 .image-left {
-    grid-area: image-2;
-    width: 250px;
+    grid-area: image-left;
+    max-width: 100%;
 }
 
 .article-h2-2 {
@@ -244,17 +248,16 @@ footer {
 }
 
 .article-text-left {
-    grid-area: text-2;
+    grid-area: article-text-left;
 }
 
 .image-right {
-    grid-area: image-3;
-    width: 250px;
-    justify-self: end;
+    grid-area: image-right;
+    max-width: 100%;
 }
 
 .article-text-right {
-    grid-area: text-3;
+    grid-area: article-text-right;
 }
 
 
@@ -310,6 +313,7 @@ footer {
         width: 100%;
     }
 
+    /*skriver över redan satta fontstorlekar, bättre att ändra dessa i requirefilen istället*/
     .body-sm {
         font-size: xx-small;
     }
@@ -317,8 +321,7 @@ footer {
         font-size: small;
     }
     .overlay__left .body-sm{
-    max-width: 80%;
-}
+    max-width: 80%; }
 
 }
 
@@ -358,6 +361,30 @@ footer {
         color: var(--white);
     }
 
-    
+    /*styling av lång artikelsida i tablet format
+    .container-article-long {
+        grid-template-columns: 1fr 1fr;
+        max-width: 50%;
+    } */
 
+        /*styling av lång artikelsida i tablet format*/
+    .container-article-long {
+    grid-template-columns: 1fr 1fr;
+    max-width: 70%;
+
+    /*header spans 2 columner*/
+    grid-template-areas: 
+            "article-head article-head"
+            "text-above-img text-above-img"
+            "article-image article-image"
+            "article-text-1 article-text-1"
+            "article-h2-1 article-h2-1"
+            "image-left article-text-right"
+            "article-h2-2 article-h2-2"
+            "article-text-left image-right";  
+    }
+
+    .image-right {
+        justify-self: end;
+    }
 }
