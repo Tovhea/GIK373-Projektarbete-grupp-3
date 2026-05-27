@@ -85,7 +85,7 @@ transition
 fontstorlekarna läggs till klasserna för olika typer av text och rubriker
 **/
 
-.headline-lg {font-size: var(--fs-24); } /*huvudrubrik på hela sidan*/
+.headline-lg {font-size: var(--fs-45); } /*huvudrubrik på hela sidan*/
 .headline-md {font-size: var(--fs-38); } 
 .headline-sm {font-size: var(--fs-24); }
 .title-lg {font-size: var(--fs-28); } /*rubriker för sektioner och kort*/
@@ -102,7 +102,6 @@ fontstorlekarna läggs till klasserna för olika typer av text och rubriker
 .headline-lg,
 .headline-md,
 .headline-sm  {
-    color: var(--white);
     line-height:1.2;
 }
 
@@ -173,7 +172,6 @@ body{
     color: var(--text-primary-black);
     line-height: 1.5;
     overflow:hidden; /*allt innehåll som sticker utanför elementets gränser klipps bort och döljs*/
-    height: 300vh; /* viewport height – alltså höjden på webbläsarfönstret, elementet är 3 gånger så högt som fönstret*/
 }
 
 body.loaded {overflow:visible;} /* Medan sidan laddar vill man dölja element som ännu inte animerats in. När allt är klart lägger JavaScript till klassen loaded på body*/ 
