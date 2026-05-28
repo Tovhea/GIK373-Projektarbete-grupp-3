@@ -187,6 +187,21 @@
 
 
 /*styling av artikelsidan*/
+
+/*.long-article-image {
+    width: 100%;
+    opacity:0.5;
+}*/
+
+.main-headline-article {
+    margin-top: var(--spacing-s);
+}
+
+hr {
+    border-top: 2px solid var(--black_a10);
+    width: 20%; /* hur brett strecket ska vara */
+    margin: var(--spacing-s) auto;  
+}
 .container-article-long {
     margin-top: var(--spacing-xxl);
     height: 100%;
@@ -195,6 +210,7 @@
     grid-template-columns: 1fr;
     width: 80%;
     margin-inline: auto;
+    max-width: 80%;
 
     /*header spans 2 columner*/
     grid-template-areas:
