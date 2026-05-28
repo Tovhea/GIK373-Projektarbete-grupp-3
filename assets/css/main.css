@@ -221,7 +221,7 @@
     font-style: italic;
     font-weight: 300;
     text-align: center;
-    padding: var(--spacing-s);
+    /*padding: var(--spacing-xs);*/
     }
 
     .article-image {
@@ -238,7 +238,6 @@
 
     .image-left {
     grid-area: image-left;
-    width: 250px;
     }
 
     .article-h2-2 {
@@ -259,7 +258,6 @@
 
     .image-right {
     grid-area: image-right;
-    width: 250px;
     }
 
     .article-text-right {
@@ -353,7 +351,7 @@
             max-width: 80%;
         }
             
-        }
+    }
 
     /* Desktop */
     @media (min-width: 1024px) {
@@ -390,10 +388,14 @@
             color: var(--white);
         }
 
+        .image-right {
+        justify-self: end;
+        }
+
         /*styling av artikelsidan*/
         .container-article-long {
         grid-template-columns: 1fr 1fr;
-        width: 80%;
+        max-width: 50%; 
         
         /*header spans 2 columner*/
         grid-template-areas:
@@ -408,8 +410,4 @@
         "article-h2-3 article-h2-3"
         "article-text-left image-right";
         } 
-
-        .image-right {
-        justify-self: end;
-        }
-}
+    }
