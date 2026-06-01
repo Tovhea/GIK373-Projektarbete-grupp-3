@@ -115,6 +115,13 @@ footer {
   margin-top: var(--spacing-l);
 }
 
+.map{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .article-image {
   display: block;
   width: 100%;

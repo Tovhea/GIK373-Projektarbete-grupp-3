@@ -29,6 +29,10 @@
     -->
         <link rel="stylesheet" href="./assets/css/require.css">
         <link rel="stylesheet" href="./assets/css/main.css">
+        <script
+        src="https://cdn.plot.ly/plotly-3.5.1.min.js"
+        charset="utf-8"
+        ></script>
 
     </head>
 </head>
@@ -80,16 +84,6 @@
             </div>
         </header>
 
-
-        <!--<img class="long-article-image" src="./assets/images/card_1.png" alt="artikelbild">
-        <section class="container-article-long">
-
-            <section class="article-head">
-                    <div class="image__overlay">
-                            <h4 class="date label-md">20 MAJ 2026</h4>
-                            <h1 class="main-headline-article headline-lg">Lönegapet mellan män och kvinnor</h1>
-                    </div>
-            </section> -->
         <section class="container-article-long">
             <section class="article-head">
                     <h4 class="date label-md">20 MAJ 2026</h4>
@@ -100,8 +94,11 @@
 
             <h2 class="article-h2-1 headline-sm">Skillnader i olika delar av landet</h2>
             <h3 class="text-above-img description">Sambandet mellan dessa variabler</h3>
-            <img class="article-image" src="./assets/images/diagram.jpg" alt="statistikbild">
+            <section class="article-image">
+                <div id="Map"></div>
 
+    <!-- <script src="Karta/script.js"></script> -->
+            </section>
 
             <p class="article-text-1 body-lg"> Lönegapet förklaras till stor del av att kvinnor arbetar färre timmar. 
 
@@ -150,6 +147,7 @@ Studien lyfter även problematiken kring individuell lönesättning. Kommunerna 
 
         </section>
 
+    <!-- hämtar in kartan-->
 
 
 
@@ -158,12 +156,15 @@ Studien lyfter även problematiken kring individuell lönesättning. Kommunerna 
     <!-- hämtar in chart.js biblioteket och visualiseringarna-->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
         <script src="./assets/js/visualisations.js"></script>
-        <script src="./assets/Karta/script.js"></script>
+    <!-- <script src="Karta/script.js"></script> -->
 
+    <script src="./assets/js/script.js"></script>
+    <script src="./script.js"></script>
 
     </main>
     <!-- CUSTOM JS LINK (egenskriven js fil) -->
-    <script src="./assets/js/script.js"></script>
+
+    <!--<script src="./assets/Karta/script.js"></script>-->
 </body>
 
 </html>
