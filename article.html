@@ -29,6 +29,10 @@
     -->
         <link rel="stylesheet" href="./assets/css/require.css">
         <link rel="stylesheet" href="./assets/css/main.css">
+        <script
+        src="https://cdn.plot.ly/plotly-3.5.1.min.js"
+        charset="utf-8"
+        ></script>
 
     </head>
 </head>
@@ -54,11 +58,11 @@
             <ul class="navbar-list">
 
                 <li class="navbar-item">
-                    <a href="./index.html" class="label-lg navbar-link has-after active" data-nav-link>Hem</a>
-                </li>
+                    <a href="./index.html" class="label-lg navbar-link has-after" data-nav-link>Hem</a>
+                        </li>
 
-                <li class="navbar-item">
-                    <a href="./article.html" class="label-lg navbar-link has-after" data-nav-link>Löneskillnader</a>
+                        <li class="navbar-item">
+                            <a href="./article.html" class="label-lg navbar-link has-after active" data-nav-link>Löneskillnader</a>
                 </li>
 
                 <li class="navbar-item">
@@ -85,16 +89,6 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-
-        <!--<img class="long-article-image" src="./assets/images/card_1.png" alt="artikelbild">
-        <section class="container-article-long">
-
-            <section class="article-head">
-                    <div class="image__overlay">
-                            <h4 class="date label-md">20 MAJ 2026</h4>
-                            <h1 class="main-headline-article headline-lg">Lönegapet mellan män och kvinnor</h1>
-                    </div>
-            </section> -->
         <section class="container-article-long">
             <section class="article-head">
                     <h4 class="date label-md">20 MAJ 2026</h4>
@@ -105,8 +99,11 @@
 
             <h2 class="article-h2-1 headline-sm">Skillnader i olika delar av landet</h2>
             <h3 class="text-above-img description">Sambandet mellan dessa variabler</h3>
-            <img class="article-image" src="./assets/images/diagram.jpg" alt="statistikbild">
+            <section class="article-image">
+                <div id="Map"></div>
 
+    <!-- <script src="Karta/script.js"></script> -->
+            </section>
 
             <p class="article-text-1 body-lg"> Lönegapet förklaras till stor del av att kvinnor arbetar färre timmar. 
 
@@ -133,14 +130,14 @@ Studien lyfter även problematiken kring individuell lönesättning. Kommunerna 
                 
                 Cirka en fjärdedel av det totala könslönegapet kan förklaras av en överrepresentation av kvinnor i relativt lågavlönade sektorer, såsom omsorg, hälsa eller utbildning. (25%)(europa.eu)  </p>
 
-                <h2 class="article-h2-3 headline-sm"> Contrary to popular belief </h2>
+                <h2 class="article-h2-3 headline-sm"> Skillnaden bland inkomstklasser </h2>
 
                 <section class="image-right">
                     <h3 class="description"> Lönegapet i olika inkomstklasser </h3>
                     <div class="chart-container">
                         <canvas id="scb3"></canvas>
                     </div>
-                    <p class="Data-Kalla" > Källa: Statistiska centralbyrån (2024)</p>
+                    <p class="data-kalla" > Källa: Statistiska centralbyrån (2024)</p>
                 </section>
 
             <p class="article-text-left body-lg"> Grafen visar kvinnors lön som andel av mäns lön i olika inkomstpercentiler. 
@@ -153,6 +150,7 @@ Studien lyfter även problematiken kring individuell lönesättning. Kommunerna 
 
         </section>
 
+    <!-- hämtar in kartan-->
 
 
 
@@ -161,12 +159,15 @@ Studien lyfter även problematiken kring individuell lönesättning. Kommunerna 
     <!-- hämtar in chart.js biblioteket och visualiseringarna-->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
         <script src="./assets/js/visualisations.js"></script>
-        <script src="./assets/Karta/script.js"></script>
+    <!-- <script src="Karta/script.js"></script> -->
 
+    <script src="./assets/js/script.js"></script>
+    <script src="./script.js"></script>
 
     </main>
     <!-- CUSTOM JS LINK (egenskriven js fil) -->
-    <script src="./assets/js/script.js"></script>
+
+    <!--<script src="./assets/Karta/script.js"></script>-->
 </body>
 
 </html>
