@@ -5,17 +5,19 @@
 
 .hero {
   width: 100%;
-  max-height: 400px;
+  height: 300px;
   overflow: hidden; /* klipper bilden om den sticker ut */
   position: relative;
 }
 
-.hero-image {
+.hero-image, .hero-image-desktop {
   height: 100%;
   width: 100%;
   object-fit: cover; /* beskär bilden snyggt utan att den förvrängs */
-  object-position: center; /* centrerar bilden vid beskärning */
+  object-position: center 8%; /* centrerar bilden vid beskärning */
+  display: block;
 }
+
 
 .hero-text {
   position: absolute;
@@ -38,11 +40,24 @@ footer {
   color: white;
   padding: 20px;
   margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-link {
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: rgba(255, 255, 255, 0.5)
 }
 
 /*Sektion mål */
 .goals {
-  padding-top: var(--spacing-s);
+
   background-color: var(--surface-tone);
 }
 
@@ -55,7 +70,7 @@ footer {
 .goals-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-l);
+
   justify-content: center;
 }
 
@@ -130,7 +145,7 @@ footer {
 }
 
 .article-card {
-  max-width: 100%;
+  width: 100%;
   background-color: var(--white);
   color: var(--text-primary-black);
   border-radius: 0.5rem;
@@ -138,66 +153,58 @@ footer {
   box-shadow: var(--shadow);
   border-top: 1px solid var(--black_a10);
 }
-/*
+
 .image {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
-.image__overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  padding: var(--spacing-s);
-  color: rgb(45, 41, 36);
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.25s;
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    padding: var(--spacing-s);
+    color: rgb(45, 41, 36);
+    transition: background 0.25s;
 }
 
-.image__overlay:hover {
-  background: rgba(0, 0, 0, 0.15);
+.image-overlay:hover {
+    background: rgba(0, 0, 0, 0.15);
 }
-
 .overlay-content {
-  max-width: 60%;
+    max-width: 60%;
 }
 
-.overlay__left {
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  flex-direction: column;
+.overlay-left {
+    justify-content: flex-start;
+    align-items:flex-start;
+    text-align: left;
+    flex-direction: column;
 }
 
-.overlay__right {
-  justify-content: flex-start;
-  align-items: flex-end;
-  text-align: right;
-  flex-direction: column;
+.overlay-right {
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
+    flex-direction: column;
 }
-
-.overlay__center {
-  justify-content: top;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
+/*
+.overlay-center {
+    justify-content: top;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+}*/
+.overlay-left .body-sm{
+    max-width: 65%;
 }
-.overlay__left .body-sm {
-  max-width: 65%;
-}
-.overlay__center .title-sm {
-  margin-top: 30px;
+.overlay-center .title-sm{
+    margin-top: 30px;
 }
 .title-sm {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
-/*styling av artikelsidan*/
-
-/*.long-article-image {
-width: 100%;
-opacity:0.5;
-}*/
 
 .main-headline-article {
   margin-top: var(--spacing-s);
@@ -363,6 +370,11 @@ hr {
   margin: 0px;
 }
 
+.data-kalla {
+  text-align: right;
+  font-size: 0.8rem;
+  
+}
 
 /* Tablet */
 @media (min-width: 768px) {
@@ -375,7 +387,15 @@ hr {
   }
 
   .hero {
-    max-height: 600px;
+    height: 400px;
+  }
+  .hero-image-mobile {
+    display: none;
+  }
+
+  .hero-image-desktop {
+    display: block;
+    object-position: center;
   }
 
   .goals-grid {
@@ -384,7 +404,7 @@ hr {
   }
 
   .articles-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
   }
 
@@ -406,8 +426,9 @@ hr {
   }
 
   .hero {
-    max-height: 800px;
+    height: 500px;
   }
+
 
   /*döjer hamburgermenyknappen vid desktopläge*/
   .nav-toggle-btn,
