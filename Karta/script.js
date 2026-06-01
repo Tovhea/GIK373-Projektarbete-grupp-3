@@ -82,11 +82,10 @@ function printMapData(data) {
 
       colorscale: [
         [0, "rgb(84, 167, 255)"],
-        [0.5, "rgb(75, 0, 130)"],
         [1, "rgb(255, 94, 196)"],
       ],
 
-      colorbar: {
+      colorbar: { 
         title: {
           text: "Löneskillnad (%)",
           font: {
@@ -98,6 +97,8 @@ function printMapData(data) {
     },
   ];
 
+
+  
   const layout = {
         title: {
       text: "Löneskillnad mellan män och kvinnor i olika regioner",
