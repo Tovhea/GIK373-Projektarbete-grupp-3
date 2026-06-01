@@ -2,6 +2,9 @@
 /* Grundstyle – mobil */
 
 /*HEADER*/
+.logo {
+    padding: 5px;
+}
 
 .hero {
   width: 100%;
@@ -29,7 +32,7 @@
   width: 50%; /* så texten inte blir för smal */
 }
 
-.headline-lg {
+.headline-sm {
   margin-bottom: 0.3rem;
 }
 
@@ -366,8 +369,11 @@ hr {
 
 /* Tablet */
 @media (min-width: 768px) {
-  html {
-    font-size: 12px;
+  /*html {
+    font-size: 15px;
+  }*/
+  .hero-headline {
+    font-size: var(--fs-38);
   }
 
   .navbar-item:not(_last-child) {
@@ -409,8 +415,11 @@ hr {
 
 /* Desktop */
 @media (min-width: 1024px) {
-  html {
-    font-size: 14px;
+  /*html {
+    font-size: 20px;
+  }*/
+  .hero-headline {
+    font-size: var(--fs-45);
   }
 
   .hero {
