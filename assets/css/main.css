@@ -36,6 +36,19 @@
   margin-bottom: 0.3rem;
 }
 
+.header-background {
+    height: 60px; /* justera efter headerns höjd */
+    overflow: hidden;
+
+}
+.header-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
 /*FOOTER*/
 
 footer {
@@ -430,6 +443,11 @@ hr {
   /*html {
     font-size: 20px;
   }*/
+
+  .header-background {
+    height: 62px;
+  }
+
   .hero-headline {
     font-size: var(--fs-45);
   }
