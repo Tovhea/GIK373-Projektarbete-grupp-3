@@ -2,20 +2,32 @@
 /* Grundstyle – mobil */
 
 /*HEADER*/
-
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
 .hero {
     width: 100%;
-    max-height: 400px;
+    max-height: 350px;
     overflow: hidden; /* klipper bilden om den sticker ut */
     position:relative;
 }
 
 .hero-image {
-    height: 100%;
+    width: 100%;
+    display: block;
+
+    transition: object-position 0.3s ease;
+
+    /*height: 100%;
     width: 100%;
     object-fit: cover; /* beskär bilden snyggt utan att den förvrängs */
-    object-position: center; /* centrerar bilden vid beskärning */
+    /*object-position: center top; /* centrerar bilden vid beskärning */
+}
+.hero-image-desktop {
+    width: 100%;
+    display: none;
 }
 
 .hero-text {
@@ -37,13 +49,27 @@
 footer {
     background-color: rgb(86, 79, 70);
     color: white;
-    padding: 20px;
+    padding: 30px;
     margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-link {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.footer-link:hover {
+    opacity: 0.6;
 }
 
 /*Sektion mål */
 .goals {
-    padding-top: var(--spacing-s); 
+    padding-top: 0.5rem; /*var(--spacing-s)*/
+    padding-bottom: 0.5rem;
     background-color: var(--surface-tone);
 }
 
@@ -51,23 +77,25 @@ footer {
 .goal-card {
     text-align: center;
     border-block-end: 0.5px solid var(--black_a10); 
-    padding: var(--spacing-l);
+    padding: var(--spacing-s);
     
 } 
 
 .goals-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    /*grid-template-columns: 1fr;*/
     gap: var(--spacing-l); 
     justify-content: center;
 
-}
+    grid-template-columns: repeat(3, 1fr); 
+    width: 100%;
 
+}
 
 /* cirkel för målen*/
 .icon-circle {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: var(--white);
     display: flex;
@@ -78,37 +106,37 @@ footer {
 }
 
 .icon-circle img {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     object-fit: contain;
 }
 
-.statistics-section {
+.stats-section {
     padding: 2rem;
 }
 
-.statistics-layout {
+.stats-layout {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
 
-.statistics-chart {
+.stats-chart {
     flex: 1.5;
     min-width: 0;
     height: 200px;
     position: relative;
 }
-.statistics-text {
+.stats-text {
     flex: 1;
     max-width: 300px;
 }
-.statistics-chart canvas {
+.stats-chart canvas {
     width: 100% !important;
     height: 100% !important;
 }
-.statistics-title {
+.stats-title {
     margin-bottom: 7px;
 }
 
@@ -123,11 +151,16 @@ footer {
 }
 
 
+.image {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
 .article-image {
-    display: block;
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
 }
 
 .article-card {
@@ -139,11 +172,11 @@ footer {
     box-shadow: var(--shadow);
     border-top: 1px solid var(--black_a10);
 }
-
+/*
 .image {
     position:relative;
     width: 100%;
-}
+}*/
 
 .image__overlay {
     position: absolute;
@@ -230,17 +263,34 @@ footer {
         font-size: 12px;
     }
     .hero {
-        max-height: 600px;
+        max-height: 400px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+    .hero-image-desktop {
+        display: block;
     }
 
     .goals-grid {
         grid-template-columns: repeat(3, 1fr); 
         width: 100%;
     }
-
+    .goal-card {
+        padding: var(--spacing-l);
+    }
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+    .icon-circle img {
+        width: 40px;
+        height: 40px;
+    }
 
     .articles-grid {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(2, 1fr); 
         width: 100%;
     }
 
@@ -264,7 +314,14 @@ footer {
     }
 
     .hero {
-        max-height: 800px;
+        max-height: 500px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+    .hero-image-desktop {
+        display: block;
     }
 
     /*döjer hamburgermenyknappen vid desktopläge*/
@@ -285,11 +342,12 @@ footer {
 
     .navbar-list {
         display: flex;
-        gap: 32px;
+        gap: 14px;
     }
 
     .navbar-link {
         color: var(--white);
+        font-size: 1.2rem;
     }
 
     
