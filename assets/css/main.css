@@ -356,6 +356,11 @@ hr {
   margin: 0px;
 }
 
+.data-kalla {
+  text-align: right;
+  font-size: 0.8rem;
+  
+}
 
 /* Tablet */
 @media (min-width: 768px) {
