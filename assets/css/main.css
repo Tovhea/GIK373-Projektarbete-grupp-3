@@ -345,8 +345,17 @@ hr {
 
 .headline-md {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 150px;
 }
+.reference-item {
+     overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.container-kallor {
+  margin: 0px;
+}
+
 
 /* Tablet */
 @media (min-width: 768px) {
