@@ -99,7 +99,7 @@ function printMapData(data) {
   ];
 
   const layout = {
-    title: {
+        title: {
       text: "Löneskillnad mellan män och kvinnor i olika regioner",
       font: {
         family: "Open Sans",

@@ -6,12 +6,12 @@
 colors, alla färger som används på sidan utgår ifrån dessa variabler som sätts senare på elementen
 **/
 --black:                    hsla(0, 0%, 15%, 1);
---white:                    hsla(220, 15%, 95%, 1);
+--white:                    hsla(0, 0%, 98%, 1);
 --white_a10:                hsla(0, 0%, 100%, 0.1);
 --white_a25:                hsla(0, 0%, 100%, 0.25);
 --white_a50:                hsla(0, 0%, 100%, 0.5);
 --black_a10:                hsla(0, 0%, 0%, 0.1);
---black_a25:                hsla(0, 0%, 0%, 0.15);
+--black_a25:                hsla(0, 0%, 0%, 0.039);
 
 --primary:                  hsla(322, 100%, 68%, 1);
 --primary-light:            hsl(15, 17%, 91%);
@@ -151,23 +151,6 @@ text-decoration:none;
 
 img {
 height:auto;
-}
-
-button {
-    background: none;
-    border: none;
-    font: inherit;
-    cursor: pointer;
-
-}
-
-.button-primary {
-    background: var(--black);
-    box-shadow: var(--shadow);
-    padding: 4px 20px;
-    border-radius: 30px;
-    color: var(--text-primary-white);
-
 }
 
 html {

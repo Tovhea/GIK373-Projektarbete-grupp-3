@@ -834,16 +834,9 @@ function printMapData(data) {
   ];
 
   const layout = {
-    title: {
-      text: "Löneskillnad mellan män och kvinnor i olika regioner",
-      font: {
-        family: "Open Sans",
-        size: 16,
-      },
-    },
-    map: { center: { lon: 15, lat: 62 }, zoom: 3 },
-    width: 800,
-    height: 700,
+    map: { center: { lon: 15, lat: 62 }, zoom: 2.5 },
+    paper_bgcolor: "rgba(0,0,0,0)",  // bakgrunden runt kartan
+    plot_bgcolor: "rgba(0,0,0,0)",   // bakgrunden inuti plotområdet
   };
 
   Plotly.newPlot("Map", plotData, layout);

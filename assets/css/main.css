@@ -61,7 +61,7 @@ footer {
 /*Sektion mål */
 .goals {
 
-  background-color: var(--surface-tone);
+  background-color: var(--white);
 }
 
 .goal-card {
@@ -79,10 +79,10 @@ footer {
 
 /* cirkel för målen*/
 .icon-circle {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background: var(--white);
+  background: var(--black_a10);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,6 +94,10 @@ footer {
   width: 40px;
   height: 40px;
   object-fit: contain;
+}
+
+.goal-title {
+  padding-top:var(--spacing-s);
 }
 
 .statistics-section {
@@ -365,7 +369,7 @@ hr {
   padding-top: 150px;
 }
 .reference-item {
-     overflow-wrap: break-word;
+    overflow-wrap: break-word;
     word-break: break-word;
 }
 
@@ -405,31 +409,50 @@ hr {
   }
 
   .goals-grid {
-    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-columns: repeat(3, 1fr);*/
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
     width: 100%;
+  }
+
+  .goal-divider {
+    border: none;
+    border-left: 0.5px solid var(--black_a10);
+    height: 60%;
+    display: none;
+  }
+  
+  .goal-divider {
+    display: block;
+  }
+
+  .goal-card{
+  border-block-end: none;
   }
 
   .articles-grid {
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
   }
 
   .body-sm {
-    font-size: xx-small;
+  font-size: xx-small;
   }
+
   .title-sm {
-    font-size: small;
+  font-size: small;
   }
   .overlay__left .body-sm {
-    max-width: 80%;
+  max-width: 80%;
   }
-}
 
 /* Desktop */
 @media (min-width: 1024px) {
   /*html {
     font-size: 20px;
   }*/
+
+
   .hero-headline {
     font-size: var(--fs-45);
   }
@@ -458,7 +481,37 @@ hr {
   .navbar-list {
     display: flex;
     gap: 32px;
+    justify-content: center;
   }
+
+/* .header{
+    position: relative;
+  }
+
+  .header .container {
+    position: relative;
+  }
+
+  .navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+  } */
+
+  .header .container {
+    justify-content: space-between;
+  }
+
+  .navbar {
+    position: static;
+    transform: none;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
 
   .navbar-link {
     color: var(--white);
