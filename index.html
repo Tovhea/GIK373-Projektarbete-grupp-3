@@ -66,11 +66,15 @@ Bakgrundsbilder i CSS)
                 </li>
 
                 <li class="navbar-item">
-                    <a href="./data.html" class="label-lg navbar-link has-after" data-nav-link>Data</a>
+                    <a href="./article.html" class="label-lg navbar-link has-after" data-nav-link>Löneskillnader</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="./sources.html" class="label-lg navbar-link has-after" data-nav-link>Källor</a>
+                    <a href="./data.html" class="label-lg navbar-link has-after" data-nav-link>Faktorer</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="./sources.html" class="label-lg navbar-link has-after" data-nav-link>Referenslista</a>
                 </li>
             </ul>
 
@@ -94,6 +98,7 @@ Bakgrundsbilder i CSS)
 
 <div class="hero">
     <img class ="hero-image" src="./assets/images/header.png" alt="hero image">
+    <img class ="hero-image-desktop" src="./assets/images/kapad_header.png" alt="hero image">
     <div class="hero-text">
         <h1 class="headline-lg">Lönegapet mellan män och kvinnor</h1>
         <p class="body-lg">Statistik, utveckling och faktorer bakom lönegapet i Sverige</p>
@@ -139,7 +144,7 @@ Bakgrundsbilder i CSS)
             <h2 class="statistics-title headline-sm">Lönegapet över tid</h2>
             <p>Hur stora är egentligen skillnaderna mellan mäns och kvinnors löner? Statistiken visar hur lönegapet skiljer sig mellan olika regioner, inkomstnivåer och över tid samt vilka faktorer som kan ligga bakom löneskillnaden.</p>
         </div>
-        <div class="statistics-chart">
+        <div class="stats-chart">
             <canvas id="scb"></canvas>
         </div>
     </div>
@@ -164,18 +169,20 @@ Bakgrundsbilder i CSS)
                     </div>
                 </div>
             </a>
-            <div class="article-card">
-                <div class="image">
+            <a href="./data.html" class="data-link">
+                <div class="article-card">
+                    <div class="image">
                         <img class ="article-image" src="./assets/images/card_2.png" alt="artikelbild">
                         <div class="image__overlay overlay__right">
                             <div class="overlay-content">
                                 <h3 class="title-sm">Faktorer bakom löneskillnaden</h3>
                                 <p class="body-sm">Läs mer om hur bland annat föräldraledighet påverkar löneskillnaderna.</p>
                             </div>
-                            
                         </div>
                     </div>
-            </div>
+                </div>
+            </a>
+            <!--
             <div class="article-card">
                 <div class="image">
                         <img class ="article-image" src="./assets/images/card_3.png" alt="artikelbild">
@@ -183,16 +190,22 @@ Bakgrundsbilder i CSS)
                             <h3 class="title-sm">Referenslista</h3>
                         </div>
                     </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </section>
 
 </main>
 <footer>
-    <p>Sandra Eriksson</p>
-    <p>Tove Hübinette</p>
-    <p>Gustav Westman</p>
+    <div>
+        <p>Sandra Eriksson</p>
+        <p>Tove Hübinette</p>
+        <p>Gustav Westman</p>
+    </div>
+
+    <a href="./sources.html" class="footer-link">
+        Referenslista
+    </a>
 </footer>
 <!-- CUSTOM JS LINK (egenskriven js fil) --> 
 <script src="./assets/js/script.js"></script>

@@ -249,14 +249,14 @@ to { transform: rotate(360deg); }
 }
 
 .header {
-    position: fixed;
+    position: absolute; /*position: fixed;*/
     top:0;
     left: 0;
     width:100%;
     color: var(--white);
     background-color: var(--black_a25);
     z-index:4;
-    padding-block: 8px;
+    padding-block: 3px; /*8px*/
     transition: var(--transition-1);
 }
 

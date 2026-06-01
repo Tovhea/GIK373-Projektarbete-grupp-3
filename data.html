@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lönegapet mellan män och kvinnor</title>
+    <meta name="title" content="Vi är grupp 3">
+    <meta name="decription" content="Det här är en hemsida med statistiska visualiseringar gjord av grupp 3">
+
+<!-- 
+Favicon(den lilla bilden som visas i webbläsarfliken)
+--> 
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-32x32.png">
+
+<!--
+google fonts
+--> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--roboto --> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!--open sans --> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!--abril fatface --> 
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Petit+Formal+Script&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+DE+Grund+Guides&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+PL:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<!--
+custom css link
+--> 
+<link rel="stylesheet" href="./assets/css/require.css">
+<link rel="stylesheet" href="./assets/css/style.css"> 
+<link rel="stylesheet" href="./assets/css/main.css"> 
+
+
+</head>
+<body>
+
+
+<!-- PRELOADER snurrande cirkel som kommer upp om innehållet på sidan behöver tid på sig att ladda-->
+<div class="preloader" data-preloader>
+    <div class="preloader-circle"></div>
+</div>
+
+
+
+<!-- HEADER -->
+<header class="header" data-header>
+    <div class="container">
+
+        <a href="./index.html" class="logo">
+            <img src="assets/images/våg.png" width="65" height="20" alt="EQUALIA">
+        </a>
+
+        <nav class="navbar" data-navbar>
+            <ul class="navbar-list">
+
+                <li class="navbar-item">
+                    <a href="./index.html" class="label-lg navbar-link has-after active" data-nav-link>Hem</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="./article.html" class="label-lg navbar-link has-after" data-nav-link>Löneskillnader</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="./data.html" class="label-lg navbar-link has-after" data-nav-link>Faktorer</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="./sources.html" class="label-lg navbar-link has-after" data-nav-link>Referenslista</a>
+                </li>
+            </ul>
+
+
+
+        </nav>
+
+        <!-- hamburgermenynapp -->
+        <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler>  
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon> 
+        </button>
+    </div>
+</header>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>      <!-- hämtar in ikonen -->
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- Hero -->
+
+<main>
+
+<div class="header-background">
+    <img src="./assets/images/header.png" alt="hero image">
+</div>
+
+<section>
+    <div class="page-title">
+        <h1>Faktorer som påverkar löneskillnaden</h1>
+    </div>
+</section>
+
+<section>
+    <div class="pie-section">
+        <div class="pie-content">
+            
+            <div class="pie-text">
+                <p>
+                    Föräldraledighet är den största enskilda faktorn bakom
+                    löneskillnaderna, men även deltidsarbete och yrkesval
+                    spelar en stor roll.
+                </p> 
+            </div>
+        
+
+            <div class="pie-chart">
+                <canvas id="pie-chart"></canvas>
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+
+<section>
+    <div class="conatiner">
+        
+    <h1>
+    Löneskillnaden beror inte på en enda faktor
+    </h1>
+
+    <p class="subtitle">
+      Flera olika faktorer påverkar löneskillnaden mellan män och kvinnor.
+      Föräldraledighet är en viktig faktor, men långt ifrån den enda.
+    </p>
+
+    <div class="main-layout">
+
+    <!-- LEFT SIDE -->
+
+      <div class="scale-wrapper">
+
+        <div class="scale">
+
+          <div class="weights" id="weightsContainer"></div>
+
+        <!-- BEAM -->
+
+          <div class="beam" id="beam">
+
+          <!-- LEFT -->
+
+            <div class="hanger-left-hanger">
+
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+
+              <div class="bowl"></div>
+
+            </div>
+
+          <!-- RIGHT -->
+
+            <div class="hanger-right-hanger">
+
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+
+              <div class="bowl"></div>
+
+            </div>
+
+          </div>
+
+        <!-- CENTER -->
+
+          <div class="center-circle"></div>
+
+        <!-- STAND -->
+
+          <div class="stand"></div>
+
+          <div class="base"></div>
+
+        </div>
+
+      </div>
+
+    <!-- RIGHT SIDE -->
+
+      <div class="right-side">
+
+        <div class="cards">
+
+          <div class="card"
+          onclick="addFactor(
+          'Föräldraledighet',
+          'Kvinnor tar ofta ut längre föräldraledighet vilket kan påverka löneutveckling och karriärmöjligheter.',
+          'pink'
+          )">
+
+            <h3>Föräldraledighet</h3>
+            <p>Klicka för att lägga till faktorn</p>
+
+          </div>
+
+          <div class="card"
+          onclick="addFactor(
+          'Deltidsarbete',
+          'Kvinnor arbetar oftare deltid vilket påverkar både inkomst och möjligheten till högre positioner.',
+          'purple'
+          )">
+
+            <h3>Deltidsarbete</h3>
+            <p>Klicka för att lägga till faktorn</p>
+
+          </div>
+
+          <div class="card"
+          onclick="addFactor(
+          'Lågavlönade sektorer',
+          'Män och kvinnor arbetar ofta inom olika yrken och branscher där lönerna kan skilja sig mycket.',
+          'yellow'
+          )">
+
+            <h3>Lågavlönade sektorer</h3>
+            <p>Klicka för att lägga till faktorn</p>
+
+          </div>
+
+          <div class="card"
+          onclick="addFactor(
+          'Övrigt',
+          'Män har oftare högre chefspositioner vilket påverkar genomsnittslönen.',
+          'blue'
+          )">
+
+            <h3>Övrigt</h3>
+            <p>Klicka för att lägga till faktorn</p>
+
+          </div>
+
+
+        </div>
+
+      <!-- INFO BOX -->
+
+        <div class="info-box" id="infoBox">
+
+          <h2>Klicka på en faktor</h2>
+
+          <p>
+            När du klickar på faktorerna läggs de till på vågen för att visa
+            att löneskillnaden påverkas av flera olika saker tillsammans.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="data-stats-section">
+    <div class="data-stats-layout">
+        <div class="data-stats-text">
+            <h2 class="data-stats-title">Lönegapet över tid</h2>
+            <p>Hur stora är egentligen skillnaderna mellan mäns och kvinnors löner? Statistiken visar hur lönegapet skiljer sig mellan olika regioner, inkomstnivåer och över tid samt vilka faktorer som kan ligga bakom löneskillnaden.</p>
+        </div>
+        <div class="data-stats-chart">
+            <canvas id="scb4"></canvas>
+        </div>
+    </div>
+</section>    
+
+
+
+
+<section class="articles">
+    <div class="container">
+        <div class="articles-grid">
+            <a href="./article.html" class="article-link">
+                <div class="article-card">
+                    <div class="image">
+                        <img class ="article-image" src="./assets/images/card_1.png" alt="artikelbild">
+                        <div class="image__overlay overlay__left">
+                            <div class="overlay-content">
+                                <h3 class="title-sm">Löneskillnader</h3>
+                                <p class="body-sm">Läs mer om löneskillnaden mellan män och kvinnor och hur den skiljer sig mellan olika regioner i Sverige.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <!--
+            <div class="article-card">
+                <div class="image">
+                        <img class ="article-image" src="./assets/images/card_3.png" alt="artikelbild">
+                        <div class="image__overlay overlay__center">
+                            <h3 class="title-sm">Referenslista</h3>
+                        </div>
+                    </div>
+            </div>-->
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div>
+        <p>Sandra Eriksson</p>
+        <p>Tove Hübinette</p>
+        <p>Gustav Westman</p>
+    </div>
+
+    <a href="./sources.html" class="footer-link">
+        Referenslista
+    </a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>    
+    <!-- CUSTOM JS LINK (egenskriven js fil) --> 
+<script src="./assets/js/script.js"></script>
+<script src="./assets/js/datascript.js"></script>
+<script src="./assets/js/visualisations.js"></script>
+</body>
+</html>
