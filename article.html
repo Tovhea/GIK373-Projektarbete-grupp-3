@@ -1,98 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lönegapet mellan män och kvinnor</title>
         <meta name="title" content="Vi är grupp 3">
         <meta name="decription" content="Det här är en hemsida med statistiska visualiseringar gjord av grupp 3">
-    
-    <!-- 
+
+        <!-- 
     Favicon(den lilla bilden som visas i webbläsarfliken)
-    --> 
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-32x32.png">
-    
-    <!--
+    -->
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-32x32.png">
+
+        <!--
     google fonts
-    --> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    <!--
+    -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+
+        <!--
     custom css link
-    --> 
-    <link rel="stylesheet" href="./assets/css/require.css">
-    <link rel="stylesheet" href="./assets/css/main.css"> 
-    
+    -->
+        <link rel="stylesheet" href="./assets/css/require.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+
     </head>
 </head>
+
 <body>
 
     <!-- PRELOADER -->
-<div class="preloader" data-preloader>
-    <div class="preloader-circle"></div>
-</div>
+    <div class="preloader" data-preloader>
+        <div class="preloader-circle"></div>
+    </div>
 
     <main>
-<!-- HEADER -->
-<header class="header" data-header>
-    <div class="container">
+        <!-- HEADER -->
+        <header class="header header-article" data-header>
+            <div class="container">
 
-        <a href="./index.html" class="logo">
-            <img src="xxxx" width="151" height="28" alt="EQUALIA">
-        </a>
+            <a href="./index.html" class="logo">
+                <img src="assets/images/våg.png" width="65" height="20" alt="EQUALIA">
+            </a>
 
-        <nav class="navbar" data-navbar>
-            <ul class="navbar-list">
+                <nav class="navbar" data-navbar>
+                    <ul class="navbar-list">
 
-                <li class="navbar-item">
-                    <a href="./index.html" class="label-lg navbar-link has-after active" data-nav-link>Hem</a>
-                </li>
+                        <li class="navbar-item">
+                            <a href="./index.html" class="label-lg navbar-link has-after active" data-nav-link>Hem</a>
+                        </li>
 
-                <li class="navbar-item">
-                    <a href="./data.html" class="label-lg navbar-link has-after" data-nav-link>Data</a>
-                </li>
+                        <li class="navbar-item">
+                            <a href="./data.html" class="label-lg navbar-link has-after" data-nav-link>Data</a>
+                        </li>
 
-                <li class="navbar-item">
-                    <a href="./sources.html" class="label-lg navbar-link has-after" data-nav-link>Källor</a>
-                </li>
-            </ul>
-        </nav>
+                        <li class="navbar-item">
+                            <a href="./sources.html" class="label-lg navbar-link has-after" data-nav-link>Källor</a>
+                        </li>
+                    </ul>
+                </nav>
 
-        <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler>
-            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon> 
-        </button>
+                <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler>
+                    <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+                </button>
 
-        <!-- hamburgermeny --> 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    </div>
-</header>
+                <!-- hamburgermeny -->
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            </div>
+        </header>
 
-<section class="article-long">
-    <section class="article-text">
-    <h4 class="date label-md">20 MAJ 2026</h4>
-    <h1 class="title-lg">Lönegapet mellan män och kvinnor</h1>
-    </section>
 
-<!--<section class="body-text"> --> 
+        <!--<img class="long-article-image" src="./assets/images/card_1.png" alt="artikelbild">
+        <section class="container-article-long">
 
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-    </section>
+            <section class="article-head">
+                    <div class="image__overlay">
+                            <h4 class="date label-md">20 MAJ 2026</h4>
+                            <h1 class="main-headline-article headline-lg">Lönegapet mellan män och kvinnor</h1>
+                    </div>
+            </section> -->
+        <section class="container-article-long">
+            <section class="article-head">
+                    <h4 class="date label-md">20 MAJ 2026</h4>
+                    <h1 class="main-headline-article headline-lg">Lönegapet mellan män och kvinnor</h1>
+            </section> 
+        
+            <hr>
 
-    <section class="img-article">
-        <h3 class="text-above-img">Sambandet mellan dessa variabler</h3>
-        <img class ="statistic-img" src="./assets/images/diagram.jpg" alt="statistikbild">
-    </section>
-</section>
+            <h2 class="article-h2-1 headline-sm">It has roots in a piece of classical</h2>
+            <h3 class="text-above-img description">Sambandet mellan dessa variabler</h3>
+            <img class="article-image" src="./assets/images/diagram.jpg" alt="statistikbild">
+
+
+            <p class="article-text-1 body-lg"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+                a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
+                literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of
+                "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book
+                is a treatise on the theory of ethics, very popular during the Renaissance. </p>
+
+            <h2 class="article-h2-2 headline-sm"> Contrary to popular belief </h2>
+
+            <section class="image-left">
+                <!-- antal kvinnor vs män i olika inkomstklasser-->
+                <h3 class="description"> Antal kvinnor vs män i olika inkomstklasser </h3>
+                <div class="chart-container">
+                    <canvas id="scb2"></canvas>
+                </div>
+            </section>
+
+
+            <p class="article-text-right body-lg"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
+                McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
+                Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+                classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+                1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+                This book is a treatise on the theory of ethics, very popular during the Renaissance. </p>
+
+                <h2 class="article-h2-3 headline-sm"> Contrary to popular belief </h2>
+
+                <section class="image-right">
+                    <h3 class="description"> Antal kvinnor vs män i olika inkomstklasser </h3>
+                    <div class="chart-container">
+                        <canvas id="scb3"></canvas>
+                    </div>
+                </section>
+
+            <p class="article-text-left body-lg"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
+                McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
+                Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+                classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+                1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+                This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of
+                Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. </p>
+
+
+        </section>
+
+
+
+
+
+
+    <!-- hämtar in chart.js biblioteket och visualiseringarna-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+        <script src="./assets/js/visualisations.js"></script>
+        <script src="./assets/Karta/script.js"></script>
 
 
     </main>
-    <!-- CUSTOM JS LINK (egenskriven js fil) --> 
-<script src="./assets/js/script.js"></script>
+    <!-- CUSTOM JS LINK (egenskriven js fil) -->
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

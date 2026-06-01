@@ -17,7 +17,7 @@ colors, alla färger som används på sidan utgår ifrån dessa variabler som s�
 --primary-light:            hsl(15, 17%, 91%);
 --primary-dark:             hsla(220, 85%, 38%, 1);
 
---accent:                   hsla(162, 73%, 46%, 1);
+--accent:                   hsla(38, 10%, 30%, 0.9);
 --accent-light:             hsla(162, 73%, 65%, 1);
 
 --surface-tone:             hsla(15, 17%, 91%, 1); /*används för kort och ytor, oftast mörk eller neutral*/
@@ -30,9 +30,8 @@ colors, alla färger som används på sidan utgår ifrån dessa variabler som s�
 /**
 typografi, alla fontstorlekar utgår ifrån dessa variabler
 **/
---ff-roboto:'Roboto', sans-serif; 
+--ff-times: 'Times New Roman', Times, serif;
 --ff-opensans: 'Open Sans', sans-serif;
---ff-abril: 'Abril Fatface';
 --fs-45: 4.5rem;
 --fs-38: 3.8rem;
 --fs-32: 3.2rem;
@@ -86,7 +85,7 @@ transition
 fontstorlekarna läggs till klasserna för olika typer av text och rubriker
 **/
 
-.headline-lg {font-size: var(--fs-24); } /*huvudrubrik på hela sidan*/
+.headline-lg {font-size: var(--fs-45); } /*huvudrubrik på hela sidan*/
 .headline-md {font-size: var(--fs-38); } 
 .headline-sm {font-size: var(--fs-24); }
 .title-lg {font-size: var(--fs-28); } /*rubriker för sektioner och kort*/
@@ -97,24 +96,31 @@ fontstorlekarna läggs till klasserna för olika typer av text och rubriker
 .body-sm {font-size: var(--fs-10); }
 .label-lg {font-size: var(--fs-14);} /*Etiketter och datum*/
 .label-md {font-size: var(--fs-10);}
+.description {font-size: var(--fs-16);}
 
 
 /*font weight och färg*/
-.headline-lg,
+
+
 .headline-md,
 .headline-sm  {
-    color: var(--white);
-    line-height:1.2;
+    padding-top: var(--spacing-md);
 }
 
-.headline-lg,
+.description {
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    padding: var(--spacing-s);
+}
+
+/*.headline-lg,
 .headline-md,
 .headline-sm,
 .title-lg,
 .title-md,
 .title-sm {
-    font-family: var(--ff-abril); 
-}
+}*/
 
 
 /**
@@ -175,7 +181,6 @@ body{
     color: var(--text-primary-black);
     line-height: 1.5;
     overflow:hidden; /*allt innehåll som sticker utanför elementets gränser klipps bort och döljs*/
-    height: 300vh; /* viewport height – alltså höjden på webbläsarfönstret, elementet är 3 gånger så högt som fönstret*/
 }
 
 body.loaded {overflow:visible;} /* Medan sidan laddar vill man dölja element som ännu inte animerats in. När allt är klart lägger JavaScript till klassen loaded på body*/ 
@@ -249,10 +254,14 @@ to { transform: rotate(360deg); }
     left: 0;
     width:100%;
     color: var(--white);
-    background-color: var(--black_a10); /*var(--black_a10) rgb(86, 79, 70)*/
+    background-color: var(--black_a25);
     z-index:4;
     padding-block: 3px; /*8px*/
     transition: var(--transition-1);
+}
+
+.header-article {
+    background-color: var(--accent);
 }
 
 /*när man scrollar ner på sidan blir det en skugga i kanten nertill på headern*/
@@ -308,7 +317,6 @@ to { transform: rotate(360deg); }
 
 /*styling av innehållet i hamburgermenyn*/
 .navbar-link {
-    text-transform: uppercase;
     letter-spacing:3px;
     padding: var(--spacing-s);
     transition: var(--transition-1);
