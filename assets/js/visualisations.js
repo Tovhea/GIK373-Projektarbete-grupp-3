@@ -356,7 +356,7 @@ function printSCB4Chart(data1, data2) {
         title: {
           display: true,
           text:
-            "Korrelation mellan kvinnors lön i relation till mäns och mäns uttag i relation till kvinnors.\nKorrelationen är " +
+            "Korrelation mellan kvinnors lön i relation till mäns och mäns uttag i relation till kvinnors.\nKoefficienten är " +
             r.toFixed(2),
           font: {
             family: "Open Sans",
