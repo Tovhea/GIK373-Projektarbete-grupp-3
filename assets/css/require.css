@@ -11,7 +11,7 @@ colors, alla f채rger som anv채nds p책 sidan utg책r ifr책n dessa variabler som s�
 --white_a25:                hsla(0, 0%, 100%, 0.25);
 --white_a50:                hsla(0, 0%, 100%, 0.5);
 --black_a10:                hsla(0, 0%, 0%, 0.1);
---black_a25:                hsla(0, 0%, 0%, 0.25);
+--black_a25:                hsla(0, 0%, 0%, 0.15);
 
 --primary:                  hsla(322, 100%, 68%, 1);
 --primary-light:            hsl(15, 17%, 91%);
@@ -254,10 +254,13 @@ to { transform: rotate(360deg); }
     left: 0;
     width:100%;
     color: var(--white);
-    background-color: var(--black_a25);
     z-index:4;
-    padding-block: 3px; /*8px*/
+    padding-block: 4px; /*8px*/
     transition: var(--transition-1);
+    box-shadow: var(--shadow);
+}
+.header-home {
+    background-color: var(--black_a25);
 }
 
 .header-article {

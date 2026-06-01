@@ -1,7 +1,8 @@
 
 .header-background {
-    height: 60px; /* justera efter headerns höjd */
+    height: 58px; /* justera efter headerns höjd */
     overflow: hidden;
+
 }
 .header-background img {
     width: 100%;
@@ -479,7 +480,7 @@ DESKTOP
 @media(min-width: 1024px){
 
   .header-background {
-    height: 75px;
+    height: 60px;
   }
 
   .pie-chart {
