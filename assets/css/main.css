@@ -284,6 +284,8 @@ footer {
 }
 
 
+
+
 .main-headline-article {
   margin-top: var(--spacing-s);
 }
@@ -544,11 +546,6 @@ hr {
   .title-sm {
    font-size: small;
   }
-
-  .articles .overlay-content .body-sm {
-    font-size: 10px;
-    max-width: 250px;
-  }
   
 }
 /* Desktop */
@@ -630,21 +627,6 @@ hr {
     max-width: 50%;
   }
 
-
-  .article-card .title-sm {
-    font-size: x-large;
-  }
-
-  .article-card .overlay-content .body-sm {
-    max-width: 400px;
-    font-size:small;
-  }
-
-  .article-card .overlay-content .link-button {
-    font-size: medium;
-  }
-
-  
   .stats-main {
     grid-template-columns: 1fr 1.5fr;
     gap: 20px;
