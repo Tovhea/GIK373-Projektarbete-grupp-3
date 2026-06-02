@@ -320,7 +320,6 @@ hr {
   margin-top: var(--spacing-xxl);
   height: 100%;
   display: grid;
-  grid-gap: 20px;
   grid-template-columns: 1fr;
   margin-inline: auto;
   max-width: 1200px;
@@ -364,7 +363,8 @@ hr {
 
 .article-text-1 {
   grid-area: article-text-1;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 .image-left {
@@ -378,7 +378,7 @@ hr {
 
 .article-text-left {
   grid-area: article-text-left;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 
 .article-h2-3 {
@@ -396,7 +396,7 @@ hr {
 
 .article-text-right {
   grid-area: article-text-right;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 
 .article-head,
@@ -461,6 +461,10 @@ hr {
 .references-description {
   display: flex;
   justify-content: center;
+}
+
+.description { 
+  padding-top: 0;
 }
 
 .sources-section {
