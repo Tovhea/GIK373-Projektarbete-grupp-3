@@ -841,5 +841,11 @@ function printMapData(data) {
     plot_bgcolor: "rgba(0,0,0,0)",   // bakgrunden inuti plotområdet
   };
 
-  Plotly.newPlot("Map", plotData, layout);
+  Plotly.newPlot(
+    "Map",
+    plotData,
+    layout,
+    {
+      responsive: true
+    });
 }
