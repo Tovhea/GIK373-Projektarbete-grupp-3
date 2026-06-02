@@ -94,6 +94,8 @@ const data_array = [25, 33, 28, 14];
 
 const pieChart = document.getElementById('pie-chart');
 
+
+
 const myChart = new Chart(pieChart, {
     type: 'pie',
 
@@ -123,10 +125,10 @@ const myChart = new Chart(pieChart, {
             },
             datalabels: {
                 color: 'white',
-                font: {
-                    weight: 'bold',
-                    size: 14
-                },
+                font: (context) => ({
+                  weight: 'bold',
+                  size: window.innerWidth > 999 ? 18 : 9
+                }),
 
                 formatter: (value, context) => {
 
@@ -147,6 +149,6 @@ const myChart = new Chart(pieChart, {
             }
         }
     },
-
+    
     plugins: [ChartDataLabels]
 });

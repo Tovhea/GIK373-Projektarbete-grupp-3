@@ -4,17 +4,17 @@
 .page-title {
     font-size: 1.8rem;
     font-weight: 700;
-    margin: 3rem;
+    margin: 2rem;
+    margin-top: 3rem;
     line-height: 1.1;
 }
 
 .pie-section {
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding-left: 2rem;
 }
 .pie-content {
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
     gap: 3rem;
 }
@@ -24,13 +24,9 @@
 }
 
 .pie-chart {
-    width: 250px;
-    height: 250px;
-}
-
-.pie-chart canvas {
-    width: 100% !important;
-    height: auto !important;
+  margin-top: -40px;
+    width: 180px;
+    height: 180px;
 }
 
 
@@ -39,7 +35,9 @@
 VÅG
 ========================= */
 
-
+.scale {
+  margin: 30px;
+}
 
 .scale-wrapper{
   position:relative;
@@ -475,10 +473,7 @@ DESKTOP
     height: 400px;
   }
 
-  .pie-section {
-    padding-right: 7rem;
-    padding-left: 5rem;
-  }
+  
 
   .main-layout {
     display: flex;

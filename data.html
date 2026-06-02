@@ -95,220 +95,142 @@ custom css link
 </div>
 
 <section>
-    <div class="page-title">
-        <h1>Faktorer som påverkar löneskillnaden</h1>
+    <div class="container">
+        <div class="page-title">
+            <h1>Faktorer som påverkar löneskillnaden</h1>
+            <hr class="hr-stats-title">
+        </div>
     </div>
 </section>
 
 <section>
-    <div class="pie-section">
-        <div class="pie-content">
+    <div class="container">
+        <div class="pie-section">
+            <div class="pie-content">
             
-            <div class="pie-text">
-                <p>
-                    Föräldraledighet är den största enskilda faktorn bakom
-                    löneskillnaderna, men även deltidsarbete och yrkesval
-                    spelar en stor roll.
-                </p> 
-            </div>
+                <div class="pie-text">
+                    <p>Löneskillnaden mellan kvinnor och män påverkas av flera olika faktorer. I diagrammet syns några av de faktorer som ofta diskuteras i samband med lönegapet, där föräldraledighet utgör den största andelen. Deltidsarbete, skillnader mellan olika yrken och sektorer samt andra arbetsrelaterade faktorer bidrar också till löneskillnaderna mellan kvinnor och män.</p>
+                    
+                    
+                </div>
         
 
-            <div class="pie-chart">
-                <canvas id="pie-chart"></canvas>
+                <div class="pie-chart">
+                    <canvas id="pie-chart"></canvas>
+                </div>
             </div>
         </div>
-        
     </div>
-
 </section>
 
 <section>
     <div class="conatiner">
-        
-    <h1>
-    Löneskillnaden beror inte på en enda faktor
-    </h1>
-
-    <p class="subtitle">
-      Flera olika faktorer påverkar löneskillnaden mellan män och kvinnor.
-      Föräldraledighet är en viktig faktor, men långt ifrån den enda.
-    </p>
-
-    <div class="main-layout">
-
-    <!-- LEFT SIDE -->
-
-      <div class="scale-wrapper">
-
         <div class="scale">
-
-          <div class="weights" id="weightsContainer"></div>
-
-        <!-- BEAM -->
-
-          <div class="beam" id="beam">
-
-          <!-- LEFT -->
-
-            <div class="hanger-left-hanger">
-
-              <div class="line-left"></div>
-              <div class="line-right"></div>
-
-              <div class="bowl"></div>
-
+            <h1>
+                Löneskillnaden beror inte på en enda faktor
+            </h1>
+            <p class="subtitle">
+                Flera olika faktorer påverkar löneskillnaden mellan män och kvinnor.
+                Föräldraledighet är en viktig faktor, men långt ifrån den enda.
+            </p>
+            <div class="main-layout">
+            <!-- LEFT SIDE -->
+                <div class="scale-wrapper">
+                    <div class="scale">
+                        <div class="weights" id="weightsContainer"></div>
+                <!-- BEAM -->
+                        <div class="beam" id="beam">
+                <!-- LEFT -->
+                            <div class="hanger-left-hanger">
+                                <div class="line-left"></div>
+                                <div class="line-right"></div>
+                                <div class="bowl"></div>
+                            </div>
+                <!-- RIGHT -->
+                            <div class="hanger-right-hanger">
+                                <div class="line-left"></div>
+                                <div class="line-right"></div>
+                                <div class="bowl"></div>
+                            </div>
+                        </div>
+                <!-- CENTER -->
+                        <div class="center-circle"></div>
+                <!-- STAND -->
+                        <div class="stand"></div>
+                        <div class="base"></div>
+                    </div>
             </div>
-
-          <!-- RIGHT -->
-
-            <div class="hanger-right-hanger">
-
-              <div class="line-left"></div>
-              <div class="line-right"></div>
-
-              <div class="bowl"></div>
-
+            <!-- RIGHT SIDE -->
+            <div class="right-side">
+                <div class="cards">
+                <div class="card"
+                onclick="addFactor(
+                'Föräldraledighet',
+                'Kvinnor tar ofta ut längre föräldraledighet vilket kan påverka löneutveckling och karriärmöjligheter.',
+                'pink'
+                )">
+                    <h3>Föräldraledighet</h3>
+                    <p>Klicka för att lägga till faktorn</p>
+                </div>
+                <div class="card"
+                onclick="addFactor(
+                'Deltidsarbete',
+                'Kvinnor arbetar oftare deltid vilket påverkar både inkomst och möjligheten till högre positioner.',
+                'purple'
+                )">
+                    <h3>Deltidsarbete</h3>
+                    <p>Klicka för att lägga till faktorn</p>
+                </div>
+                <div class="card"
+                onclick="addFactor(
+                'Lågavlönade sektorer',
+                'Män och kvinnor arbetar ofta inom olika yrken och branscher där lönerna kan skilja sig mycket.',
+                'yellow'
+                )">
+                    <h3>Lågavlönade sektorer</h3>
+                    <p>Klicka för att lägga till faktorn</p>
+                </div>
+                <div class="card"
+                onclick="addFactor(
+                'Övrigt',
+                'Män har oftare högre chefspositioner vilket påverkar genomsnittslönen.',
+                'blue'
+                )">
+                    <h3>Övrigt</h3>
+                    <p>Klicka för att lägga till faktorn</p>
+                </div>
+                </div>
+            <!-- INFO BOX -->
+                <div class="info-box" id="infoBox">
+                <h2>Klicka på en faktor</h2>
+                <p>
+                    När du klickar på faktorerna läggs de till på vågen för att visa
+                    att löneskillnaden påverkas av flera olika saker tillsammans.
+                </p>
+                </div>
             </div>
-
-          </div>
-
-        <!-- CENTER -->
-
-          <div class="center-circle"></div>
-
-        <!-- STAND -->
-
-          <div class="stand"></div>
-
-          <div class="base"></div>
-
+            </div>
         </div>
-
-      </div>
-
-    <!-- RIGHT SIDE -->
-
-      <div class="right-side">
-
-        <div class="cards">
-
-          <div class="card"
-          onclick="addFactor(
-          'Föräldraledighet',
-          'Kvinnor tar ofta ut längre föräldraledighet vilket kan påverka löneutveckling och karriärmöjligheter.',
-          'pink'
-          )">
-
-            <h3>Föräldraledighet</h3>
-            <p>Klicka för att lägga till faktorn</p>
-
-          </div>
-
-          <div class="card"
-          onclick="addFactor(
-          'Deltidsarbete',
-          'Kvinnor arbetar oftare deltid vilket påverkar både inkomst och möjligheten till högre positioner.',
-          'purple'
-          )">
-
-            <h3>Deltidsarbete</h3>
-            <p>Klicka för att lägga till faktorn</p>
-
-          </div>
-
-          <div class="card"
-          onclick="addFactor(
-          'Lågavlönade sektorer',
-          'Män och kvinnor arbetar ofta inom olika yrken och branscher där lönerna kan skilja sig mycket.',
-          'yellow'
-          )">
-
-            <h3>Lågavlönade sektorer</h3>
-            <p>Klicka för att lägga till faktorn</p>
-
-          </div>
-
-          <div class="card"
-          onclick="addFactor(
-          'Övrigt',
-          'Män har oftare högre chefspositioner vilket påverkar genomsnittslönen.',
-          'blue'
-          )">
-
-            <h3>Övrigt</h3>
-            <p>Klicka för att lägga till faktorn</p>
-
-          </div>
-
-
-        </div>
-
-      <!-- INFO BOX -->
-
-        <div class="info-box" id="infoBox">
-
-          <h2>Klicka på en faktor</h2>
-
-          <p>
-            När du klickar på faktorerna läggs de till på vågen för att visa
-            att löneskillnaden påverkas av flera olika saker tillsammans.
-          </p>
-
-        </div>
-
-      </div>
-
     </div>
-
-  </div>
 </section>
 
 
 
 <section class="data-stats-section">
-    <div class="data-stats-layout">
-        <div class="data-stats-text">
-            <h2 class="data-stats-title">Lönegapet över tid</h2>
-            <p>Hur stora är egentligen skillnaderna mellan mäns och kvinnors löner? Statistiken visar hur lönegapet skiljer sig mellan olika regioner, inkomstnivåer och över tid samt vilka faktorer som kan ligga bakom löneskillnaden.</p>
-        </div>
-        <div class="data-stats-chart">
-            <canvas id="scb4"></canvas>
+    <div class="container">
+        <div class="data-stats-layout">
+            <div class="data-stats-text">
+                <h2 class="data-stats-title">Lönegapet över tid</h2>
+                <p>Hur stora är egentligen skillnaderna mellan mäns och kvinnors löner? Statistiken visar hur lönegapet skiljer sig mellan olika regioner, inkomstnivåer och över tid samt vilka faktorer som kan ligga bakom löneskillnaden.</p>
+            </div>
+            <div class="data-stats-chart">
+                <canvas id="scb4"></canvas>
+            </div>
         </div>
     </div>
 </section>    
 
 
-
-
-<section class="articles">
-    <div class="container">
-        <div class="articles-grid">
-            <a href="./article.html" class="article-link">
-                <div class="article-card">
-                    <div class="image">
-                        <img class ="article-image" src="./assets/images/card_1.png" alt="artikelbild">
-                        <div class="image__overlay overlay__left">
-                            <div class="overlay-content">
-                                <h3 class="title-sm">Löneskillnader</h3>
-                                <p class="body-sm">Läs mer om löneskillnaden mellan män och kvinnor och hur den skiljer sig mellan olika regioner i Sverige.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <!--
-            <div class="article-card">
-                <div class="image">
-                        <img class ="article-image" src="./assets/images/card_3.png" alt="artikelbild">
-                        <div class="image__overlay overlay__center">
-                            <h3 class="title-sm">Referenslista</h3>
-                        </div>
-                    </div>
-            </div>-->
-        </div>
-    </div>
-</section>
 </main>
 
 <footer>
