@@ -73,7 +73,6 @@ footer {
 
 /*Sektion mål */
 .goals {
-
   background-color: var(--white);
 }
 
@@ -86,8 +85,11 @@ footer {
 .goals-grid {
   display: grid;
   grid-template-columns: 1fr;
-
   justify-content: center;
+}
+
+.goal-divider {
+  display: none;
 }
 
 /* cirkel för målen*/
@@ -153,6 +155,21 @@ footer {
     min-width: 0;
     color: white;
 }
+
+.hr-stats-title {
+  width: 60px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+
+#cb7be9-map {
+    width: 100%;
+    height: 500px;
+}
+
+/*
 .stats-chart {
     height: 200px;
 }
@@ -166,6 +183,7 @@ footer {
     margin-bottom: 10px;
     border-radius: 10px;
 }
+    */
 
 .fact-icon {
     width: 30px;
@@ -207,11 +225,12 @@ footer {
   margin-top: var(--spacing-l);
 }
 
-.map{
+#Map{
   display: block;
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  /*object-fit: contain;*/
 }
 
 .article-image {
@@ -222,6 +241,7 @@ footer {
   filter:
         saturate(75%)
         brightness(90%);
+  background-color:hsla(0, 0%, 100%, 1);
 }
 
 .article-card {
@@ -270,15 +290,30 @@ footer {
 }
 
 
+
+
 .main-headline-article {
   margin-top: var(--spacing-s);
 }
-
-hr {
-  border-top: 2px solid var(--black_a10);
+.hr-article {
   width: 20%; /* hur brett strecket ska vara */
   margin: var(--spacing-s) auto;
 }
+
+hr {
+  background: #eb5dbb;
+  height: 3px;
+}
+
+.drop-cap::first-letter {
+  font-family: Georgia, serif; 
+  font-size: 60px;
+  font-weight: bold;
+  float: left;
+  line-height: 1;
+  margin-right: 0.1em;
+}
+
 .container-article-long {
   margin-top: var(--spacing-xxl);
   height: 100%;
@@ -376,6 +411,7 @@ hr {
 
 
 
+
 .date {
   font-weight: 300;
   font-family:
@@ -452,9 +488,10 @@ hr {
 
 /* Tablet */
 @media (min-width: 768px) {
-  /*html {
+  html {
     font-size: 15px;
-  }*/
+  }
+
   .hero-headline {
     font-size: var(--fs-38);
   }
@@ -487,6 +524,7 @@ hr {
     border-left: 0.5px solid var(--black_a10);
     height: 60%;
     display: block;
+    background: var(--black_a25) ;
   }
   
 
@@ -515,11 +553,6 @@ hr {
 
   .title-sm {
    font-size: small;
-  }
-
-  .articles .overlay-content .body-sm {
-    font-size: 10px;
-    max-width: 250px;
   }
   
 }
@@ -602,21 +635,6 @@ hr {
     max-width: 50%;
   }
 
-
-  .article-card .title-sm {
-    font-size: x-large;
-  }
-
-  .article-card .overlay-content .body-sm {
-    max-width: 400px;
-    font-size:small;
-  }
-
-  .article-card .overlay-content .link-button {
-    font-size: medium;
-  }
-
-  
   .stats-main {
     grid-template-columns: 1fr 1.5fr;
     gap: 20px;
