@@ -52,23 +52,68 @@
 /*FOOTER*/
 
 footer {
-  background-color: rgb(86, 79, 70);
+  background-color: hsla(42, 16%, 15%, 0.9);
   color: white;
   padding: 20px;
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 120px;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
 }
 
-.footer-link {
+.footer-content {
+  display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    padding-bottom: 30px;
+}
+
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section img {
+  padding-left: 5px;
+  padding-bottom: 5px;
+
+}
+
+.footer-section h3 {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-right: 700px;
+}
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
     text-decoration: underline;
     transition: color 0.3s;
 }
 
-.footer-link:hover {
+.footer-section li:hover {
     color: rgba(255, 255, 255, 0.5)
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    padding-top: 15px;
 }
 
 /*Sektion mål */
@@ -485,6 +530,8 @@ hr {
   font-size: 0.8rem;
   
 }
+
+
 
 /* Tablet */
 @media (min-width: 768px) {
