@@ -255,7 +255,8 @@ RIGHT SIDE
 
 .card{
   background:white;
-  padding:6px;
+  padding:7px;
+  padding-left: 15px;
   border-radius:14px;
   cursor:pointer;
   transition:0.3s;

@@ -275,9 +275,9 @@ footer {
     width: fit-content;
     background: #eb5dbb;
     color: white;
-    padding: .8rem 1.2rem;
-    border-radius: .5rem;
-    font-weight: 600;
+    padding: .2rem .8rem;
+    border-radius: .65rem;
+    font-weight: 500;
     margin-top: 1rem;
 }
 
