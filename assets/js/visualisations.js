@@ -628,48 +628,46 @@ fetch(request3)
 function printSCB3Chart(dataSCB) {
   const allData = dataSCB.data;
 
-  // Hitta rätt rader för män och kvinnor
+
   const menItem = allData.find((item) => item.key[1] === "1");
   const womenItem = allData.find((item) => item.key[1] === "2");
 
   const men = menItem.values.map(Number);
   const women = womenItem.values.map(Number);
 
-  // 📊 Räkna ut procenten (Kvinnor / Män * 100)
+
   const percentages = men.map((m, i) => (women[i] / m) * 100);
 
-  // 🏷️ Etiketter som matchar ordningen på ContentsCode ovan
-  //const labels = ['10th', '25th', '50th', '75th', '90th'];
 
   const percentilNamn = {
-    "000002V5": "10:e percentilen", // Ändrad till 10:e percentilen efter din uppdatering
-    "000002V4": "25:e percentilen", // Ändrad till 25:e percentilen efter din uppdatering
+    "000002V5": "10:e percentilen", 
+    "000002V4": "25:e percentilen", 
     "000002V3": "50:e percentilen",
-    "000002V6": "75:e percentilen", // Ändrad till 75:e percentilen efter din uppdatering
+    "000002V6": "75:e percentilen", 
     "000002V7": "90:e percentilen",
   };
 
-  // Hämta ordningen på koderna direkt från din querySCB3-variabel
+  
   const koderAnvanda = querySCB3.query.find((q) => q.code === "ContentsCode")
     .selection.values;
 
-  // Mappa koderna till sina respektive namn
+
   const labels = koderAnvanda.map((kod) => percentilNamn[kod] || kod);
 
   ("rgb(84, 167, 255)", "rgb(255, 94, 196)");
 
-  // 📊 Ny Chart.js-inställning med FiveThirtyEight-stil
+
   new Chart(document.getElementById("scb3"), {
     type: "line",
     data: {
-      labels: labels, // Kopplas till Y-axeln tack vare indexAxis: 'y'
+      labels: labels, 
       datasets: [
         {
           label: "Kvinnors lön i % av mäns 2024",
-          data: percentages, // Tolkas som X-värden automatiskt
-          borderColor: "rgb(255, 94, 196)", // FiveThirtyEight-röd
-          backgroundColor: "rgba(255, 94, 196, 0.25)", // Rosa/röd fyllning för lönegapet
-          fill: "end", // Fyller hela vägen ut till höger (mot 100%)
+          data: percentages,
+          borderColor: "rgb(255, 94, 196)",
+          backgroundColor: "rgba(255, 94, 196, 0.25)", 
+          fill: "end", 
           borderWidth: 2.5,
           pointBackgroundColor: "rgb(255, 94, 196)",
           pointRadius: 5,
@@ -837,8 +835,8 @@ function printMapData(data) {
 
   const layout = {
     map: { center: { lon: 15, lat: 62 }, zoom: 2.5 },
-    paper_bgcolor: "rgba(0,0,0,0)",  // bakgrunden runt kartan
-    plot_bgcolor: "rgba(0,0,0,0)",   // bakgrunden inuti plotområdet
+    paper_bgcolor: "rgba(0,0,0,0)", 
+    plot_bgcolor: "rgba(0,0,0,0)", 
   };
 
   Plotly.newPlot(

@@ -348,6 +348,16 @@ hr {
   color: var(--text-primary-black);
 }
 
+
+.articles .overlay-content { 
+  padding: 2rem;
+}
+  .articles .overlay-content .body-sm {
+    max-width: 250px;
+  }
+
+
+
 .date {
   font-weight: 300;
   font-family:
@@ -490,6 +500,11 @@ hr {
   .title-sm {
    font-size: small;
   }
+
+  .articles .overlay-content .body-sm {
+    font-size: 10px;
+    max-width: 250px;
+  }
   
 }
 /* Desktop */
@@ -571,6 +586,21 @@ hr {
     max-width: 50%;
   }
 
+
+  .article-card .title-sm {
+    font-size: x-large;
+  }
+
+  .article-card .overlay-content .body-sm {
+    max-width: 400px;
+    font-size:small;
+  }
+
+  .article-card .overlay-content .link-button {
+    font-size: medium;
+  }
+
+  
   /*styling av artikelsidan
     .container-article-long {
     grid-template-columns: 1fr 1fr;
