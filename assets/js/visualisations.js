@@ -835,6 +835,7 @@ function printMapData(data) {
 
   const layout = {
     map: { center: { lon: 15, lat: 62 }, zoom: 2.5 },
+    margin: { t: 0, l: 0, r: 0, b: 0 },
     paper_bgcolor: "rgba(0,0,0,0)", 
     plot_bgcolor: "rgba(0,0,0,0)", 
   };
@@ -844,6 +845,8 @@ function printMapData(data) {
     plotData,
     layout,
     {
-      responsive: true
+      responsive: true,
+      displayModeBar: false,
+      
     });
 }
