@@ -113,33 +113,70 @@ footer {
   padding-top:var(--spacing-s);
 }
 
-.statistics-section {
-  padding: 2rem;
+
+.stats-section {
+    margin-top: 20px;
+}
+.stats-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
 }
 
-.statistics-layout {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+
+.stats-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    border-radius: var(--radius-20);
+    background: hsla(229, 37%, 22%, 1);
 }
 
-.statistics-chart {
-  flex: 1.5;
-  min-width: 0;
-  height: 200px;
-  position: relative;
+.fact-box {
+    background: hsla(229, 37%, 22%, 0.6);
+    min-width: 0;
+    border-radius: var(--radius-20);
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    color: white;
 }
-.statistics-text {
-  flex: 1;
-  max-width: 300px;
+
+.stats-text, .stats-chart {
+    min-width: 0;
+    color: white;
 }
-.statistics-chart canvas {
-  width: 100% !important;
-  height: 100% !important;
+.stats-title::after, .overlay-content h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #eb5dbb;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
-.statistics-title {
-  margin-bottom: 7px;
+
+.fact-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #eb5dbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 5px;
+    color: #eb5dbb; /* <-- lägg här istället */
 }
+
 
 /*styling av clickbara cards för artiklar*/
 .articles-grid {
@@ -162,13 +199,16 @@ footer {
   width: 100%;
   height: auto;
   object-fit: contain;
+  filter:
+        saturate(75%)
+        brightness(90%);
 }
 
 .article-card {
   width: 100%;
   background-color: var(--white);
   color: var(--text-primary-black);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-20);
   overflow: hidden;
   box-shadow: var(--shadow);
   border-top: 1px solid var(--black_a10);
@@ -183,47 +223,33 @@ footer {
     position: absolute;
     inset: 0;
     display: flex;
-    padding: var(--spacing-s);
-    color: rgb(45, 41, 36);
-    transition: background 0.25s;
+    padding: 2rem;
+    color: white;
+    background:
+        linear-gradient(
+            rgba(36,43,78,0.35),
+            rgba(36,43,78,0.15)
+        );
 }
 
 .image-overlay:hover {
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(96, 21, 75, 0.15);
 }
 .overlay-content {
-    max-width: 60%;
+    max-width: 80%;
 }
 
-.overlay-left {
-    justify-content: flex-start;
-    align-items:flex-start;
-    text-align: left;
-    flex-direction: column;
+.link-button {
+    width: fit-content;
+    background: #eb5dbb;
+    color: white;
+    padding: .8rem 1.2rem;
+    border-radius: .5rem;
+    font-weight: 600;
+    margin-top: 1rem;
 }
 
-.overlay-right {
-    justify-content: flex-start;
-    align-items: flex-end;
-    text-align: left;
-    flex-direction: column;
-}
-/*
-.overlay-center {
-    justify-content: top;
-    align-items: center;
-    text-align: left;
-    flex-direction: column;
-}*/
-.overlay-left .body-sm{
-    max-width: 65%;
-}
-.overlay-center .title-sm{
-    margin-top: 30px;
-}
-.title-sm {
-    margin-bottom: 1rem;
-}
+
 
 
 .main-headline-article {
@@ -440,37 +466,41 @@ hr {
   }
 
   .goal-card{
-  border-block-end: none;
+    border-block-end: none;
+  }
+
+  .stats-layout {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .stats-main {
+    grid-template-columns: 1fr 1fr;
   }
 
   .articles-grid {
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   width: 100%;
   }
 
   .body-sm {
-  font-size: xx-small;
+   font-size: xx-small;
   }
 
   .title-sm {
-  font-size: small;
+   font-size: small;
   }
-  .overlay__left .body-sm {
-  max-width: 80%;
-  }
-
+  
+}
 /* Desktop */
 @media (min-width: 1024px) {
   /*html {
     font-size: 20px;
   }*/
 
-<<<<<<< HEAD
-=======
   .header-background {
     height: 62px;
   }
->>>>>>> 50901cb6ee44d01f0800df078e38693bcac43619
 
   .hero-headline {
     font-size: var(--fs-45);
@@ -530,7 +560,7 @@ hr {
     display: flex;
     justify-content: center;
   }
-}
+
 
   .navbar-link {
     color: var(--white);

@@ -25,6 +25,7 @@ google fonts
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <!--abril fatface --> 
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Petit+Formal+Script&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+DE+Grund+Guides&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+PL:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/2fceea4654.js" crossorigin="anonymous"></script>
 
 <!--
 custom css link
@@ -140,20 +141,48 @@ Bakgrundsbilder i CSS)
 </section>
 
 <!--statistik -->
-<section class="statistics-section">
-    <div class="statistics-layout">
-        <div class="statistics-text">
-            <h2 class="statistics-title headline-sm">Lönegapet över tid</h2>
-            <p>Hur stora är egentligen skillnaderna mellan mäns och kvinnors löner? Statistiken visar hur lönegapet skiljer sig mellan olika regioner, inkomstnivåer och över tid samt vilka faktorer som kan ligga bakom löneskillnaden.</p>
-        </div>
-        <div class="stats-chart">
-            <canvas id="scb"></canvas>
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-layout">
+            <div class="stats-main">
+                <div class="stats-text">
+                    <h2 class="stats-title headline-xs">Lönegapet över tid</h2>
+                    <p>Hur stora är egentligen skillnaderna mellan mäns och kvinnors löner? Statistiken visar hur lönegapet skiljer sig mellan olika regioner, inkomstnivåer och över tid samt vilka faktorer som kan ligga bakom löneskillnaden.</p>
+                    <a href="./article.html" class="link-button">Utforska statistiken</a>
+                </div>
+                <div class="stats-chart">
+                    <canvas id="scb"></canvas>
+                </div>
+            </div>
+            
+            <div class="fact-box">
+                <div class="fact-icon">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </div>
+                <h3>Fortsatt lönegap</h3>
+                <p>
+                    År 2022 tjänade kvinnor i genomsnitt 12,2 % mindre än män.
+                </p>
+            </div>
         </div>
     </div>
+    
 </section>    
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./assets/js/visualisations.js"></script>
 
+<section class="fact">
+    <div class="container">
+        <div class="text">
+            <p>
+                Sedan 1994 har svensk lagstiftning krävt att arbetsgivare genomför lönekartläggningar i syfte att minska ojämlikheter mellan män och kvinnor. Studien visar dock att lönekartläggningar inte alltid fungerar som ett verktyg för jämställdhet, utan i stället ofta används för att legitimera redan existerande löneskillnader mellan kvinnor och män. Svenska kommuner fokuserar ofta på att hitta förklaringar till skillnaderna snarare än att ifrågasätta om strukturerna bakom dem faktiskt är rättvisa. 
+                När män tjänade mer än kvinnor i liknande arbeten förklarades det ofta med att männen hade mer ”erfarenhet”, ”särskilda arbetsuppgifter” eller större ansvar. Studien visar dock att dessa begrepp sällan definieras tydligt. ”Erfarenhet” verkar ofta endast syfta på högre ålder eller längre anställningstid, inte nödvändigtvis bättre kompetens. 
+                Ett centralt tema i studien är att tekniska och mansdominerade yrken ofta får högre lön än kvinnodominerade omsorgsyrken, trots att arbetena enligt arbetsvärderingen bedöms vara likvärdiga. 
+                Studien lyfter även problematiken kring individuell lönesättning. Kommunerna beskriver ofta individuell och differentierad lön som något rättvist och neutralt, men forskarna menar att denna modell kan göra det svårare att upptäcka könsdiskriminering.
+            </p>
+        </div>
+    </div>
+</section>
 
 <section class="articles">
     <div class="container">
@@ -161,11 +190,12 @@ Bakgrundsbilder i CSS)
             <a href="./article.html" class="article-link">
                 <div class="article-card">
                     <div class="image">
-                        <img class ="article-image" src="./assets/images/man_kvinna.png" alt="artikelbild">
+                        <img class ="article-image" src="./assets/images/kvinna_man.png" alt="artikelbild">
                         <div class="image-overlay overlay-left">
                             <div class="overlay-content">
                                 <h3 class="title-sm">Löneskillnader</h3>
                                 <p class="body-sm">Läs mer om löneskillnaden mellan män och kvinnor och hur den skiljer sig mellan olika regioner i Sverige.</p>
+                                <div class="link-button">Läs mer</div>
                             </div>
                         </div>
                     </div>
@@ -174,25 +204,17 @@ Bakgrundsbilder i CSS)
             <a href="./data.html" class="data-link">
                 <div class="article-card">
                     <div class="image">
-                        <img class ="article-image" src="./assets/images/barnvagn.png" alt="artikelbild">
+                        <img class ="article-image" src="./assets/images/barn_vagn.png" alt="artikelbild">
                         <div class="image-overlay overlay-right">
                             <div class="overlay-content">
                                 <h3 class="title-sm">Faktorer bakom löneskillnaden</h3>
                                 <p class="body-sm">Läs mer om hur bland annat föräldraledighet påverkar löneskillnaderna.</p>
+                                <div class="link-button">Läs mer</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
-            <!--
-            <div class="article-card">
-                <div class="image">
-                        <img class ="article-image" src="./assets/images/card_3.png" alt="artikelbild">
-                        <div class="image__overlay overlay__center">
-                            <h3 class="title-sm">Referenslista</h3>
-                        </div>
-                    </div>
-            </div>-->
         </div>
     </div>
 </section>

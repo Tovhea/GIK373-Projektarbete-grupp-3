@@ -67,7 +67,7 @@ function printSCBChart(dataSCB) {
       borderColor: "rgb(84, 167, 255)",
       backgroundColor: "rgb(84, 167, 255)",
       hoverBorderWidth: 4,
-      pointRadius: 1.3,
+      pointRadius: 1.3
     },
     {
       label: "Lön för kvinnor",
@@ -76,7 +76,7 @@ function printSCBChart(dataSCB) {
       borderColor: "rgb(255, 94, 196)",
       backgroundColor: "rgb(255, 94, 196)",
       hoverBorderWidth: 4,
-      pointRadius: 1.3,
+      pointRadius: 1.3
     },
   ];
 
@@ -92,13 +92,14 @@ function printSCBChart(dataSCB) {
         legend: {
           position: "bottom",
           labels: {
+            color: "white",
             usePointStyle: true,
             pointStyle: 'circle',
             boxWidth: 4,
             boxHeight: 4,
             font: {
               family: "Open Sans",
-              size: 12
+              size: 10
             }
           }
         } 
@@ -107,7 +108,8 @@ function printSCBChart(dataSCB) {
       scales: {
         x: {
           ticks: {
-            padding: 15,
+            color: "white",
+            padding: 10,
             font: {
               family: "Open Sans",
               size: 10,
@@ -127,6 +129,7 @@ function printSCBChart(dataSCB) {
             display: false,
           },
           ticks: {
+            color: "white",
             font: {
               family: "Open Sans",
               size: 10,

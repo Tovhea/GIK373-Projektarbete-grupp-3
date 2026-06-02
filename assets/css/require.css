@@ -67,6 +67,7 @@ shadow, för t ex cards, knappar
 /**
 border radius
 **/
+--radius-20: 20px;
 --radius-50: 50px;
 --radius-pill: 100px;
 --radius-cirkle: 50%;
