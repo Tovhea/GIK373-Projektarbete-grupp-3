@@ -123,108 +123,20 @@ custom css link
     </div>
 </section>
 
-<section>
-    <div class="conatiner">
-        <div class="scale">
-            <h1>
-                Löneskillnaden beror inte på en enda faktor
-            </h1>
-            <p class="subtitle">
-                Flera olika faktorer påverkar löneskillnaden mellan män och kvinnor.
-                Föräldraledighet är en viktig faktor, men långt ifrån den enda.
-            </p>
-            <div class="main-layout">
-            <!-- LEFT SIDE -->
-                <div class="scale-wrapper">
-                    <div class="scale">
-                        <div class="weights" id="weightsContainer"></div>
-                <!-- BEAM -->
-                        <div class="beam" id="beam">
-                <!-- LEFT -->
-                            <div class="hanger-left-hanger">
-                                <div class="line-left"></div>
-                                <div class="line-right"></div>
-                                <div class="bowl"></div>
-                            </div>
-                <!-- RIGHT -->
-                            <div class="hanger-right-hanger">
-                                <div class="line-left"></div>
-                                <div class="line-right"></div>
-                                <div class="bowl"></div>
-                            </div>
-                        </div>
-                <!-- CENTER -->
-                        <div class="center-circle"></div>
-                <!-- STAND -->
-                        <div class="stand"></div>
-                        <div class="base"></div>
-                    </div>
-            </div>
-            <!-- RIGHT SIDE -->
-            <div class="right-side">
-                <div class="cards">
-                <div class="card"
-                onclick="addFactor(
-                'Föräldraledighet',
-                'Kvinnor tar ofta ut längre föräldraledighet vilket kan påverka löneutveckling och karriärmöjligheter.',
-                'pink'
-                )">
-                    <h3>Föräldraledighet</h3>
-                    <p>Klicka för att lägga till faktorn</p>
-                </div>
-                <div class="card"
-                onclick="addFactor(
-                'Deltidsarbete',
-                'Kvinnor arbetar oftare deltid vilket påverkar både inkomst och möjligheten till högre positioner.',
-                'purple'
-                )">
-                    <h3>Deltidsarbete</h3>
-                    <p>Klicka för att lägga till faktorn</p>
-                </div>
-                <div class="card"
-                onclick="addFactor(
-                'Lågavlönade sektorer',
-                'Män och kvinnor arbetar ofta inom olika yrken och branscher där lönerna kan skilja sig mycket.',
-                'yellow'
-                )">
-                    <h3>Lågavlönade sektorer</h3>
-                    <p>Klicka för att lägga till faktorn</p>
-                </div>
-                <div class="card"
-                onclick="addFactor(
-                'Övrigt',
-                'Män har oftare högre chefspositioner vilket påverkar genomsnittslönen.',
-                'blue'
-                )">
-                    <h3>Övrigt</h3>
-                    <p>Klicka för att lägga till faktorn</p>
-                </div>
-                </div>
-            <!-- INFO BOX -->
-                <div class="info-box" id="infoBox">
-                <h2>Klicka på en faktor</h2>
-                <p>
-                    När du klickar på faktorerna läggs de till på vågen för att visa
-                    att löneskillnaden påverkas av flera olika saker tillsammans.
-                </p>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 
 <section class="data-stats-section">
     <div class="container">
-        <div class="data-stats-layout">
-            <div class="data-stats-text">
-                <h2 class="data-stats-title">Lönegapet över tid</h2>
-                <p>Hur stora är egentligen skillnaderna mellan mäns och kvinnors löner? Statistiken visar hur lönegapet skiljer sig mellan olika regioner, inkomstnivåer och över tid samt vilka faktorer som kan ligga bakom löneskillnaden.</p>
-            </div>
-            <div class="data-stats-chart">
-                <canvas id="scb4"></canvas>
+        <div class="data-stats">
+            <div class="data-stats-layout">
+                <div class="data-stats-text">
+                    <h2 class="data-stats-title">Lönegapet över tid</h2>
+                    <p>Hur stora är egentligen skillnaderna mellan mäns och kvinnors löner? Statistiken visar hur lönegapet skiljer sig mellan olika regioner, inkomstnivåer och över tid samt vilka faktorer som kan ligga bakom löneskillnaden.</p>
+                </div>
+                <div class="data-stats-chart">
+                    <canvas id="scb4"></canvas>
+                </div>
             </div>
         </div>
     </div>

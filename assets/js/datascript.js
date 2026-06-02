@@ -127,7 +127,7 @@ const myChart = new Chart(pieChart, {
                 color: 'white',
                 font: (context) => ({
                   weight: 'bold',
-                  size: window.innerWidth > 999 ? 18 : 9
+                  size: window.innerWidth > 999 ? 16 : 9
                 }),
 
                 formatter: (value, context) => {

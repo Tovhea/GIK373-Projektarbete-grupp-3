@@ -156,6 +156,10 @@ footer {
     color: white;
 }
 
+.stats-chart {
+    height: 200px;
+}
+
 .hr-stats-title {
   width: 60px;
   margin-top: 5px;
@@ -169,21 +173,7 @@ footer {
     height: 500px;
 }
 
-/*
-.stats-chart {
-    height: 200px;
-}
-.stats-title::after, .overlay-content h3::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #eb5dbb;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-    */
+
 
 .fact-icon {
     width: 30px;
