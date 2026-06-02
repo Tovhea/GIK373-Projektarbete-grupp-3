@@ -22,6 +22,15 @@
   display: block;
 }
 
+.hero-image-desktop {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* beskär bilden snyggt utan att den förvrängs */
+    object-position: center 8%; /* centrerar bilden vid beskärning */
+    display: none;
+}
+
+
 .hero-text {
   position: absolute;
   top: 50%;
@@ -526,13 +535,12 @@ hr {
   .hero {
     height: 400px;
   }
-  .hero-image-mobile {
+  .hero-image {
     display: none;
   }
 
   .hero-image-desktop {
     display: block;
-    object-position: center;
   }
 
   .goals-grid {

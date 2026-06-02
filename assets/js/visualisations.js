@@ -356,43 +356,56 @@ function printSCB4Chart(data1, data2) {
     },
     options: {
       plugins: {
-        title: {
-          display: true,
-          text:
-            "Korrelation mellan kvinnors lön i relation till mäns och mäns uttag i relation till kvinnors.\nKoefficienten är " +
-            r.toFixed(2),
-          font: {
-            family: "Open Sans",
-            size: 12,
-            weight: "bold",
-          },
-        },
+        legend: {
+          labels: {
+
+            title: {
+              display: false,
+                text:
+                "Korrelation mellan kvinnors lön i relation till mäns och mäns uttag i relation till kvinnors.\nKoefficienten är " +
+                r.toFixed(2),
+              font: {
+                family: "Open Sans",
+                size: 12,
+                weight: "bold",
+              },
+            },
+          }
+        }
+        
+        
       },
       scales: {
         x: {
-          title: {
-            display: true,
-            text: "Kvinnors lön i relation till mäns",
+          ticks: {
 
-            font: {
-              family: "Open Sans",
-              size: 10,
-              weight: "bold",
+            title: {
+              display: true,
+              text: "Kvinnors lön i relation till mäns",
+              font: {
+                family: "Open Sans",
+                size: 10,
+                weight: "bold",
+              },
             },
           },
+          
         },
 
         y: {
-          title: {
-            display: true,
-            text: "Mäns uttag / kvinnors uttag",
-
-            font: {
-              family: "Open Sans",
-              size: 10,
-              weight: "bold",
+          ticks: {
+  
+            title: {
+              display: true,
+              text: "Mäns uttag / kvinnors uttag",
+              font: {
+                family: "Open Sans",
+                size: 10,
+                weight: "bold",
+              },
             },
-          },
+          }
+          
         },
       },
     },

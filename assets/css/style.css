@@ -41,16 +41,23 @@
   overflow: hidden;
 }
 .data-stats-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 20px;
-  border-radius: var(--radius-20);
-  background: hsla(229, 37%, 22%, 1);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    border-radius: var(--radius-20);
+
+    box-sizing: border-box;
 }
-.data-stats-text {
-  color: white;
-  min-width: 0;
+
+.data-stats-text,
+.data-stats-chart {
+    min-width: 0;
+}
+.data-stats-chart {
+  background: hsla(0, 0%, 100%, 0.5);
+  height: 200px;
+  border-radius: 15px;
 }
 
 
@@ -226,6 +233,7 @@ WEIGHTS
   text-align: center;
 }
 
+
 .weight.show{
   opacity: 1;
   transform:translateY(0);
@@ -263,6 +271,7 @@ RIGHT SIDE
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     width: 100%;
+    margin-bottom: 10px;
   }
 
 .card{
@@ -354,10 +363,7 @@ DESKTOP
 @media (min-width: 768px) {
   
 
-  .pie-chart {
-    width: 300px;
-    height: 300px;
-  }
+
   
   .pie-chart {
     width: 400px;
@@ -426,7 +432,7 @@ DESKTOP
 
   /* WEIGHTS */
 
-
+ 
 
 }
 
