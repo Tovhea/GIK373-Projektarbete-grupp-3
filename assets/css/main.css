@@ -73,7 +73,6 @@ footer {
 
 /*Sektion mål */
 .goals {
-
   background-color: var(--white);
 }
 
@@ -86,8 +85,11 @@ footer {
 .goals-grid {
   display: grid;
   grid-template-columns: 1fr;
-
   justify-content: center;
+}
+
+.goal-divider {
+
 }
 
 /* cirkel för målen*/
@@ -154,6 +156,15 @@ footer {
     min-width: 0;
     color: white;
 }
+
+.hr-stats-title {
+  width: 60px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/*
 .stats-title::after, .overlay-content h3::after {
     content: "";
     display: block;
@@ -164,6 +175,7 @@ footer {
     margin-bottom: 10px;
     border-radius: 10px;
 }
+    */
 
 .fact-icon {
     width: 30px;
@@ -255,12 +267,16 @@ footer {
 .main-headline-article {
   margin-top: var(--spacing-s);
 }
-
-hr {
-  border-top: 2px solid var(--black_a10);
+.hr-article {
   width: 20%; /* hur brett strecket ska vara */
   margin: var(--spacing-s) auto;
 }
+
+hr {
+  background: #eb5dbb;
+  height: 3px;
+}
+
 .container-article-long {
   margin-top: var(--spacing-xxl);
   height: 100%;
@@ -458,11 +474,8 @@ hr {
     border: none;
     border-left: 0.5px solid var(--black_a10);
     height: 60%;
-    display: none;
-  }
-  
-  .goal-divider {
     display: block;
+    background: var(--black_a25) ;
   }
 
   .goal-card{
