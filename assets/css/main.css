@@ -232,7 +232,7 @@ footer {
 
 #Map {
   width: 100%;
-  height: 500px;
+  height: 400px;
 }
 .article-image {
   display: block;
@@ -364,6 +364,7 @@ hr {
 
 .article-text-1 {
   grid-area: article-text-1;
+  padding-bottom: 80px;
 }
 
 .image-left {
@@ -377,6 +378,7 @@ hr {
 
 .article-text-left {
   grid-area: article-text-left;
+    padding-bottom: 80px;
 }
 
 .article-h2-3 {
@@ -394,6 +396,7 @@ hr {
 
 .article-text-right {
   grid-area: article-text-right;
+    padding-bottom: 80px;
 }
 
 .article-head,
@@ -643,11 +646,13 @@ hr {
   }
 
   #Map {
-  width: 65%;
+  width: 50%;
   height: 500px;
   margin-inline: auto;
-  padding-left: 20px;
+
 }
+
+
 
   /*styling av artikelsidan
     .container-article-long {
