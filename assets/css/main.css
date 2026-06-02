@@ -225,23 +225,25 @@ footer {
   margin-top: var(--spacing-l);
 }
 
-#Map{
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /*object-fit: contain;*/
+.map-wrapper {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
+#Map {
+  width: 100%;
+  height: 500px;
+}
 .article-image {
   display: block;
+  grid-column: 1 / -1;
   width: 100%;
   height: auto;
   object-fit: contain;
+  justify-content: center;
   filter:
         saturate(75%)
         brightness(90%);
-  background-color:hsla(0, 0%, 100%, 1);
 }
 
 .article-card {
@@ -321,7 +323,8 @@ hr {
   grid-gap: 20px;
   grid-template-columns: 1fr;
   margin-inline: auto;
-  max-width: 80%;
+  max-width: 1200px;
+  width: 100%;
 
   /*header spans 2 columner*/
   grid-template-areas:
@@ -554,7 +557,6 @@ hr {
   .title-sm {
    font-size: small;
   }
-  
 }
 /* Desktop */
 @media (min-width: 1024px) {
@@ -639,6 +641,13 @@ hr {
     grid-template-columns: 1fr 1.5fr;
     gap: 20px;
   }
+
+  #Map {
+  width: 65%;
+  height: 500px;
+  margin-inline: auto;
+  padding-left: 20px;
+}
 
   /*styling av artikelsidan
     .container-article-long {
