@@ -183,12 +183,15 @@ Bakgrundsbilder i CSS)
 <section>
     <div class="conatiner">
         <div class="scale-section">
-            <h1>
-                Löneskillnaden beror på flera faktorer
-            </h1>
-            <p class="subtitle">
-                Trots stora framsteg inom jämställdhet tjänar kvinnor och män fortfarande inte lika mycket. Löneskillnaden mellan könen är ett ämne som diskuteras världen över och påverkas av många olika faktorer. Samtidigt är frågan komplex, och det finns sällan en enkel förklaring till varför skillnaderna uppstår.
-            </p>
+            <div class=" scale-text">
+                <h2 class="headline-xs">
+                    Löneskillnaden beror på flera faktorer
+                </h2>
+                <p class="subtitle">
+                    Trots stora framsteg inom jämställdhet tjänar kvinnor och män fortfarande inte lika mycket. Löneskillnaden mellan könen är ett ämne som diskuteras världen över och påverkas av många olika faktorer. Samtidigt är frågan komplex, och det finns sällan en enkel förklaring till varför skillnaderna uppstår.
+                </p>
+            </div>
+            
             <div class="main-layout">
             <!-- LEFT SIDE -->
                 <div class="scale-wrapper">
@@ -215,56 +218,56 @@ Bakgrundsbilder i CSS)
                         <div class="stand"></div>
                         <div class="base"></div>
                     </div>
-            </div>
+                </div>
             <!-- RIGHT SIDE -->
-            <div class="right-side">
-                <div class="cards">
-                <div class="card"
-                onclick="addFactor(
-                'Föräldraledighet',
-                'Kvinnor tar ofta ut längre föräldraledighet vilket kan påverka löneutveckling och karriärmöjligheter.',
-                'pink'
-                )">
-                    <h3>Föräldraledighet</h3>
-                    <p>Klicka för att lägga till faktorn</p>
-                </div>
-                <div class="card"
-                onclick="addFactor(
-                'Deltidsarbete',
-                'Kvinnor arbetar oftare deltid vilket påverkar både inkomst och möjligheten till högre positioner.',
-                'purple'
-                )">
-                    <h3>Deltidsarbete</h3>
-                    <p>Klicka för att lägga till faktorn</p>
-                </div>
-                <div class="card"
-                onclick="addFactor(
-                'Lågavlönade sektorer',
-                'Män och kvinnor arbetar ofta inom olika yrken och branscher där lönerna kan skilja sig mycket.',
-                'yellow'
-                )">
-                    <h3>Lågavlönade sektorer</h3>
-                    <p>Klicka för att lägga till faktorn</p>
-                </div>
-                <div class="card"
-                onclick="addFactor(
-                'Övrigt',
-                'Män har oftare högre chefspositioner vilket påverkar genomsnittslönen.',
-                'blue'
-                )">
-                    <h3>Övrigt</h3>
-                    <p>Klicka för att lägga till faktorn</p>
-                </div>
+                <div class="right-side">
+                    <div class="cards">
+                        <div class="card card-pink"
+                            onclick="addFactor(
+                            'Föräldraledighet',
+                            'Kvinnor tar ofta ut längre föräldraledighet vilket kan påverka löneutveckling och karriärmöjligheter.',
+                            'pink'
+                            )">
+                            <h3>Föräldraledighet</h3>
+                            <p>Klicka för att lägga till faktorn</p>
+                        </div>
+                        <div class="card card-blue"
+                            onclick="addFactor(
+                            'Deltidsarbete',
+                            'Kvinnor arbetar oftare deltid vilket påverkar både inkomst och möjligheten till högre positioner.',
+                            'blue'
+                            )">
+                            <h3>Deltidsarbete</h3>
+                            <p>Klicka för att lägga till faktorn</p>
+                        </div>
+                        <div class="card card-purple"
+                            onclick="addFactor(
+                            'Lågavlönade sektorer',
+                            'Män och kvinnor arbetar ofta inom olika yrken och branscher där lönerna kan skilja sig mycket.',
+                            'purple'
+                            )">
+                            <h3>Lågavlönade sektorer</h3>
+                            <p>Klicka för att lägga till faktorn</p>
+                        </div>
+                        <div class="card card-brown"
+                            onclick="addFactor(
+                            'Övrigt',
+                            'Män har oftare högre chefspositioner vilket påverkar genomsnittslönen.',
+                            'brown'
+                            )">
+                            <h3>Övrigt</h3>
+                            <p>Klicka för att lägga till faktorn</p>
+                        </div>
+                    </div>
                 </div>
             <!-- INFO BOX -->
                 <div class="info-box" id="infoBox">
-                <h2>Klicka på en faktor</h2>
-                <p>
-                    När du klickar på faktorerna läggs de till på vågen för att visa
-                    att löneskillnaden påverkas av flera olika saker tillsammans.
-                </p>
+                    <h2>Klicka på en faktor</h2>
+                    <p>
+                        När du klickar på faktorerna läggs de till på vågen för att visa
+                        att löneskillnaden påverkas av flera olika saker tillsammans.
+                    </p>
                 </div>
-            </div>
             </div>
         </div>
     </div>

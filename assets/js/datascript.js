@@ -6,6 +6,12 @@ let angle = 0;
 
 let activeFactors = [];
 
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('active');
+  });
+});
+
 function addFactor(title, text, color){
 
   const exists = activeFactors.find(
@@ -13,7 +19,37 @@ function addFactor(title, text, color){
   );
 
   if(exists){
-    return;
+    const weight = [...weightsContainer.children].find(
+    w => w.innerText === title
+  );
+
+  if (weight) {
+    weight.remove();
+  }
+
+  activeFactors = activeFactors.filter(
+    f => f.title !== title
+  );
+
+  angle -= 4;
+
+  if (angle < 0) {
+    angle = 0;
+  }
+
+  beam.style.transform = `rotate(${angle}deg)`;
+
+  if (activeFactors.length === 0) {
+    infoBox.innerHTML = `
+      <h2>Klicka på en faktor</h2>
+      <p>
+        När du klickar på faktorerna läggs de till på vågen för att visa
+        att löneskillnaden påverkas av flera olika saker tillsammans.
+      </p>
+    `;
+  }
+
+  return;
   }
 
   activeFactors.push({
@@ -51,38 +87,7 @@ function addFactor(title, text, color){
     <p>${text}</p>
   `;
 
-  /* REMOVE WEIGHT */
-
-  weight.addEventListener("click", () => {
-
-    weight.remove();
-
-    activeFactors = activeFactors.filter(
-      f => f.title !== title
-    );
-
-    angle -= 4;
-
-    if(angle < 0){
-      angle = 0;
-    }
-
-    beam.style.transform =
-    `rotate(${angle}deg)`;
-
-    if(activeFactors.length === 0){
-
-      infoBox.innerHTML = `
-        <h2>Klicka på en faktor</h2>
-        <p>
-          När du klickar på faktorerna läggs de till på vågen för att visa
-          att löneskillnaden påverkas av flera olika saker tillsammans.
-        </p>
-      `;
-
-    }
-
-  });
+  
 
 }
 
