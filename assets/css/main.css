@@ -491,9 +491,9 @@ hr {
 
 /* Tablet */
 @media (min-width: 768px) {
-  html {
+  /*html {
     font-size: 15px;
-  }
+  }*/
 
   .hero-headline {
     font-size: var(--fs-38);
