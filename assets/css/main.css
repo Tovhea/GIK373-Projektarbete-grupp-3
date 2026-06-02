@@ -131,15 +131,14 @@ footer {
 .stats-main {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
-    align-items: center;
+    gap: 20px;
     padding: 20px;
     border-radius: var(--radius-20);
     background: hsla(229, 37%, 22%, 1);
 }
 
 .fact-box {
-    background: hsla(229, 37%, 22%, 0.6);
+    background: hsla(229, 40%, 71%, 0.7);
     min-width: 0;
     border-radius: var(--radius-20);
     padding: 30px;
@@ -149,13 +148,14 @@ footer {
     justify-content: center;
     text-align: center;
 
-    color: white;
+    color: hsla(229, 37%, 22%, 1);
 }
 
 .stats-text, .stats-chart {
     min-width: 0;
     color: white;
 }
+<<<<<<< HEAD
 
 .hr-stats-title {
   width: 60px;
@@ -165,6 +165,11 @@ footer {
 }
 
 /*
+=======
+.stats-chart {
+    height: 200px;
+}
+>>>>>>> 8e4ed66be52ac4f759588b89167c8cc162dc7774
 .stats-title::after, .overlay-content h3::after {
     content: "";
     display: block;
@@ -189,6 +194,18 @@ footer {
     color: #eb5dbb; /* <-- lägg här istället */
 }
 
+.fact {
+    margin: 50px;    
+    display: flex;
+    justify-content: center;
+}
+.fact-text {
+    max-width: 500px;
+    padding: 7px;
+}
+.fact-space-between {
+    padding: 8px;
+}
 
 /*styling av clickbara cards för artiklar*/
 .articles-grid {
@@ -594,6 +611,11 @@ hr {
   .container-article-long {
     grid-template-columns: 1fr;
     max-width: 50%;
+  }
+
+  .stats-main {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
   }
 
   /*styling av artikelsidan
