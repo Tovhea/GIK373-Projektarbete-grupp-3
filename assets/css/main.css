@@ -281,8 +281,6 @@ footer {
 }
 
 
-
-
 .main-headline-article {
   margin-top: var(--spacing-s);
 }
@@ -391,6 +389,16 @@ hr {
   text-align: center;
   color: var(--text-primary-black);
 }
+
+
+.articles .overlay-content { 
+  padding: 2rem;
+}
+  .articles .overlay-content .body-sm {
+    max-width: 250px;
+  }
+
+
 
 .date {
   font-weight: 300;
@@ -532,6 +540,11 @@ hr {
   .title-sm {
    font-size: small;
   }
+
+  .articles .overlay-content .body-sm {
+    font-size: 10px;
+    max-width: 250px;
+  }
   
 }
 /* Desktop */
@@ -613,6 +626,21 @@ hr {
     max-width: 50%;
   }
 
+
+  .article-card .title-sm {
+    font-size: x-large;
+  }
+
+  .article-card .overlay-content .body-sm {
+    max-width: 400px;
+    font-size:small;
+  }
+
+  .article-card .overlay-content .link-button {
+    font-size: medium;
+  }
+
+  
   .stats-main {
     grid-template-columns: 1fr 1.5fr;
     gap: 20px;
