@@ -199,11 +199,12 @@ footer {
   margin-top: var(--spacing-l);
 }
 
-.map{
+#Map{
   display: block;
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  /*object-fit: contain;*/
 }
 
 .article-image {
@@ -214,6 +215,7 @@ footer {
   filter:
         saturate(75%)
         brightness(90%);
+  background-color:hsla(0, 0%, 100%, 1);
 }
 
 .article-card {
@@ -275,6 +277,15 @@ footer {
 hr {
   background: #eb5dbb;
   height: 3px;
+}
+
+.drop-cap::first-letter {
+  font-family: Georgia, serif; 
+  font-size: 60px;
+  font-weight: bold;
+  float: left;
+  line-height: 1;
+  margin-right: 0.1em;
 }
 
 .container-article-long {
@@ -440,9 +451,10 @@ hr {
 
 /* Tablet */
 @media (min-width: 768px) {
-  /*html {
+  html {
     font-size: 15px;
-  }*/
+  }
+
   .hero-headline {
     font-size: var(--fs-38);
   }
