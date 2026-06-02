@@ -187,6 +187,12 @@ footer {
 .fact-text {
     max-width: 500px;
     padding: 7px;
+    border-left: 3px solid #dbd5d9;
+    padding-left: 1rem;
+}
+.fact {
+    display: flex;
+    align-items: center;
 }
 .fact-space-between {
     padding: 8px;
@@ -480,12 +486,10 @@ hr {
     border: none;
     border-left: 0.5px solid var(--black_a10);
     height: 60%;
-    display: none;
-  }
-  
-  .goal-divider {
     display: block;
   }
+  
+
 
   .goal-card{
     border-block-end: none;
