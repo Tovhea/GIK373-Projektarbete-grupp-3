@@ -1,81 +1,60 @@
+<!--Sandra Eriksson Gustav Westman Tove Hübinette-->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lönegapet mellan män och kvinnor</title>
+    <meta name="title" content="Vi är grupp 3">
+    <meta name="decription" content="Det här är en hemsida med statistiska visualiseringar gjord av grupp 3">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lönegapet mellan män och kvinnor</title>
-        <meta name="title" content="Vi är grupp 3">
-        <meta name="decription" content="Det här är en hemsida med statistiska visualiseringar gjord av grupp 3">
+    <!-- Favicon(den lilla bilden som visas i webbläsarfliken)--> 
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/scale.png">
 
-        <!-- 
-    Favicon(den lilla bilden som visas i webbläsarfliken)
-    -->
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-16x16.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-32x32.png">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--roboto --> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--open sans --> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <!--
-    google fonts
-    -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet">
 
-        <!--
-    custom css link
-    -->
-        <link rel="stylesheet" href="./assets/css/require.css">
-        <link rel="stylesheet" href="./assets/css/main.css">
-        <script
-        src="https://cdn.plot.ly/plotly-3.5.1.min.js"
-        charset="utf-8"
-        ></script>
-
-    </head>
+    <!--custom css link-->
+    <link rel="stylesheet" href="./assets/css/require.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
 </head>
 
 <body>
+<!-- PRELOADER -->
+<div class="preloader" data-preloader>
+    <div class="preloader-circle"></div>
+</div>
 
-    <!-- PRELOADER -->
-    <div class="preloader" data-preloader>
-        <div class="preloader-circle"></div>
-    </div>
-
-    <main>
-        
 <!-- HEADER -->
 <header class="header" data-header>
     <div class="container">
-
         <a href="./index.html" class="logo">
             <img src="assets/images/scale.png" width="65" height="20" alt="EQUALIA">
         </a>
-
         <nav class="navbar" data-navbar>
             <ul class="navbar-list">
-
                 <li class="navbar-item">
                     <a href="./index.html" class="label-lg navbar-link has-after" data-nav-link>Hem</a>
                 </li>
-
                 <li class="navbar-item">
                     <a href="./article.html" class="label-lg navbar-link has-after active" data-nav-link>Löneskillnader</a>
                 </li>
-
                 <li class="navbar-item">
                     <a href="./data.html" class="label-lg navbar-link has-after" data-nav-link>Faktorer</a>
                 </li>
-
-                
+                <li class="navbar-item">
+                    <a href="./sources.html" class="label-lg navbar-link has-after" data-nav-link>Referenslista</a>
+                </li>
             </ul>
-
-
-
         </nav>
-
         <!-- hamburgermenynapp -->
         <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler>  
             <ion-icon name="menu-outline" aria-hidden="true"></ion-icon> 
@@ -86,124 +65,204 @@
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>      <!-- hämtar in ikonen -->
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-
+<main>
 <div class="header-background">
     <img src="./assets/images/header.png" alt="hero image">
 </div>
 
-        <section class="container-article-long">
-            <section class="article-head">
-                    <h4 class="date label-md">20 MAJ 2026</h4>
-                    <h1 class="main-headline-article headline-lg">Lönegapet mellan män och kvinnor</h1>
-            </section> 
-        
-            <hr class="hr-article">
+<section>
+    <div class="container">
+        <div class="page-title">
+            <h1 class="headline-md headline-page">Lönegapet mellan män och kvinnor</h1>
+            <hr class="hr-stats-title hr-headline-page">
+        </div>
+    </div>
+</section>
 
-            <h2 class="article-h2-1 headline-sm">Skillnader i olika delar av landet</h2>
-            <h3 class="text-above-img description">Sambandet mellan dessa variabler</h3>
-            <section class="article-image">
-                <div class="map-wrapper">
-                    <div id="Map"></div>
-                </div>
-            </section>
+<section class="analysis-section">
+    <div class="container">
 
-            <p class="article-text-1 body-lg drop-cap"> Lönegapet förklaras till stor del av att kvinnor arbetar färre timmar. 
-
-Enligt siffror från 2022 arbetar nästan en tredjedel av kvinnorna (28 procent) deltid. Sedan 1994 har svensk lagstiftning krävt att arbetsgivare genomför lönekartläggningar i syfte att minska ojämlikheter mellan män och kvinnor. Studien visar dock att lönekartläggningar inte alltid fungerar som ett verktyg för jämställdhet, utan i stället ofta används för att legitimera redan existerande löneskillnader mellan kvinnor och män. Svenska kommuner fokuserar ofta på att hitta förklaringar till skillnaderna snarare än att ifrågasätta om strukturerna bakom dem faktiskt är rättvisa. 
-
-När män tjänade mer än kvinnor i liknande arbeten förklarades det ofta med att männen hade mer ”erfarenhet”, ”särskilda arbetsuppgifter” eller större ansvar. Studien visar dock att dessa begrepp sällan definieras tydligt. ”Erfarenhet” verkar ofta endast syfta på högre ålder eller längre anställningstid, inte nödvändigtvis bättre kompetens.  
-
-Studien lyfter även problematiken kring individuell lönesättning. Kommunerna beskriver ofta individuell och differentierad lön som något rättvist och neutralt, men forskarna menar att denna modell kan göra det svårare att upptäcka könsdiskriminering Salminen-Karlsson, M., & Fogelberg Eriksson, A. (2024).  </p>
-
-            <h2 class="article-h2-2 headline-sm"> Branch och sektor påverkar </h2>
-
-            <section class="image-left">
-                <!-- antal kvinnor vs män i olika inkomstklasser-->
-                <h3 class="description"> Antal kvinnor vs män i olika inkomstklasser </h3>
-                <div class="chart-container">
-                    <canvas id="scb2"></canvas>
-                </div>
-            </section>
-
-
-            <p class="article-text-right body-lg"> Lönegapet är väldigt olika beroende på branch och sektor (Bennedsen et al. (2023)).  
-
-                Tekniska och mansdominerade yrken ofta får högre lön än kvinnodominerade omsorgsyrken, trots att arbetena enligt arbetsvärderingen bedöms vara likvärdiga Karlsson, M., & Fogelberg Eriksson, A. (2024).  
-                
-                Cirka en fjärdedel av det totala könslönegapet kan förklaras av en överrepresentation av kvinnor i relativt lågavlönade sektorer, såsom omsorg, hälsa eller utbildning. (25%)(europa.eu)  </p>
-
-                <h2 class="article-h2-3 headline-sm"> Skillnaden bland inkomstklasser </h2>
-
-                <section class="image-right">
-                    <h3 class="description"> Lönegapet i olika inkomstklasser </h3>
-                    <div class="chart-container">
-                        <canvas id="scb3"></canvas>
+        <div class="analysis-layout">
+            <div class="stats-section">
+                <div class="stats-layout">
+                    <div class="stats-main">
+                        <div class="stats-text">
+                            <h3 class="stats-title headline-xs">Genomsnittlig löneskillnad över tid (kr/mån)</h3>
+                        </div>
+                        <div class="stats-chart">
+                            <canvas id="scb"></canvas>
+                        </div>
                     </div>
-                    <p class="data-kalla" > Källa: Statistiska centralbyrån (2024)</p>
-                </section>
+                </div>
+            </div> 
+            <div class="information">
+                <div class="information-text">
+                    <h3 class="headline-xs">
+                        10 procent mindre år efter år  
+                    </h3>
+                    <p class="body-lg">
+                        Lönegapet mellan kvinnor och män finns i alla länder. De skandinaviska länderna har dock bland de minsta löneskillnaderna. 
+                        Även om lönegapet har minskat sedan andra världskriget har utvecklingen stannat av under de senaste decennierna (Bennedsen et al., 2023). 
+                        Detta diagram visar löneskillnaderna mellan män och kvinnor från 2014 till 2022. År 2022 tjänade kvinnor i genomsnitt 10 % mindre än män vilket är en skillnad som varit relativt konsekvent sedan 2014. 
+                        Det relativa gapet i kronor har dock minskat något. Mellan 2014 och 2022 ökade männens löner med ungefär 6 500 kr och kvinnornas med ungefär 7 000 kr per månad. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="analysis-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="headline-page-h2 headline-sm">Fördelningen som berättar mer än ett genomsnitt </h2>
+        </div>
+        <div class="analysis-layout reverse">
+            <div class="stats-section">
+                <div class="stats-layout">
+                    <div class="stats-main">
+                        <div class="stats-text">
+                            <h3 class="stats-title headline-xs">Antal män och kvinnor i olika inkomstklasser</h3>
+                        </div>
+                        <div class="stats-chart">
+                            <canvas id="scb2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="information">
+                <div class="information-text">
+                    <h3 class="headline-xs">
+                        Strukturella skillnader i inkomst och yrkesnivå mellan kvinnor och män
+                    </h3>
+                    <p class="body-lg line-break">
+                        Stapeldiagrammet visar antalet kvinnor och män med olika förvärvsinkomst i olika inkomstklasser. Förvärvsinkomster innefattar lön, pension, sjukpenning och andra skattepliktiga ersättningar, men inte kapitalinkomster. Här kan vi tydligt se att det är betydligt fler kvinnor än män som har lägre inkomst. Upp till 499 000 kronor per år, vilket motsvarar cirka 41 600 kronor per månad, är kvinnor i majoritet bland inkomsttagarna. Vid inkomster över denna nivå är män i majoritet. Enligt Salminen-Karlsson och Fogelberg Eriksson (2024) kan detta förklaras av att tekniska och mansdominerade yrken ofta får högre lön än kvinnodominerade omsorgsyrken.   
+                    </p>
+                    <p class="body-lg line-break">
+                        Europaparlamentet (2025) menar också att cirka en fjärdedel av det totala könslönegapet kan förklaras av en överrepresentation av kvinnor i relativt lågavlönade sektorer, såsom omsorg, hälsa eller utbildning. Kvinnor arbetar också färre timmar: enligt siffror från 2022 arbetar 28 % av kvinnorna deltid.  
+                    </p>
+                    <p class="body-lg line-break">
+                        Inom akademin syns liknande mönster. Kvinnor har svårare att nå högre tjänster som professurer menar Masso et al. (2025). Män blir därför överrepresenterade på de högre nivåerna medan kvinnor oftare återfinns i lägre positioner. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="analysis-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="headline-page-h2 headline-sm">Är lönegapet större bland höginkomsttagare? </h2>
+        </div>
+        <div class="analysis-layout">
+            <div class="stats-section">
+                <div class="stats-layout">
+                    <div class="stats-main">
+                        <div class="stats-text">
+                            <h3 class="stats-title headline-xs">Kvinnors lön som andel av mäns lön i olika inkomstnivåer </h3>
+                        </div>
+                        <div class="stats-chart">
+                            <canvas id="scb3"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="information">
+                <div class="information-text">
+                    <h3 class="headline-xs">
+                        Lönegapet är större bland höginkomsttagare
+                    </h3>
+                    <p class="body-lg line-break">
+                        Grafen visar kvinnors lön som andel av mäns lön i olika inkomstpercentiler. Kvinnors löner ligger närmare mäns löner i de lägre och mellersta inkomstgrupperna, 
+                        där kvinnor tjänar omkring 92 - 95 % av männens lön. Skillnaden ökar däremot i de högsta inkomstgrupperna. I den 90:e percentilen tjänar kvinnor cirka 85 % av männens lön, 
+                        vilket indikerar att lönegapet är större bland höginkomsttagare.  
+                    </p>
+                    <p class="body-lg line-break">
+                        Lönegapet tenderar också att öka med åldern medan det är mindre bland nytillträdande på arbetsmarknaden hävdar Bennedsen et al., (2023). 
+                        Skillnaderna varierar också avsevärt mellan branscher och sektorer, och påverkas av personliga omständigheter, exempelvis är lönegapet lägre för ogifta än för gifta kvinnor. 
+                    </p>
+                    <p class="body-lg line-break">
+                        Kvinnor är ofta underrepresenterade i högbetalda positioner inom företag enligt Europaparlamentet (2025) som menar att kvinnor i EU tjänar i 
+                        genomsnitt 23% mindre per timme än manliga chefer och endast besitter 34,7% av alla chefspositioner.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="analysis-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="headline-page-h2 headline-sm">Var är lönegapet störst?</h2>
+        </div>
+        <div>
+            <div class="stats-section">
+                <div class="stats-layout">
+                    <div class="stats-main">
+                        <div class="stats-text">
+                            <h3 class="stats-title headline-xs">Kvinnors lön i % av män i olika regioner</h3>
+                        </div>
+                        <div class="stats-chart">
+                            <div id="Map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="information">
+                <div class="information-text map-text">
+                    <h3 class="headline-xs">
+                        Geografiska mönster i könsskillnader på arbetsmarknaden
+                    </h3>
+                    <p class="body-lg line-break">
+                        Denna karta visar kvinnors lön i procent av mäns utifrån data från 2024 i olika delar av landet. 
+                        De största löneskillnaderna kan vi se i Stockholm och Sydsverige och mindre löneskillnader i Småland.  
+                    </p>
+                    <p class="body-lg line-break">
+                        Enligt Salminen-Karlsson och Fogelberg Eriksson (2024) har svensk lagstiftning sedan 1994 krävt att arbetsgivare genomför lönekartläggningar i syfte att minska ojämlikheter mellan män och kvinnor. 
+                        Studien visar dock att lönekartläggningar inte alltid fungerar som ett verktyg för jämställdhet, utan i stället ofta används för att legitimera redan existerande löneskillnader mellan kvinnor och män. 
+                    </p>
+                    <p class="body-lg line-break">
+                        I det här fallet undersöktes svenska kommuner som ofta fokuserar på att hitta förklaringar till skillnaderna snarare än att ifrågasätta om strukturerna bakom dem faktiskt är rättvisa. 
+                        När män tjänade mer än kvinnor i liknande arbeten förklarades det ofta med att männen hade mer ”erfarenhet”, ”särskilda arbetsuppgifter” eller större ansvar. Studien visar dock att dessa begrepp sällan definieras tydligt. 
+                        ”Erfarenhet” verkar ofta endast syfta på högre ålder eller längre anställningstid, inte nödvändigtvis bättre kompetens. Studien lyfter även problematiken kring individuell lönesättning. 
+                        Kommunerna beskriver ofta individuell och differentierad lön som något rättvist och neutralt, men forskarna menar att denna modell kan göra det svårare att upptäcka könsdiskriminering Salminen-Karlsson och Fogelberg Eriksson (2024). 
+                    </p>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
 
-            <p class="article-text-left body-lg"> Grafen visar kvinnors lön som andel av mäns lön i olika inkomstpercentiler. 
-                Kvinnors löner ligger närmare mäns löner i de lägre och mellersta inkomstgrupperna, där kvinnor tjänar omkring 92-95 procent av männens lön. 
-                Skillnaden ökar däremot i de högsta inkomstgrupperna. I den 90:e percentilen tjänar kvinnor cirka 85 procent av männens lön,
-                 vilket indikerar att lönegapet är större bland höginkomsttagare. En bidragande faktor kan vara att kvinnor ofta är underrepresenterade
-                i högbetalda positioner inom företag. Enligt Europaparlamentet (2025) har kvinnor i EU endast 34,7% av chefpositioner och tjänar i genomsnitt
-            23% mindre per timme än manliga chefer.  </p>
-
-
-        </section>
-
-    <!-- hämtar in kartan-->
-
-
-
-
-
-    <!-- hämtar in chart.js biblioteket och visualiseringarna-->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
-        <script src="./assets/js/visualisations.js"></script>
-    <!-- <script src="Karta/script.js"></script> -->
-
+<!-- hämtar in chart.js biblioteket och visualiseringarna-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="https://cdn.plot.ly/plotly-3.5.1.min.js" charset="utf-8"></script>
+<!-- CUSTOM JS LINK (egenskriven js fil) -->
+    <script src="./assets/js/visualisations.js"></script>
     <script src="./assets/js/script.js"></script>
-    <script src="./script.js"></script>
 
 </main>
-    <!-- CUSTOM JS LINK (egenskriven js fil) -->
+    
 <footer class="footer">
     <div class="container footer-content">
-
-        <div class="footer-section">
+        <div class="footer-section footer-logo">
             <img src="assets/images/scale.png" width="65" alt="EQUALIA">
-
             <h3>EQUALIA</h3>
-            <p class = "body-md">
-                En webbplats som utforskar löneskillnader mellan kvinnor och män i Sverige.
-            </p>
         </div>
-
-        <div class="footer-section">
-            <h4 class = "body-md">Navigation</h4>
-            <ul>
-                <li class = "body-md"><a href="./index.html">Hem</a></li>
-                <li class = "body-md"><a href="./article.html">Löneskillnader</a></li>
-                <li class = "body-md"><a href="./data.html">Faktorer</a></li>
-                <li class = "body-md"><a href="./sources.html">Referenser</a></li>
-            </ul>
+        <div class="footer-section footer-nav">
+            <p class="body-lg"><a href="./index.html">Hem</a></p>
+            <p class="body-lg"><a href="./article.html">Löneskillnader</a></p>
+            <p class="body-lg"><a href="./data.html">Faktorer</a></p>
+            <p class="body-lg"><a href="./sources.html">Referenser</a></p>
         </div>
-
-        <div class="footer-section">
-            <h4 class = "body-md">Projektgrupp</h4>
-            <p class = "body-md">Tove Hübinette</p>
-            <p class = "body-md">Sandra Eriksson</p>
-            <p class = "body-md">Gustav Westman</p>
-        </div>
-
     </div>
-
     <div class="footer-bottom">
         <p>© 2026 Grupp 3</p>
+        <div class="footer-name">
+            <p class="body-md">Tove Hübinette</p>
+            <p class="body-md">Sandra Eriksson</p>
+            <p class="body-md">Gustav Westman</p>
+        </div>
     </div>
 </footer>
-    <!--<script src="./assets/Karta/script.js"></script>-->
 </body>
-
 </html>

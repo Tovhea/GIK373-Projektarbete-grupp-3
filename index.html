@@ -1,3 +1,5 @@
+<!--Sandra Eriksson Gustav Westman Tove Hübinette-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,45 +9,25 @@
     <meta name="title" content="Vi är grupp 3">
     <meta name="decription" content="Det här är en hemsida med statistiska visualiseringar gjord av grupp 3">
 
-<!-- 
-Favicon(den lilla bilden som visas i webbläsarfliken)
---> 
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images/våg.png">
-<!--<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-32x32.png">-->
+    <!-- Favicon(den lilla bilden som visas i webbläsarfliken)--> 
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/scale.png">
 
-<!--
-google fonts
---> 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--roboto --> 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<!--open sans --> 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<!--abril fatface --> 
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Petit+Formal+Script&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+DE+Grund+Guides&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+PL:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/2fceea4654.js" crossorigin="anonymous"></script>
+    <!--google fonts--> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--roboto --> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--open sans --> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-<!--
-custom css link
---> 
-<link rel="stylesheet" href="./assets/css/require.css">
-<link rel="stylesheet" href="./assets/css/main.css"> 
-<link rel="stylesheet" href="./assets/css/style.css"> 
-
-<!--
-Preload images(Ladda den här bilden direkt, även om den inte används förrän senare. Användbart för: Hero-bilder – stora bilder högst upp på sidan
-Loggor – visas direkt vid laddning
-Bakgrundsbilder i CSS)
---> 
-
-<!--<link rel="preload" as="image" href="./assets/images/strand.jpeg"> -->
+    <!--custom css link--> 
+    <link rel="stylesheet" href="./assets/css/require.css">
+    <link rel="stylesheet" href="./assets/css/main.css"> 
+    <link rel="stylesheet" href="./assets/css/style.css"> 
 </head>
+
 <body>
-
-
-<!-- PRELOADER snurrande cirkel som kommer upp om innehållet på sidan behöver tid på sig att ladda-->
+<!-- PRELOADER-->
 <div class="preloader" data-preloader>
     <div class="preloader-circle"></div>
 </div>
@@ -74,6 +56,9 @@ Bakgrundsbilder i CSS)
                 <li class="navbar-item">
                     <a href="./data.html" class="label-lg navbar-link has-after" data-nav-link>Faktorer</a>
                 </li>
+                <li class="navbar-item">
+                    <a href="./sources.html" class="label-lg navbar-link has-after" data-nav-link>Referenslista</a>
+                </li>
 
             </ul>
 
@@ -101,8 +86,7 @@ Bakgrundsbilder i CSS)
     <div class="hero-text">
         <p class="Jämställdhet"> </p>
         <h1 class="headline-sm hero-headline">Lönegapet mellan män och kvinnor</h1>
-        <p class="body-sm">Statistik, utveckling och faktorer bakom lönegapet i Sverige</p>
-        <!--<button class="button-primary">Se vår statistik</button>-->
+        <p class="body-lg">Statistik, utveckling och faktorer bakom lönegapet i Sverige</p>
     </div>
 </div>
 
@@ -141,210 +125,34 @@ Bakgrundsbilder i CSS)
     </div>
 </section>
 
-
-
-
-
-<!--statistik -->
-<section class="stats-section">
-    <div class="container">
-        <div class="stats-layout">
-            <div class="stats-main">
-                <div class="stats-text">
-                    <h2 class="stats-title headline-xs">Lönegapet över tid</h2>
-                    <hr class="hr-stats-title">
-                    <p>Hur stora är egentligen skillnaderna mellan mäns och kvinnors löner? Statistiken visar hur lönegapet skiljer sig mellan olika regioner, inkomstnivåer och över tid samt vilka faktorer som kan ligga bakom löneskillnaden.</p>
-                    <a href="./article.html" class="link-button">Utforska statistiken</a>
-                </div>
-                <div class="stats-chart">
-                    <canvas id="scb"></canvas>
-                </div>
-            </div>
-            
-            <div class="fact-box">
-                <div class="fact-icon">
-                    <i class="fa-solid fa-arrow-trend-up"></i>
-                </div>
-                <h3>Fortsatt lönegap</h3>
-                <p>
-                    År 2022 tjänade kvinnor i genomsnitt 10 % mindre än män.
-                </p>
-            </div>
-        </div>
-    </div>
-    
-</section>    
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="./assets/js/visualisations.js"></script>
-
-
-
-
-<section>
-    <div class="conatiner">
-        <div class="scale-section">
-            <div class=" scale-text">
-                <h2 class="headline-xs">
-                    Löneskillnaden beror på flera faktorer
-                </h2>
-                <p class="subtitle">
-                    Trots stora framsteg inom jämställdhet tjänar kvinnor och män fortfarande inte lika mycket. Löneskillnaden mellan könen är ett ämne som diskuteras världen över och påverkas av många olika faktorer. Samtidigt är frågan komplex, och det finns sällan en enkel förklaring till varför skillnaderna uppstår.
-                </p>
-            </div>
-            
-            <div class="main-layout">
-            <!-- LEFT SIDE -->
-                <div class="scale-wrapper">
-                    <div class="scale">
-                        <div class="weights" id="weightsContainer"></div>
-                <!-- BEAM -->
-                        <div class="beam" id="beam">
-                <!-- LEFT -->
-                            <div class="left-hanger">
-                                <div class="line-left"></div>
-                                <div class="line-right"></div>
-                                <div class="bowl"></div>
-                            </div>
-                <!-- RIGHT -->
-                            <div class="right-hanger">
-                                <div class="line-left"></div>
-                                <div class="line-right"></div>
-                                <div class="bowl"></div>
-                            </div>
-                        </div>
-                <!-- CENTER -->
-                        <div class="center-circle"></div>
-                <!-- STAND -->
-                        <div class="stand"></div>
-                        <div class="base"></div>
-                    </div>
-                </div>
-            <!-- RIGHT SIDE -->
-                <div class="right-side">
-                    <div class="cards">
-                        <div class="card card-pink"
-                            onclick="addFactor(
-                            'Föräldraledighet',
-                            'Kvinnor tar ofta ut längre föräldraledighet vilket kan påverka löneutveckling och karriärmöjligheter.',
-                            'pink'
-                            )">
-                            <h3>Föräldraledighet</h3>
-                            <p>Klicka för att lägga till faktorn</p>
-                        </div>
-                        <div class="card card-blue"
-                            onclick="addFactor(
-                            'Deltidsarbete',
-                            'Kvinnor arbetar oftare deltid vilket påverkar både inkomst och möjligheten till högre positioner.',
-                            'blue'
-                            )">
-                            <h3>Deltidsarbete</h3>
-                            <p>Klicka för att lägga till faktorn</p>
-                        </div>
-                        <div class="card card-purple"
-                            onclick="addFactor(
-                            'Lågavlönade sektorer',
-                            'Män och kvinnor arbetar ofta inom olika yrken och branscher där lönerna kan skilja sig mycket.',
-                            'purple'
-                            )">
-                            <h3>Lågavlönade sektorer</h3>
-                            <p>Klicka för att lägga till faktorn</p>
-                        </div>
-                        <div class="card card-brown"
-                            onclick="addFactor(
-                            'Övrigt',
-                            'Män har oftare högre chefspositioner vilket påverkar genomsnittslönen.',
-                            'brown'
-                            )">
-                            <h3>Övrigt</h3>
-                            <p>Klicka för att lägga till faktorn</p>
-                        </div>
-                    </div>
-                </div>
-            <!-- INFO BOX -->
-                <div class="info-box" id="infoBox">
-                    <h2>Klicka på en faktor</h2>
-                    <p>
-                        När du klickar på faktorerna läggs de till på vågen för att visa
-                        att löneskillnaden påverkas av flera olika saker tillsammans.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="articles">
-    <div class="container">
-        <div class="articles-grid">
-            <a href="./article.html" class="article-link">
-                <div class="article-card">
-                    <div class="image">
-                        <img class ="article-image" src="./assets/images/kvinna_man.png" alt="artikelbild">
-                        <div class="image-overlay overlay-left">
-                            <div class="overlay-content">
-                                <h3 class="title-sm">Löneskillnader</h3>
-                                <hr class="hr-stats-title">
-                                <p class="body-sm">Läs mer om löneskillnaden mellan män och kvinnor och hur den skiljer sig mellan olika regioner i Sverige.</p>
-                                <div class="link-button">Läs mer</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="./data.html" class="data-link">
-                <div class="article-card">
-                    <div class="image">
-                        <img class ="article-image" src="./assets/images/barn_vagn.png" alt="artikelbild">
-                        <div class="image-overlay overlay-right">
-                            <div class="overlay-content">
-                                <h3 class="title-sm">Faktorer bakom löneskillnaden</h3>
-                                <hr class="hr-stats-title">
-                                <p class="body-sm">Läs mer om hur bland annat föräldraledighet påverkar löneskillnaderna.</p>
-                                <div class="link-button">Läs mer</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-
 </main>
 <footer class="footer">
     <div class="container footer-content">
-
-        <div class="footer-section">
+        <div class="footer-section footer-logo">
             <img src="assets/images/scale.png" width="65" alt="EQUALIA">
 
             <h3>EQUALIA</h3>
-            <p class = "body-md">
+            <!--<p class = "body-md">
                 En webbplats som utforskar löneskillnader mellan kvinnor och män i Sverige.
-            </p>
+            </p> -->
         </div>
 
-        <div class="footer-section">
-            <h4 class = "body-md">Navigation</h4>
-            <ul>
-                <li class = "body-md"><a href="./index.html">Hem</a></li>
-                <li class = "body-md"><a href="./article.html">Löneskillnader</a></li>
-                <li class = "body-md"><a href="./data.html">Faktorer</a></li>
-                <li class = "body-md"><a href="./sources.html">Referenser</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4 class = "body-md">Projektgrupp</h4>
-            <p class = "body-md">Tove Hübinette</p>
-            <p class = "body-md">Sandra Eriksson</p>
-            <p class = "body-md">Gustav Westman</p>
+        <div class="footer-section footer-nav">
+            <p class="body-lg"><a href="./index.html">Hem</a></p>
+            <p class="body-lg"><a href="./article.html">Löneskillnader</a></p>
+            <p class="body-lg"><a href="./data.html">Faktorer</a></p>
+            <p class="body-lg"><a href="./sources.html">Referenser</a></p>
         </div>
 
     </div>
-
     <div class="footer-bottom">
         <p>© 2026 Grupp 3</p>
+        <div class="footer-name">
+            <p class="body-md">Tove Hübinette</p>
+            <p class="body-md">Sandra Eriksson</p>
+            <p class="body-md">Gustav Westman</p>
+        </div>
+        
     </div>
 </footer>
 <!-- CUSTOM JS LINK (egenskriven js fil) --> 

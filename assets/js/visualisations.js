@@ -1,6 +1,8 @@
+// Sandra Eriksson Gustav Westman Tove Hübinette
+
+// scb
 // Visualisering av lönegapet mellan män och kvinnor,
 // alla sektorer i hela sverige 2014-2022
-
 const urlSCB =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/AM/AM0110/AM0110A/LonYrkeRegion4A";
 
@@ -92,7 +94,6 @@ function printSCBChart(dataSCB) {
         legend: {
           position: "bottom",
           labels: {
-            color: "white",
             usePointStyle: true,
             pointStyle: 'circle',
             boxWidth: 4,
@@ -108,7 +109,6 @@ function printSCBChart(dataSCB) {
       scales: {
         x: {
           ticks: {
-            color: "white",
             padding: 10,
             font: {
               family: "Open Sans",
@@ -129,7 +129,6 @@ function printSCBChart(dataSCB) {
             display: false,
           },
           ticks: {
-            color: "white",
             font: {
               family: "Open Sans",
               size: 10,
@@ -141,8 +140,9 @@ function printSCBChart(dataSCB) {
   });
 }
 
-//
-
+// scb4
+// Correlation
+// Löneskillnad och föräldraledighet
 const urlSCB4 =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/LE/LE0201/LE0201EKO/Tema28";
 
@@ -264,7 +264,6 @@ function printSCB4Chart(data1, data2) {
     },
   ];
 
-  //
   const scatterData = womenPerMen.map((value, i) => {
     return {
       x: value,
@@ -355,10 +354,11 @@ function printSCB4Chart(data1, data2) {
       ],
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           labels: {
-
             title: {
               display: false,
                 text:
@@ -378,7 +378,6 @@ function printSCB4Chart(data1, data2) {
       scales: {
         x: {
           ticks: {
-
             title: {
               display: true,
               text: "Kvinnors lön i relation till mäns",
@@ -394,7 +393,6 @@ function printSCB4Chart(data1, data2) {
 
         y: {
           ticks: {
-  
             title: {
               display: true,
               text: "Mäns uttag / kvinnors uttag",
@@ -412,8 +410,8 @@ function printSCB4Chart(data1, data2) {
   });
 }
 
-//
-
+// scb2
+// Antal män resp. kvinnor som ligger i en viss inkomstklass
 const urlSCB2 =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/HE/HE0110/HE0110A/SamForvInk1";
 
@@ -547,6 +545,8 @@ function printSCB2Chart(dataSCB) {
     data: { labels, datasets },
 
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           position: "top",
@@ -595,8 +595,8 @@ function printSCB2Chart(dataSCB) {
   });
 }
 
-//
-
+// scb3
+// Kvinnors lön i % av mäns 2024
 const urlSCB3 =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/LE/LE0201/LE0201EKO/Tema210";
 
@@ -689,6 +689,8 @@ function printSCB3Chart(dataSCB) {
       ],
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       indexAxis: "y",
       responsive: true,
       plugins: {
@@ -836,7 +838,7 @@ function printMapData(data) {
 
       colorbar: {
         title: {
-          text: "Löneskillnad (%)",
+          text: "(%)",
           font: {
             family: "Open Sans",
             size: 14,
@@ -847,7 +849,7 @@ function printMapData(data) {
   ];
 
   const layout = {
-    map: { center: { lon: 15, lat: 62 }, zoom: 2.5 },
+    map: { center: { lon: 15, lat: 63 }, zoom: 3 },
     margin: { t: 0, l: 0, r: 0, b: 0 },
     paper_bgcolor: "rgba(0,0,0,0)", 
     plot_bgcolor: "rgba(0,0,0,0)", 

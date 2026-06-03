@@ -1,3 +1,5 @@
+<!--Sandra Eriksson Gustav Westman Tove Hübinette-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,72 +9,55 @@
     <meta name="title" content="Vi är grupp 3">
     <meta name="decription" content="Det här är en hemsida med statistiska visualiseringar gjord av grupp 3">
 
-<!-- 
-Favicon(den lilla bilden som visas i webbläsarfliken)
---> 
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-32x32.png">
+    <!-- Favicon(den lilla bilden som visas i webbläsarfliken)--> 
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/scale.png">
 
-<!--
-google fonts
---> 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--roboto --> 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<!--open sans --> 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<!--abril fatface --> 
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Petit+Formal+Script&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+DE+Grund+Guides&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+PL:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--roboto --> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--open sans --> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-<!--
-custom css link
---> 
-<link rel="stylesheet" href="./assets/css/require.css">
-<link rel="stylesheet" href="./assets/css/style.css"> 
-<link rel="stylesheet" href="./assets/css/main.css"> 
-
-
+    <!--custom css link-->
+    <link rel="stylesheet" href="./assets/css/require.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/scale_style.css">
+    <script
+    src="https://cdn.plot.ly/plotly-3.5.1.min.js"
+    charset="utf-8"
+    ></script>
 </head>
+
 <body>
-
-
-<!-- PRELOADER snurrande cirkel som kommer upp om innehållet på sidan behöver tid på sig att ladda-->
+<!-- PRELOADER-->
 <div class="preloader" data-preloader>
     <div class="preloader-circle"></div>
 </div>
 
-
-
 <!-- HEADER -->
 <header class="header" data-header>
     <div class="container">
-
         <a href="./index.html" class="logo">
             <img src="assets/images/scale.png" width="65" height="20" alt="EQUALIA">
         </a>
-
         <nav class="navbar" data-navbar>
             <ul class="navbar-list">
-
                 <li class="navbar-item">
                     <a href="./index.html" class="label-lg navbar-link has-after" data-nav-link>Hem</a>
                 </li>
-
                 <li class="navbar-item">
                     <a href="./article.html" class="label-lg navbar-link has-after" data-nav-link>Löneskillnader</a>
                 </li>
-
                 <li class="navbar-item">
                     <a href="./data.html" class="label-lg navbar-link has-after active" data-nav-link>Faktorer</a>
                 </li>
-
+                <li class="navbar-item">
+                    <a href="./sources.html" class="label-lg navbar-link has-after" data-nav-link>Referenslista</a>
+                </li>
             </ul>
-
-
-
         </nav>
-
         <!-- hamburgermenynapp -->
         <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler>  
             <ion-icon name="menu-outline" aria-hidden="true"></ion-icon> 
@@ -83,10 +68,7 @@ custom css link
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>      <!-- hämtar in ikonen -->
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<!-- Hero -->
-
 <main>
-
 <div class="header-background">
     <img src="./assets/images/header.png" alt="hero image">
 </div>
@@ -94,105 +76,171 @@ custom css link
 <section>
     <div class="container">
         <div class="page-title">
-            <h1>Faktorer som påverkar löneskillnaden</h1>
-            <hr class="hr-stats-title">
+            <h1 class="headline-md headline-page">Faktorer som påverkar löneskillnaden</h1>
+            <hr class="hr-stats-title hr-headline-page">
         </div>
     </div>
 </section>
 
-<section>
+<section class="analysis-section">
     <div class="container">
-        <div class="pie-section">
-            <div class="pie-content">
-            
-                <div class="pie-text">
-                    <p>Löneskillnaden mellan kvinnor och män påverkas av flera olika faktorer. I diagrammet syns några av de faktorer som ofta diskuteras i samband med lönegapet, där föräldraledighet utgör den största andelen. Deltidsarbete, skillnader mellan olika yrken och sektorer samt andra arbetsrelaterade faktorer bidrar också till löneskillnaderna mellan kvinnor och män.</p>
-                    
-                    
+        <div class="analysis-layout">
+            <div class="stats-section">
+                <div class="stats-layout">
+                    <div class="stats-main">
+                        <div class="stats-text">
+                            <h3 class="stats-title headline-xs">Klicka på en faktor för att se hur vågen ändras</h3>
+                        </div>
+                        <div class="scale-section">
+                            <div class="main-layout">
+                            <!-- LEFT SIDE -->
+                                <div class="scale-wrapper">
+                                    <div class="scale">
+                                        <div class="weights" id="weightsContainer"></div>
+                                <!-- BEAM -->
+                                        <div class="beam" id="beam">
+                                <!-- LEFT -->
+                                            <div class="left-hanger">
+                                                <div class="line-left"></div>
+                                                <div class="line-right"></div>
+                                                <div class="bowl"></div>
+                                            </div>
+                                <!-- RIGHT -->
+                                            <div class="right-hanger">
+                                                <div class="line-left"></div>
+                                                <div class="line-right"></div>
+                                                <div class="bowl"></div>
+                                            </div>
+                                        </div>
+                                <!-- CENTER -->
+                                        <div class="center-circle"></div>
+                                <!-- STAND -->
+                                        <div class="stand"></div>
+                                        <div class="base"></div>
+                                    </div>
+                                </div>
+                            <!-- RIGHT SIDE -->
+                                <div class="right-side">
+                                    <div class="cards">
+                                        <div class="card card-pink"
+                                            onclick="addFactor(
+                                            'Föräldraledighet',
+                                            'Kvinnor tar ofta ut längre föräldraledighet vilket kan påverka löneutveckling och karriärmöjligheter.',
+                                            'pink'
+                                            )">
+                                            <h3>Föräldraledighet 33%</h3>
+                                            <p>Klicka för att lägga till faktorn</p>
+                                        </div>
+                                        <div class="card card-blue"
+                                            onclick="addFactor(
+                                            'Deltidsarbete',
+                                            'Kvinnor arbetar oftare deltid vilket påverkar både inkomst och möjligheten till högre positioner.',
+                                            'blue'
+                                            )">
+                                            <h3>Deltidsarbete 28%</h3>
+                                            <p>Klicka för att lägga till faktorn</p>
+                                        </div>
+                                        <div class="card card-purple"
+                                            onclick="addFactor(
+                                            'Lågavlönade sektorer',
+                                            'Män och kvinnor arbetar ofta inom olika yrken och branscher där lönerna kan skilja sig mycket.',
+                                            'purple'
+                                            )">
+                                            <h3>Lågavlönade sektorer 25%</h3>
+                                            <p>Klicka för att lägga till faktorn</p>
+                                        </div>
+                                        <div class="card card-brown"
+                                            onclick="addFactor(
+                                            'Övrigt',
+                                            'Män har oftare högre chefspositioner vilket påverkar genomsnittslönen.',
+                                            'brown'
+                                            )">
+                                            <h3>Övrigt 14%</h3>
+                                            <p>Klicka för att lägga till faktorn</p>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        
-
-                <div class="pie-chart">
-                    <canvas id="pie-chart"></canvas>
+            </div>
+            <div class="information">
+                <div class="information-text">
+                    <h3 class="headline-xs">Löneskillnaden beror på flera faktorer</h3>
+                    <p class="body-lg">
+                        Trots stora framsteg inom jämställdhet finns fortfarande löneskillnader mellan kvinnor och män. Forskning visar att flera faktorer bidrar till lönegapet, bland annat att kvinnor oftare arbetar deltid och är överrepresenterade i relativt lågavlönade yrken inom vård, omsorg och utbildning. Samtidigt pekar flera studier på att föräldraskap och föräldraledighet har en särskilt stor påverkan på kvinnors inkomster och karriärutveckling. Därför fokuserar nästa avsnitt på hur föräldraledighet påverkar löneskillnaden mellan kvinnor och män.
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </div>      
+</section> 
 
-
-
-
-<section class="data-stats-section">
+<section class="analysis-section">
     <div class="container">
-        <div class="data-stats">
-            <div class="data-stats-layout">
-                <div class="data-stats-text">
-                    <h2 class="data-stats-title">Lönegapet över tid</h2>
-                    <p>Hur stora är egentligen skillnaderna mellan mäns och kvinnors löner? Statistiken visar hur lönegapet skiljer sig mellan olika regioner, inkomstnivåer och över tid samt vilka faktorer som kan ligga bakom löneskillnaden.</p>
+        <div class="section-title">
+            <h2 class="headline-page-h2 headline-sm">Föräldraledighet</h2>
+        </div>
+        <div class="analysis-layout">
+            <div class="stats-section">
+                <div class="stats-layout">
+                    <div class="stats-main">
+                        <div class="stats-text">
+                            <h3 class="stats-title headline-xs">Sambandet mellan lönejämlikhet och mäns uttag av föräldraledighet (correlation 0,93)</h3>
+                        </div>
+                        <div class="stats-chart">
+                            <canvas id="scb4"></canvas>
+                        </div>
+                    </div>
                 </div>
-                <div class="data-stats-chart">
-                    <canvas id="scb4"></canvas>
+            </div>
+            <div class="information">
+                <div class="information-text">
+                    <h3 class="headline-xs">Föräldraledighetens betydelse för lönegapet</h3>
+                    <p class="body-lg line-break">
+                        X-axeln visar kvinnors lön i relation till mäns där 0.90 betyder att kvinnor tjänar 90 % av männens lön. Y-axeln visar mäns uttag av föräldraledighet i relation till kvinnors där 0,40 visar att män tar ut 40 % av vad kvinnor tar ut i föräldraledighet. 
+                        Koefficinten är 0.93 vilket innebär en mycket stark korrelation. Detta visar att när kvinnors löner ligger närmare männens, tenderar männens uttag av föräldraledighet att vara högre. 
+                    </p>
+                    <p class="body-lg line-break">
+                        Enligt Europaparlamentet (2025) är kvinnor betydligt mer benägna att ha karriäruppehåll: år 2018 hade en tredjedel av de anställda kvinnorna i EU ett arbetsavbrott av barnomsorgsskäl (ca 33%). 
+                    </p>
+                    <p class="body-lg line-break">
+                        En studie av Masso et al. (2025) som behandlade ämnet om löneskillnaderna inom akademin kom fram till att kvinnor inom akademin får lägre årsinkomst och arbetar färre timmar efter att det första barnet föds. 
+                        Årsinkomsten kan minska med upp till cirka 70 % kort efter födseln. Till skillnad från kvinnor påverkas män nästan inte alls ekonomiskt av att bli föräldrar. Forskarna beskriver därför föräldraskapet som en viktig förklaring till att könslönegapet kvarstår. 
+                    </p>
+                    <p class="body-lg line-break">
+                        Studien visar att den största konsekvensen av föräldraskap inte handlar om timlön utan om arbetstid. Kvinnor minskar sina arbetstimmar kraftigt under flera år efter att de fått barn, 
+                        och forskarna uppskattar att detta i genomsnitt motsvarar en förlust av arbetstid på ungefär två och ett halvt års heltidsarbete under de fem första åren efter det första barnet.                    
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</section>    
-
-<section>
-    <div class="container">
-        <div class="information">
-            <div class="information-text">
-                <h2></h2>
-                <p>
-                    Lönegapet förklaras till stor del av att kvinnor arbetar färre timmar. Lönegapet tenderar också att öka med åldern medan det är mindre bland nytillträdande på arbetsmarknaden. Skillnaderna varierar också avsevärt mellan branscher och sektorer, och påverkas av personliga omständigheter, exempelvis är lönegapet lägre för ogifta än för gifta kvinnor (Bennedsen et al., 2023). 
-                    Enligt siffror från 2022 arbetar nästan en tredjedel av kvinnorna (28 procent) deltid.  
-                    Sedan 1994 har svensk lagstiftning krävt att arbetsgivare genomför lönekartläggningar i syfte att minska ojämlikheter mellan män och kvinnor. Studien visar dock att lönekartläggningar inte alltid fungerar som ett verktyg för jämställdhet, utan i stället ofta används för att legitimera redan existerande löneskillnader mellan kvinnor och män. Svenska kommuner fokuserar ofta på att hitta förklaringar till skillnaderna snarare än att ifrågasätta om strukturerna bakom dem faktiskt är rättvisa. 
-                    När män tjänade mer än kvinnor i liknande arbeten förklarades det ofta med att männen hade mer ”erfarenhet”, ”särskilda arbetsuppgifter” eller större ansvar. Studien visar dock att dessa begrepp sällan definieras tydligt. ”Erfarenhet” verkar ofta endast syfta på högre ålder eller längre anställningstid, inte nödvändigtvis bättre kompetens. 
-                    Ett centralt tema i studien är att tekniska och mansdominerade yrken ofta får högre lön än kvinnodominerade omsorgsyrken, trots att arbetena enligt arbetsvärderingen bedöms vara likvärdiga. 
-                    Studien lyfter även problematiken kring individuell lönesättning. Kommunerna beskriver ofta individuell och differentierad lön som något rättvist och neutralt, men forskarna menar att denna modell kan göra det svårare att upptäcka könsdiskriminering Salminen-Karlsson, M., & Fogelberg Eriksson, A. (2024).
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
+    </div>      
+</section> 
 
 </main>
 
 <footer class="footer">
     <div class="container footer-content">
-
-        <div class="footer-section">
+        <div class="footer-section footer-logo">
             <img src="assets/images/scale.png" width="65" alt="EQUALIA">
-
             <h3>EQUALIA</h3>
-            <p class = "body-md">
-                En webbplats som utforskar löneskillnader mellan kvinnor och män i Sverige.
-            </p>
         </div>
-
-        <div class="footer-section">
-            <h4 class = "body-md">Navigation</h4>
-            <ul>
-                <li class = "body-md"><a href="./index.html">Hem</a></li>
-                <li class = "body-md"><a href="./article.html">Löneskillnader</a></li>
-                <li class = "body-md"><a href="./data.html">Faktorer</a></li>
-                <li class = "body-md"><a href="./sources.html">Referenser</a></li>
-            </ul>
+        <div class="footer-section footer-nav">
+            <p class="body-lg"><a href="./index.html">Hem</a></p>
+            <p class="body-lg"><a href="./article.html">Löneskillnader</a></p>
+            <p class="body-lg"><a href="./data.html">Faktorer</a></p>
+            <p class="body-lg"><a href="./sources.html">Referenser</a></p>
         </div>
-
-        <div class="footer-section">
-            <h4 class = "body-md">Projektgrupp</h4>
-            <p class = "body-md">Tove Hübinette</p>
-            <p class = "body-md">Sandra Eriksson</p>
-            <p class = "body-md">Gustav Westman</p>
-        </div>
-
     </div>
-
     <div class="footer-bottom">
         <p>© 2026 Grupp 3</p>
+        <div class="footer-name">
+            <p class="body-md">Tove Hübinette</p>
+            <p class="body-md">Sandra Eriksson</p>
+            <p class="body-md">Gustav Westman</p>
+        </div>
     </div>
 </footer>
 
@@ -200,7 +248,7 @@ custom css link
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>    
     <!-- CUSTOM JS LINK (egenskriven js fil) --> 
 <script src="./assets/js/script.js"></script>
-<script src="./assets/js/datascript.js"></script>
+<script src="./assets/js/scale_script.js"></script>
 <script src="./assets/js/visualisations.js"></script>
 </body>
 </html>

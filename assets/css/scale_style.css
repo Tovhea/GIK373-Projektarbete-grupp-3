@@ -1,85 +1,7 @@
+/*Sandra Eriksson Gustav Westman Tove Hübinette*/
 
 
-
-.page-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin: 2rem;
-    margin-top: 3rem;
-    line-height: 1.1;
-    max-width: 500px;
-}
-
-.pie-section {
-  padding-left: 2rem;
-  padding-right: 1rem;
-}
-.pie-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-}
-
-.pie-text {
-    flex: 1;
-}
-
-.pie-chart {
-  margin-top: -40px;
-    width: 180px;
-    height: 180px;
-}
-
-.data-stats-section {
-  margin-top: 20px;
-}
-.data-stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  width: 100%;
-  overflow: hidden;
-}
-.data-stats-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
-    border-radius: var(--radius-20);
-
-    box-sizing: border-box;
-}
-
-.data-stats-text,
-.data-stats-chart {
-    min-width: 0;
-}
-.data-stats-chart {
-  background: hsla(0, 0%, 100%, 0.5);
-  height: 200px;
-  border-radius: 15px;
-}
-
-
-
-/* =========================
-VÅG
-========================= */
-
-.scale-section {
-  margin-top: 50px;
-  margin-left: 20px;
-}
-.scale-text p{
-  padding-top: 15px;
-  max-width: 450px;
-}
-.scale-text {
-  border-left: solid #666;
-  margin: 15px;
-  padding-left: 15px;
-}
-
+/* VÅG */
 .scale-wrapper{
   position:relative;
   width:100%;
@@ -97,7 +19,6 @@ VÅG
 }
 
 /* BEAM */
-
 .beam{
   position:absolute;
   width: 85%;
@@ -111,7 +32,6 @@ VÅG
 }
 
 /* HANGERS */
-
 .left-hanger{
   position:absolute;
   width:70px;
@@ -128,10 +48,7 @@ VÅG
   top:6px;
 }
 
-/* =========================
-LINES
-========================= */
-
+/* LINES */
 .line-left,
 .line-right{
   position:absolute;
@@ -152,7 +69,6 @@ LINES
 }
 
 /* BOWL */
-
 .bowl{
   position:absolute;
   bottom:17px;
@@ -167,7 +83,6 @@ LINES
 }
 
 /* CENTER */
-
 .center-circle{
   position:absolute;
   width:34px;
@@ -182,7 +97,6 @@ LINES
 }
 
 /* STAND */
-
 .stand{
   position:absolute;
   width:12px;
@@ -193,7 +107,6 @@ LINES
   transform:translateX(-50%);
   border-radius:20px;
 }
-
 
 .base{
   position:absolute;
@@ -206,14 +119,10 @@ LINES
   border-radius:20px;
 }
 
-/* =========================
-WEIGHTS
-========================= */
-
+/* WEIGHTS */
 .weights{
   position:absolute;
   right:0;
-
   display:flex;
   flex-direction:column;
   gap:8px;
@@ -233,7 +142,6 @@ WEIGHTS
   text-align: center;
 }
 
-
 .weight.show{
   opacity: 1;
   transform:translateY(0);
@@ -242,37 +150,30 @@ WEIGHTS
 .pink{
   background:#DC8CAA;
 }
-
 .blue{
   background:#789ABE;
 }
-
 .purple{
   background:#B4A5E6;
 }
-
 .brown{
   background:#E6BEA0;
 }
 
-/* =========================
-RIGHT SIDE
-========================= */
-
+/* RIGHT SIDE */
 .right-side{
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
 /* CARDS */
-
 .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    width: 100%;
-    margin-bottom: 10px;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
 .card{
   padding:7px;
@@ -283,6 +184,7 @@ RIGHT SIDE
   transition:0.3s;
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
+
 .card-pink {
   background:hsla(330, 51%, 70%, 0.6);
 }
@@ -311,99 +213,53 @@ RIGHT SIDE
 .card-brown:hover {
   background:hsla(29, 57%, 76%, 1);
 }
-.card.active {
-  opacity: 1;
-}
+
 
 .card-pink.active {
   background: hsla(330, 51%, 70%, 1);
 }
-
 .card-blue.active {
   background: hsla(214, 35%, 61%, 1);
 }
-
 .card-purple.active {
   background: hsla(254, 56%, 77%, 1);
 }
-
 .card-brown.active {
   background: hsla(29, 57%, 76%, 1);
 }
-
 .card p{
   color:#666;
   font-size: 9px;
 }
 
-/* INFO BOX */
-
-.info-box{
-
-  background:white;
-  padding:15px;
-  height: 28rem;
-  border-radius:20px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-.info-box h2{
-  color: hsla(229, 37%, 22%, 1);
-  margin-bottom:15px;
-  font-size:22px;
-}
-
-.info-box p{
-  color:#444;
-}
-
-/* =========================
-DESKTOP
-========================= */
+/* Tablet */
 @media (min-width: 768px) {
-  
-
-
-  
-  .pie-chart {
-    width: 400px;
-    height: 400px;
-  }
-
-
-
   .main-layout {
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 3rem;
   }
-
 
   .right-side {
     flex: 0.5;
     margin: 1rem;
+    display: flex;
+    justify-content: left;
   }
 
   .cards {
     display: flex;
-    flex: 0 0 25%;
     flex-direction: column;
-    width: 100%;
+    width: 70%;
   }
-
-  .info-box {
-    flex: 1;
-    margin-right: 20px;
-
-  }
-
 
   /* SCALE */
-
   .scale-wrapper{
-    flex: 1;
+    flex: 0.5;
     width:100%;
-    min-width:500px;
-
+    display: flex;
+    justify-content: right;
   }
 
   .scale{
@@ -428,17 +284,11 @@ DESKTOP
     height:140px;
     top:110px;
   }
-
-
-  /* WEIGHTS */
-
- 
-
 }
 
+/* DESKTOP */
 @media(min-width: 1024px){
-
-
-
-  
+  .cards {
+    width: 80%;
+  }
 }

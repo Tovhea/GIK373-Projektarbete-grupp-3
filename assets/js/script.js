@@ -1,4 +1,4 @@
-
+// Sandra Eriksson Gustav Westman Tove Hübinette
 
 
 /* 
@@ -9,8 +9,6 @@ Allt är laddat → JS lägger till .loaded på body
 overflow: visible aktiveras → sidan visas normalt
 
 */
-
-
 
 window.addEventListener('load', function() {
   document.querySelector('[data-preloader]').classList.add('loaded');

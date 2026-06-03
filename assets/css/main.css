@@ -1,9 +1,15 @@
+/*Sandra Eriksson Gustav Westman Tove Hübinette*/
+
 /*I denna main fil finns css för specifika delar av hemsidan*/
 /* Grundstyle – mobil */
+.container {
+  padding-inline: 20px; 
+  margin-inline: auto;
+}
 
 /*HEADER*/
 .logo {
-    padding: 5px;
+  padding: 5px;
 }
 
 .hero {
@@ -22,13 +28,12 @@
 }
 
 .hero-image-desktop {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; /* beskär bilden snyggt utan att den förvrängs */
-    object-position: center 8%; /* centrerar bilden vid beskärning */
-    display: none;
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* beskär bilden snyggt utan att den förvrängs */
+  object-position: center 8%; /* centrerar bilden vid beskärning */
+  display: none;
 }
-
 
 .hero-text {
   position: absolute;
@@ -45,83 +50,67 @@
 }
 
 .header-background {
-    height: 60px; /* justera efter headerns höjd */
-    overflow: hidden;
+  height: 60px; /* justera efter headerns höjd */
+  overflow: hidden;
 
 }
 .header-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 /*FOOTER*/
-
 footer {
   background-color: hsla(42, 16%, 15%, 0.9);
   color: white;
   padding: 20px;
   margin-top: 120px;
   align-items: center;
-  padding: 40px;
 }
 
 .footer-content {
   display: flex;
-    justify-content: space-between;
-    gap: 100px;
-    padding-bottom: 30px;
+  justify-content: space-between;
+  align-items: center
 }
 
-
-.footer-section {
-    flex: 1;
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+.footer-nav p:hover {
+  color: rgba(255, 255, 255, 0.5)
 }
 
 .footer-section img {
   padding-left: 5px;
   padding-bottom: 5px;
-
 }
 
 .footer-section h3 {
   padding-left: 10px;
   padding-bottom: 10px;
-  margin-right: 700px;
 }
-.footer-section h4 {
-    margin-bottom: 15px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section li {
-    margin-bottom: 10px;
-    text-decoration: underline;
-    transition: color 0.3s;
-}
-
-.footer-section li:hover {
-    color: rgba(255, 255, 255, 0.5)
-}
-
-.footer-section a {
-    color: white;
-    text-decoration: none;
-}
-
-
-
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.2);
-    text-align: center;
-    padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  padding-top: 15px;
+}
+.footer-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 1rem;
 }
 
 /*Sektion mål */
@@ -168,49 +157,28 @@ footer {
   padding-top:var(--spacing-s);
 }
 
-
-.stats-section {
-    margin-top: 20px;
-}
-.stats-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    width: 100%;
-    overflow: hidden;
-}
-
-
+/*STATISTIK*/
 .stats-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
-    border-radius: var(--radius-20);
-    background: hsla(229, 37%, 22%, 1);
-}
-
-.fact-box {
-    background: hsla(229, 40%, 71%, 0.7);
-    min-width: 0;
-    border-radius: var(--radius-20);
-    padding: 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-
-    color: hsla(229, 37%, 22%, 1);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 30px;
+  margin:10px; 
+  margin-bottom: 0;
+  background: #ffffff;
+  border-radius: 15px;
+  border: 1px solid #ececec;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.04),
+    0 12px 30px rgba(0,0,0,0.08);
 }
 
 .stats-text, .stats-chart {
-    min-width: 0;
-    color: white;
+  min-width: 0;
 }
 
 .stats-chart {
-    height: 200px;
+  min-height: 250px;
 }
 
 .hr-stats-title {
@@ -220,126 +188,47 @@ footer {
   border-radius: 10px;
 }
 
-
-#cb7be9-map {
-    width: 100%;
-    height: 500px;
+.hr-headline-page {
+  margin-bottom: 50px;
+  margin-left: 2rem;
+  width: 80px;
 }
 
-
-
-.fact-icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid #eb5dbb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 5px;
-    color: #eb5dbb; /* <-- lägg här istället */
+.scale-text {
+  border-block-end: 0.5px solid var(--black_a10);
+  margin: 40px;
+  padding-bottom: 20px;
 }
 
-.fact {
-    margin: 50px;    
-    display: flex;
-    justify-content: center;
-}
-.fact-text {
-    max-width: 500px;
-    padding: 7px;
-    border-left: 3px solid #dbd5d9;
-    padding-left: 1rem;
-}
-.fact {
-    display: flex;
-    align-items: center;
-}
-.fact-space-between {
-    padding: 8px;
-}
-
-/*styling av clickbara cards för artiklar*/
-.articles-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+.information {
+  display: flex;
   justify-content: center;
-  gap: var(--spacing-xs); /* mellanrum mellan korten */
-  margin-top: var(--spacing-l);
 }
 
-.map-wrapper {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+.information-text {
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+  margin-bottom: 50px;
+  margin-top: 10px; 
+}
+
+.analysis-layout {
+  display: flex;
+  flex-direction: column;
+  border-block-end: 0.5px solid var(--black_a10);
+  margin-bottom: 50px;
+}
+
+.line-break {
+  margin-bottom: 10px;
 }
 
 #Map {
   width: 100%;
   height: 400px;
 }
-.article-image {
-  display: block;
-  grid-column: 1 / -1;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  justify-content: center;
-  filter:
-        saturate(75%)
-        brightness(90%);
-}
 
-.article-card {
-  width: 100%;
-  background-color: var(--white);
-  color: var(--text-primary-black);
-  border-radius: var(--radius-20);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  border-top: 1px solid var(--black_a10);
-}
-
-.image {
-    position: relative;
-    width: 100%;
-}
-
-.image-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    padding: 2rem;
-    color: white;
-    background:
-        linear-gradient(
-            rgba(36,43,78,0.35),
-            rgba(36,43,78,0.15)
-        );
-}
-
-.image-overlay:hover {
-    background: rgba(96, 21, 75, 0.15);
-}
-.overlay-content {
-    max-width: 80%;
-}
-
-.link-button {
-    width: fit-content;
-    background: #eb5dbb;
-    color: white;
-    padding: .2rem .8rem;
-    border-radius: .65rem;
-    font-weight: 500;
-    margin-top: 1rem;
-}
-
-
-
-
-.main-headline-article {
-  margin-top: var(--spacing-s);
-}
 .hr-article {
   width: 20%; /* hur brett strecket ska vara */
   margin: var(--spacing-s) auto;
@@ -350,150 +239,25 @@ hr {
   height: 3px;
 }
 
-.drop-cap::first-letter {
-  font-family: Georgia, serif; 
-  font-size: 60px;
-  font-weight: bold;
-  float: left;
-  line-height: 1;
-  margin-right: 0.1em;
-}
-
-.container-article-long {
-  margin-top: var(--spacing-xxl);
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-inline: auto;
-  max-width: 1200px;
-  width: 100%;
-
-  /*header spans 2 columner*/
-  grid-template-areas:
-    "head"
-    "article-head"
-    "article-h2-1"
-    "text-above-img"
-    "article-image"
-    "article-text-1"
-    "article-h2-2"
-    "image-left"
-    "article-text-right"
-    "article-h2-3"
-    "image-right"
-    "article-text-left";
-}
-
-.article-head {
-  grid-area: head;
-}
-
-.text-above-img {
-  grid-area: text-above-img;
-  font-style: italic;
-  font-weight: 300;
-  text-align: center;
-  /*padding: var(--spacing-xs);*/
-}
-
-.article-image {
-  grid-area: article-image;
-}
-
-.article-h2-1 {
-  grid-area: article-h2-1;
-}
-
-.article-text-1 {
-  grid-area: article-text-1;
-  padding-bottom: 40px;
-  padding-top: 20px;
-}
-
-.image-left {
-  grid-area: image-left;
-  width: 100%;
-}
-
-.article-h2-2 {
-  grid-area: article-h2-2;
-}
-
-.article-text-left {
-  grid-area: article-text-left;
-    padding-bottom: 40px;
-}
-
-.article-h2-3 {
-  grid-area: article-h2-3;
-}
-
-.article-h2-3 {
-  grid-area: article-h2-3;
-}
-
-.image-right {
-  grid-area: image-right;
-  width: 100%;
-}
-
-.article-text-right {
-  grid-area: article-text-right;
-    padding-bottom: 40px;
-}
-
-.article-head,
-.article-h2-1,
-.article-h2-2,
-.article-h2-3 {
-  text-align: center;
-  color: var(--text-primary-black);
-}
-
-
-.articles .overlay-content { 
-  padding: 2rem;
-}
-  .articles .overlay-content .body-sm {
-    max-width: 250px;
-  }
-
-
-
-
-.date {
-  font-weight: 300;
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.title {
-  text-align: center;
-  padding: var(--spacing-xl);
-}
-
-.statistic-img {
-  width: 90%;
-  margin-inline: auto;
-}
-
-.chart-container {
-  width: 100%;
-  margin-inline: auto;
-}
-
+/* Referenser */
 .references-section {
   display: flex;
   justify-content: center;
 }
 
-.references-box {
+.references-box-1 {
   width: 70%;
   background-color: var(--surface-tone);
   padding: 3rem;
   padding-top: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 15px 15px 0 0;
+}
+.references-box-2 {
+  width: 70%;
+  background-color: var(--surface-tone);
+  padding: 3rem;
+  padding-top: 2rem;
+  border-radius: 0 0 15px 15px;
 }
 
 .references-content {
@@ -506,46 +270,27 @@ hr {
   justify-content: center;
 }
 
-.description { 
-  padding-top: 0;
+.references-title {
+  width: 70%;
+}
+.references-page {
+  margin-left: 0;
+}
+.hr-references-page {
+  margin-left: 0;
 }
 
-.sources-section {
-  display: flex;
-  justify-content: center;
-}
-
-.sources-header {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.headline-md {
-  text-align: center;
-  padding-top: 150px;
-}
 .reference-item {
-    overflow-wrap: break-word;
-    word-break: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
-
-.container-kallor {
-  margin: 0px;
-}
-
-.data-kalla {
-  text-align: right;
-  font-size: 0.8rem;
-  
-}
-
 
 
 /* Tablet */
 @media (min-width: 768px) {
-  /*html {
-    font-size: 15px;
-  }*/
+  .container {
+    max-width: 90%;
+  }
 
   .hero-headline {
     font-size: var(--fs-38);
@@ -558,6 +303,7 @@ hr {
   .hero {
     height: 400px;
   }
+
   .hero-image {
     display: none;
   }
@@ -567,7 +313,6 @@ hr {
   }
 
   .goals-grid {
-    /*grid-template-columns: repeat(3, 1fr);*/
     grid-template-columns: 1fr auto 1fr auto 1fr;
     align-items: center;
     width: 100%;
@@ -581,20 +326,10 @@ hr {
     background: var(--black_a25) ;
   }
   
-
-
   .goal-card{
     border-block-end: none;
   }
-
-  .stats-layout {
-    grid-template-columns: 3fr 1fr;
-  }
-
-  .stats-main {
-    grid-template-columns: 1fr 1fr;
-  }
-
+    
   .articles-grid {
    display: grid;
    grid-template-columns: 1fr 1fr;
@@ -611,10 +346,6 @@ hr {
 }
 /* Desktop */
 @media (min-width: 1024px) {
-  /*html {
-    font-size: 20px;
-  }*/
-
   .header-background {
     height: 62px;
   }
@@ -627,12 +358,12 @@ hr {
     height: 500px;
   }
 
-
   /*döjer hamburgermenyknappen vid desktopläge*/
   .nav-toggle-btn,
   .nav-toggle-btn ion-icon {
     display: none;
   }
+
   /*navbarens utseende i desktopläge*/
   .navbar {
     display: block;
@@ -650,22 +381,6 @@ hr {
     justify-content: center;
   }
 
-/* .header{
-    position: relative;
-  }
-
-  .header .container {
-    position: relative;
-  }
-
-  .navbar {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 50%;
-    transform: translate(-50%, -50%);
-  } */
-
   .header .container {
     justify-content: space-between;
   }
@@ -678,7 +393,6 @@ hr {
     justify-content: center;
   }
 
-
   .navbar-link {
     color: var(--white);
   }
@@ -688,36 +402,31 @@ hr {
     max-width: 50%;
   }
 
-  .stats-main {
-    grid-template-columns: 1fr 1.5fr;
-    gap: 20px;
+  #Map {
+    height: 500px;
+    margin-inline: auto;
+  }
+  .map-text {
+    column-count: 2;
+    column-gap: 4rem;
+    max-width: 80%;
   }
 
-  #Map {
-  width: 50%;
-  height: 500px;
-  margin-inline: auto;
+  .analysis-layout {
+    display: flex;
+    flex-direction: row;
+  }
 
-}
+  .reverse {
+    flex-direction: row-reverse;
+  }
 
+  .stats-section {
+    flex: 1;
+    margin-bottom: 50px;
+  }
 
-
-  /*styling av artikelsidan
-    .container-article-long {
-    grid-template-columns: 1fr 1fr;
-    max-width: 50%; 
-    
-        /*header spans 2 columner
-        grid-template-areas:
-        "head head"
-        "article-head article-head"
-        "article-h2-1 article-h2-1"
-        "text-above-img text-above-img"
-        "article-image article-image"
-        "article-text-1 article-text-1"
-        "article-h2-2 article-h2-2"
-        "image-left article-text-right"
-        "article-h2-3 article-h2-3"
-        "article-text-left image-right";
-    } */
+  .information {
+    flex: 0.5;
+  }
 }
