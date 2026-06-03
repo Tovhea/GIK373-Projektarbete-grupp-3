@@ -19,7 +19,8 @@
   position: relative;
 }
 
-.hero-image, .hero-image-desktop {
+.hero-image,
+.hero-image-desktop {
   height: 100%;
   width: 100%;
   object-fit: cover; /* beskär bilden snyggt utan att den förvrängs */
@@ -52,7 +53,6 @@
 .header-background {
   height: 60px; /* justera efter headerns höjd */
   overflow: hidden;
-
 }
 .header-background img {
   width: 100%;
@@ -154,7 +154,7 @@ footer {
 }
 
 .goal-title {
-  padding-top:var(--spacing-s);
+  padding-top: var(--spacing-s);
 }
 
 /*STATISTIK*/
@@ -228,7 +228,6 @@ footer {
   width: 100%;
   height: 400px;
 }
-
 .hr-article {
   width: 20%; /* hur brett strecket ska vara */
   margin: var(--spacing-s) auto;
@@ -323,7 +322,7 @@ hr {
     border-left: 0.5px solid var(--black_a10);
     height: 60%;
     display: block;
-    background: var(--black_a25) ;
+    background: var(--black_a25);
   }
   
   .goal-card{
@@ -331,17 +330,22 @@ hr {
   }
     
   .articles-grid {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
   }
 
   .body-sm {
-   font-size: xx-small;
+    font-size: xx-small;
   }
 
   .title-sm {
-   font-size: small;
+    font-size: small;
+  }
+
+  .footer-section:first-child p {
+    display: flex;
+    max-width: 150px;
   }
 }
 /* Desktop */
@@ -396,6 +400,8 @@ hr {
   .navbar-link {
     color: var(--white);
   }
+
+
 
   .container-article-long {
     grid-template-columns: 1fr;
